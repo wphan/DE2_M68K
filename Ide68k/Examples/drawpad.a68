@@ -1,0 +1,26 @@
+         section code
+*  DRAWPAD.A68 - A small assembly program to set interrupt level in status register
+*
+*  Do NOT call this file DRAWPAD.ASM - it will be overwritten by the compiler!
+*
+*  used with DRAWPAD.C
+*
+*  int intlevel(int n);
+*  returns old interrupt level
+
+* Author: Peter J. Fondse (pfondse@hetnet.nl)
+
+         xdef    _intlevel
+_intlevel:
+         move.w  SR,D0         get statusregister
+         move.w  D0,A0         save in A0
+         and.w   #$F8FF,D0     clear interrupt level bits
+         move.l  (4,A7),D1     get argument direct by A7 (dirty asm trick!)
+         and.l   #$0007,D1     truncate possible wrong arg
+         lsl.w   #8,D1         shift in place
+         or.w    D0,D1         or to status bits, D1 is new status
+         move.w  A0,D0         get old status
+         asr.w   #8,D0         shift and
+         and.l   #$0007,D0     isolate old interrupt level
+         move.w  D1,SR         set new interrupt level in statusregister
+         rts                   return with old interrupt level in D0

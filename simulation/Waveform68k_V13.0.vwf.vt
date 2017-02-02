@@ -1,0 +1,2080 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/23/2013 17:13:22"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    MC68K
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module MC68K_vlg_sample_tst(
+	Bus_Request_SW8_H,
+	CLK_50Mhz,
+	FlashData,
+	InPortA,
+	InPortB,
+	InPortC,
+	InPortE,
+	IRQ2_Key2_L,
+	IRQ4_Key1_L,
+	RESET_Key0_L,
+	RS232_RxData,
+	sdram_dq,
+	SRam_Data,
+	Trace_Request_Key3_L,
+	sampler_tx
+);
+input  Bus_Request_SW8_H;
+input  CLK_50Mhz;
+input [7:0] FlashData;
+input [7:0] InPortA;
+input [7:0] InPortB;
+input [7:0] InPortC;
+input [7:0] InPortE;
+input  IRQ2_Key2_L;
+input  IRQ4_Key1_L;
+input  RESET_Key0_L;
+input  RS232_RxData;
+input [15:0] sdram_dq;
+input [15:0] SRam_Data;
+input  Trace_Request_Key3_L;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(Bus_Request_SW8_H or CLK_50Mhz or FlashData or InPortA or InPortB or InPortC or InPortE or IRQ2_Key2_L or IRQ4_Key1_L or RESET_Key0_L or RS232_RxData or sdram_dq or SRam_Data or Trace_Request_Key3_L)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module MC68K_vlg_check_tst (
+	Address_OUT,
+	AS_L,
+	AS_OUT_L,
+	BG_L,
+	BGACK_L,
+	BlueOut,
+	BR_L,
+	CPU_RW,
+	CPUClock,
+	DMA_DataOut,
+	DramDtack_L,
+	DramSelect_H,
+	Dtack_L,
+	FlashAddress,
+	FlashCE_L,
+	FlashData,
+	FlashOE_L,
+	FlashReset_L,
+	FlashWE_L,
+	GreenLEDS,
+	GreenOut,
+	HexDisplay0,
+	HexDisplay1,
+	HexDisplay2,
+	HexDisplay3,
+	HexDisplay4,
+	HexDisplay5,
+	HexDisplay6,
+	HexDisplay7,
+	horiz_sync_out,
+	LCD_BLON_DE2,
+	LCD_Contrast_DE1,
+	LCD_E,
+	LCD_ON_DE2,
+	LCD_RS,
+	LCD_RW,
+	LCDDataOut,
+	LDS_L,
+	LDS_OUT_L,
+	OnChipRamSelect_H,
+	OutPortE,
+	RedLEDSA,
+	RedLEDSB,
+	RedLEDSC,
+	RedOut,
+	ResetOut,
+	RomSelect_H,
+	RS232_TxData,
+	RW_OUT,
+	sdram_a,
+	sdram_ba,
+	sdram_cas_n,
+	sdram_cke,
+	sdram_clock,
+	sdram_cs_n,
+	sdram_dq,
+	sdram_dqm,
+	sdram_ras_n,
+	sdram_we_n,
+	SRam_CE_L,
+	SRam_Data,
+	SRam_LB_L,
+	SRam_OE_L,
+	SRam_UB_L,
+	SRam_WE_L,
+	SRamAddress,
+	UDS_L,
+	UDS_OUT_L,
+	vert_sync_out,
+	VideoDAC_Blank_L,
+	VideoDac_Clock,
+	VideoDac_Sync_L,
+	VideoRamSelect_H,
+	sampler_rx
+);
+input [31:0] Address_OUT;
+input  AS_L;
+input  AS_OUT_L;
+input  BG_L;
+input  BGACK_L;
+input [9:0] BlueOut;
+input  BR_L;
+input  CPU_RW;
+input  CPUClock;
+input [15:0] DMA_DataOut;
+input  DramDtack_L;
+input  DramSelect_H;
+input  Dtack_L;
+input [21:0] FlashAddress;
+input  FlashCE_L;
+input [7:0] FlashData;
+input  FlashOE_L;
+input  FlashReset_L;
+input  FlashWE_L;
+input [7:0] GreenLEDS;
+input [9:0] GreenOut;
+input [6:0] HexDisplay0;
+input [6:0] HexDisplay1;
+input [6:0] HexDisplay2;
+input [6:0] HexDisplay3;
+input [6:0] HexDisplay4;
+input [6:0] HexDisplay5;
+input [6:0] HexDisplay6;
+input [6:0] HexDisplay7;
+input  horiz_sync_out;
+input  LCD_BLON_DE2;
+input  LCD_Contrast_DE1;
+input  LCD_E;
+input  LCD_ON_DE2;
+input  LCD_RS;
+input  LCD_RW;
+input [7:0] LCDDataOut;
+input  LDS_L;
+input  LDS_OUT_L;
+input  OnChipRamSelect_H;
+input [7:0] OutPortE;
+input [7:0] RedLEDSA;
+input [7:0] RedLEDSB;
+input [7:0] RedLEDSC;
+input [9:0] RedOut;
+input  ResetOut;
+input  RomSelect_H;
+input  RS232_TxData;
+input  RW_OUT;
+input [11:0] sdram_a;
+input [1:0] sdram_ba;
+input  sdram_cas_n;
+input  sdram_cke;
+input  sdram_clock;
+input  sdram_cs_n;
+input [15:0] sdram_dq;
+input [1:0] sdram_dqm;
+input  sdram_ras_n;
+input  sdram_we_n;
+input  SRam_CE_L;
+input [15:0] SRam_Data;
+input  SRam_LB_L;
+input  SRam_OE_L;
+input  SRam_UB_L;
+input  SRam_WE_L;
+input [17:0] SRamAddress;
+input  UDS_L;
+input  UDS_OUT_L;
+input  vert_sync_out;
+input  VideoDAC_Blank_L;
+input  VideoDac_Clock;
+input  VideoDac_Sync_L;
+input  VideoRamSelect_H;
+input sampler_rx;
+
+reg [31:0] Address_OUT_expected;
+reg  AS_L_expected;
+reg  AS_OUT_L_expected;
+reg  BG_L_expected;
+reg  BGACK_L_expected;
+reg [9:0] BlueOut_expected;
+reg  BR_L_expected;
+reg  CPU_RW_expected;
+reg  CPUClock_expected;
+reg [15:0] DMA_DataOut_expected;
+reg  DramDtack_L_expected;
+reg  DramSelect_H_expected;
+reg  Dtack_L_expected;
+reg [21:0] FlashAddress_expected;
+reg  FlashCE_L_expected;
+reg [7:0] FlashData_expected;
+reg  FlashOE_L_expected;
+reg  FlashReset_L_expected;
+reg  FlashWE_L_expected;
+reg [7:0] GreenLEDS_expected;
+reg [9:0] GreenOut_expected;
+reg [6:0] HexDisplay0_expected;
+reg [6:0] HexDisplay1_expected;
+reg [6:0] HexDisplay2_expected;
+reg [6:0] HexDisplay3_expected;
+reg [6:0] HexDisplay4_expected;
+reg [6:0] HexDisplay5_expected;
+reg [6:0] HexDisplay6_expected;
+reg [6:0] HexDisplay7_expected;
+reg  horiz_sync_out_expected;
+reg  LCD_BLON_DE2_expected;
+reg  LCD_Contrast_DE1_expected;
+reg  LCD_E_expected;
+reg  LCD_ON_DE2_expected;
+reg  LCD_RS_expected;
+reg  LCD_RW_expected;
+reg [7:0] LCDDataOut_expected;
+reg  LDS_L_expected;
+reg  LDS_OUT_L_expected;
+reg  OnChipRamSelect_H_expected;
+reg [7:0] OutPortE_expected;
+reg [7:0] RedLEDSA_expected;
+reg [7:0] RedLEDSB_expected;
+reg [7:0] RedLEDSC_expected;
+reg [9:0] RedOut_expected;
+reg  ResetOut_expected;
+reg  RomSelect_H_expected;
+reg  RS232_TxData_expected;
+reg  RW_OUT_expected;
+reg [11:0] sdram_a_expected;
+reg [1:0] sdram_ba_expected;
+reg  sdram_cas_n_expected;
+reg  sdram_cke_expected;
+reg  sdram_clock_expected;
+reg  sdram_cs_n_expected;
+reg [15:0] sdram_dq_expected;
+reg [1:0] sdram_dqm_expected;
+reg  sdram_ras_n_expected;
+reg  sdram_we_n_expected;
+reg  SRam_CE_L_expected;
+reg [15:0] SRam_Data_expected;
+reg  SRam_LB_L_expected;
+reg  SRam_OE_L_expected;
+reg  SRam_UB_L_expected;
+reg  SRam_WE_L_expected;
+reg [17:0] SRamAddress_expected;
+reg  UDS_L_expected;
+reg  UDS_OUT_L_expected;
+reg  vert_sync_out_expected;
+reg  VideoDAC_Blank_L_expected;
+reg  VideoDac_Clock_expected;
+reg  VideoDac_Sync_L_expected;
+reg  VideoRamSelect_H_expected;
+
+reg [31:0] Address_OUT_prev;
+reg  AS_L_prev;
+reg  AS_OUT_L_prev;
+reg  BG_L_prev;
+reg  BGACK_L_prev;
+reg [9:0] BlueOut_prev;
+reg  BR_L_prev;
+reg  CPU_RW_prev;
+reg  CPUClock_prev;
+reg [15:0] DMA_DataOut_prev;
+reg  DramDtack_L_prev;
+reg  DramSelect_H_prev;
+reg  Dtack_L_prev;
+reg [21:0] FlashAddress_prev;
+reg  FlashCE_L_prev;
+reg [7:0] FlashData_prev;
+reg  FlashOE_L_prev;
+reg  FlashReset_L_prev;
+reg  FlashWE_L_prev;
+reg [7:0] GreenLEDS_prev;
+reg [9:0] GreenOut_prev;
+reg [6:0] HexDisplay0_prev;
+reg [6:0] HexDisplay1_prev;
+reg [6:0] HexDisplay2_prev;
+reg [6:0] HexDisplay3_prev;
+reg [6:0] HexDisplay4_prev;
+reg [6:0] HexDisplay5_prev;
+reg [6:0] HexDisplay6_prev;
+reg [6:0] HexDisplay7_prev;
+reg  horiz_sync_out_prev;
+reg  LCD_BLON_DE2_prev;
+reg  LCD_Contrast_DE1_prev;
+reg  LCD_E_prev;
+reg  LCD_ON_DE2_prev;
+reg  LCD_RS_prev;
+reg  LCD_RW_prev;
+reg [7:0] LCDDataOut_prev;
+reg  LDS_L_prev;
+reg  LDS_OUT_L_prev;
+reg  OnChipRamSelect_H_prev;
+reg [7:0] OutPortE_prev;
+reg [7:0] RedLEDSA_prev;
+reg [7:0] RedLEDSB_prev;
+reg [7:0] RedLEDSC_prev;
+reg [9:0] RedOut_prev;
+reg  ResetOut_prev;
+reg  RomSelect_H_prev;
+reg  RS232_TxData_prev;
+reg  RW_OUT_prev;
+reg [11:0] sdram_a_prev;
+reg [1:0] sdram_ba_prev;
+reg  sdram_cas_n_prev;
+reg  sdram_cke_prev;
+reg  sdram_clock_prev;
+reg  sdram_cs_n_prev;
+reg [15:0] sdram_dq_prev;
+reg [1:0] sdram_dqm_prev;
+reg  sdram_ras_n_prev;
+reg  sdram_we_n_prev;
+reg  SRam_CE_L_prev;
+reg [15:0] SRam_Data_prev;
+reg  SRam_LB_L_prev;
+reg  SRam_OE_L_prev;
+reg  SRam_UB_L_prev;
+reg  SRam_WE_L_prev;
+reg [17:0] SRamAddress_prev;
+reg  UDS_L_prev;
+reg  UDS_OUT_L_prev;
+reg  vert_sync_out_prev;
+reg  VideoDAC_Blank_L_prev;
+reg  VideoDac_Clock_prev;
+reg  VideoDac_Sync_L_prev;
+reg  VideoRamSelect_H_prev;
+
+reg [31:0] Address_OUT_expected_prev;
+reg  AS_L_expected_prev;
+reg  BG_L_expected_prev;
+reg  BGACK_L_expected_prev;
+reg  BR_L_expected_prev;
+reg  CPU_RW_expected_prev;
+reg  CPUClock_expected_prev;
+reg  DramDtack_L_expected_prev;
+reg  Dtack_L_expected_prev;
+reg  LDS_L_expected_prev;
+reg  ResetOut_expected_prev;
+reg [11:0] sdram_a_expected_prev;
+reg [1:0] sdram_ba_expected_prev;
+reg  sdram_cas_n_expected_prev;
+reg  sdram_cke_expected_prev;
+reg  sdram_clock_expected_prev;
+reg  sdram_cs_n_expected_prev;
+reg [1:0] sdram_dqm_expected_prev;
+reg  sdram_ras_n_expected_prev;
+reg  sdram_we_n_expected_prev;
+reg  UDS_L_expected_prev;
+
+reg [31:0] last_Address_OUT_exp;
+reg  last_AS_L_exp;
+reg  last_BG_L_exp;
+reg  last_BGACK_L_exp;
+reg  last_BR_L_exp;
+reg  last_CPU_RW_exp;
+reg  last_CPUClock_exp;
+reg  last_DramDtack_L_exp;
+reg  last_Dtack_L_exp;
+reg  last_LDS_L_exp;
+reg  last_ResetOut_exp;
+reg [11:0] last_sdram_a_exp;
+reg [1:0] last_sdram_ba_exp;
+reg  last_sdram_cas_n_exp;
+reg  last_sdram_cke_exp;
+reg  last_sdram_clock_exp;
+reg  last_sdram_cs_n_exp;
+reg [1:0] last_sdram_dqm_exp;
+reg  last_sdram_ras_n_exp;
+reg  last_sdram_we_n_exp;
+reg  last_UDS_L_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:73] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 73'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	Address_OUT_prev = Address_OUT;
+	AS_L_prev = AS_L;
+	AS_OUT_L_prev = AS_OUT_L;
+	BG_L_prev = BG_L;
+	BGACK_L_prev = BGACK_L;
+	BlueOut_prev = BlueOut;
+	BR_L_prev = BR_L;
+	CPU_RW_prev = CPU_RW;
+	CPUClock_prev = CPUClock;
+	DMA_DataOut_prev = DMA_DataOut;
+	DramDtack_L_prev = DramDtack_L;
+	DramSelect_H_prev = DramSelect_H;
+	Dtack_L_prev = Dtack_L;
+	FlashAddress_prev = FlashAddress;
+	FlashCE_L_prev = FlashCE_L;
+	FlashData_prev = FlashData;
+	FlashOE_L_prev = FlashOE_L;
+	FlashReset_L_prev = FlashReset_L;
+	FlashWE_L_prev = FlashWE_L;
+	GreenLEDS_prev = GreenLEDS;
+	GreenOut_prev = GreenOut;
+	HexDisplay0_prev = HexDisplay0;
+	HexDisplay1_prev = HexDisplay1;
+	HexDisplay2_prev = HexDisplay2;
+	HexDisplay3_prev = HexDisplay3;
+	HexDisplay4_prev = HexDisplay4;
+	HexDisplay5_prev = HexDisplay5;
+	HexDisplay6_prev = HexDisplay6;
+	HexDisplay7_prev = HexDisplay7;
+	horiz_sync_out_prev = horiz_sync_out;
+	LCD_BLON_DE2_prev = LCD_BLON_DE2;
+	LCD_Contrast_DE1_prev = LCD_Contrast_DE1;
+	LCD_E_prev = LCD_E;
+	LCD_ON_DE2_prev = LCD_ON_DE2;
+	LCD_RS_prev = LCD_RS;
+	LCD_RW_prev = LCD_RW;
+	LCDDataOut_prev = LCDDataOut;
+	LDS_L_prev = LDS_L;
+	LDS_OUT_L_prev = LDS_OUT_L;
+	OnChipRamSelect_H_prev = OnChipRamSelect_H;
+	OutPortE_prev = OutPortE;
+	RedLEDSA_prev = RedLEDSA;
+	RedLEDSB_prev = RedLEDSB;
+	RedLEDSC_prev = RedLEDSC;
+	RedOut_prev = RedOut;
+	ResetOut_prev = ResetOut;
+	RomSelect_H_prev = RomSelect_H;
+	RS232_TxData_prev = RS232_TxData;
+	RW_OUT_prev = RW_OUT;
+	sdram_a_prev = sdram_a;
+	sdram_ba_prev = sdram_ba;
+	sdram_cas_n_prev = sdram_cas_n;
+	sdram_cke_prev = sdram_cke;
+	sdram_clock_prev = sdram_clock;
+	sdram_cs_n_prev = sdram_cs_n;
+	sdram_dq_prev = sdram_dq;
+	sdram_dqm_prev = sdram_dqm;
+	sdram_ras_n_prev = sdram_ras_n;
+	sdram_we_n_prev = sdram_we_n;
+	SRam_CE_L_prev = SRam_CE_L;
+	SRam_Data_prev = SRam_Data;
+	SRam_LB_L_prev = SRam_LB_L;
+	SRam_OE_L_prev = SRam_OE_L;
+	SRam_UB_L_prev = SRam_UB_L;
+	SRam_WE_L_prev = SRam_WE_L;
+	SRamAddress_prev = SRamAddress;
+	UDS_L_prev = UDS_L;
+	UDS_OUT_L_prev = UDS_OUT_L;
+	vert_sync_out_prev = vert_sync_out;
+	VideoDAC_Blank_L_prev = VideoDAC_Blank_L;
+	VideoDac_Clock_prev = VideoDac_Clock;
+	VideoDac_Sync_L_prev = VideoDac_Sync_L;
+	VideoRamSelect_H_prev = VideoRamSelect_H;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	Address_OUT_expected_prev = Address_OUT_expected;
+	AS_L_expected_prev = AS_L_expected;
+	BG_L_expected_prev = BG_L_expected;
+	BGACK_L_expected_prev = BGACK_L_expected;
+	BR_L_expected_prev = BR_L_expected;
+	CPU_RW_expected_prev = CPU_RW_expected;
+	CPUClock_expected_prev = CPUClock_expected;
+	DramDtack_L_expected_prev = DramDtack_L_expected;
+	Dtack_L_expected_prev = Dtack_L_expected;
+	LDS_L_expected_prev = LDS_L_expected;
+	ResetOut_expected_prev = ResetOut_expected;
+	sdram_a_expected_prev = sdram_a_expected;
+	sdram_ba_expected_prev = sdram_ba_expected;
+	sdram_cas_n_expected_prev = sdram_cas_n_expected;
+	sdram_cke_expected_prev = sdram_cke_expected;
+	sdram_clock_expected_prev = sdram_clock_expected;
+	sdram_cs_n_expected_prev = sdram_cs_n_expected;
+	sdram_dqm_expected_prev = sdram_dqm_expected;
+	sdram_ras_n_expected_prev = sdram_ras_n_expected;
+	sdram_we_n_expected_prev = sdram_we_n_expected;
+	UDS_L_expected_prev = UDS_L_expected;
+end
+
+
+
+// expected ResetOut
+initial
+begin
+	ResetOut_expected = 1'bX;
+end 
+
+// expected CPUClock
+initial
+begin
+	CPUClock_expected = 1'bX;
+end 
+
+// expected CPU_RW
+initial
+begin
+	CPU_RW_expected = 1'bX;
+end 
+
+// expected AS_L
+initial
+begin
+	AS_L_expected = 1'bX;
+end 
+
+// expected LDS_L
+initial
+begin
+	LDS_L_expected = 1'bX;
+end 
+
+// expected UDS_L
+initial
+begin
+	UDS_L_expected = 1'bX;
+end 
+
+// expected Dtack_L
+initial
+begin
+	Dtack_L_expected = 1'bX;
+end 
+
+// expected sdram_clock
+initial
+begin
+	sdram_clock_expected = 1'bX;
+end 
+// expected sdram_a[ 11 ]
+initial
+begin
+	sdram_a_expected[11] = 1'bX;
+end 
+// expected sdram_a[ 10 ]
+initial
+begin
+	sdram_a_expected[10] = 1'bX;
+end 
+// expected sdram_a[ 9 ]
+initial
+begin
+	sdram_a_expected[9] = 1'bX;
+end 
+// expected sdram_a[ 8 ]
+initial
+begin
+	sdram_a_expected[8] = 1'bX;
+end 
+// expected sdram_a[ 7 ]
+initial
+begin
+	sdram_a_expected[7] = 1'bX;
+end 
+// expected sdram_a[ 6 ]
+initial
+begin
+	sdram_a_expected[6] = 1'bX;
+end 
+// expected sdram_a[ 5 ]
+initial
+begin
+	sdram_a_expected[5] = 1'bX;
+end 
+// expected sdram_a[ 4 ]
+initial
+begin
+	sdram_a_expected[4] = 1'bX;
+end 
+// expected sdram_a[ 3 ]
+initial
+begin
+	sdram_a_expected[3] = 1'bX;
+end 
+// expected sdram_a[ 2 ]
+initial
+begin
+	sdram_a_expected[2] = 1'bX;
+end 
+// expected sdram_a[ 1 ]
+initial
+begin
+	sdram_a_expected[1] = 1'bX;
+end 
+// expected sdram_a[ 0 ]
+initial
+begin
+	sdram_a_expected[0] = 1'bX;
+end 
+// expected sdram_ba[ 1 ]
+initial
+begin
+	sdram_ba_expected[1] = 1'bX;
+end 
+// expected sdram_ba[ 0 ]
+initial
+begin
+	sdram_ba_expected[0] = 1'bX;
+end 
+
+// expected sdram_we_n
+initial
+begin
+	sdram_we_n_expected = 1'bX;
+end 
+
+// expected sdram_ras_n
+initial
+begin
+	sdram_ras_n_expected = 1'bX;
+end 
+
+// expected sdram_cas_n
+initial
+begin
+	sdram_cas_n_expected = 1'bX;
+end 
+
+// expected sdram_cke
+initial
+begin
+	sdram_cke_expected = 1'bX;
+end 
+
+// expected sdram_cs_n
+initial
+begin
+	sdram_cs_n_expected = 1'bX;
+end 
+// expected sdram_dqm[ 1 ]
+initial
+begin
+	sdram_dqm_expected[1] = 1'bX;
+end 
+// expected sdram_dqm[ 0 ]
+initial
+begin
+	sdram_dqm_expected[0] = 1'bX;
+end 
+
+// expected DramDtack_L
+initial
+begin
+	DramDtack_L_expected = 1'bX;
+end 
+
+// expected BR_L
+initial
+begin
+	BR_L_expected = 1'bX;
+end 
+
+// expected BG_L
+initial
+begin
+	BG_L_expected = 1'bX;
+end 
+
+// expected BGACK_L
+initial
+begin
+	BGACK_L_expected = 1'bX;
+end 
+// expected Address_OUT[ 31 ]
+initial
+begin
+	Address_OUT_expected[31] = 1'bX;
+end 
+// expected Address_OUT[ 30 ]
+initial
+begin
+	Address_OUT_expected[30] = 1'bX;
+end 
+// expected Address_OUT[ 29 ]
+initial
+begin
+	Address_OUT_expected[29] = 1'bX;
+end 
+// expected Address_OUT[ 28 ]
+initial
+begin
+	Address_OUT_expected[28] = 1'bX;
+end 
+// expected Address_OUT[ 27 ]
+initial
+begin
+	Address_OUT_expected[27] = 1'bX;
+end 
+// expected Address_OUT[ 26 ]
+initial
+begin
+	Address_OUT_expected[26] = 1'bX;
+end 
+// expected Address_OUT[ 25 ]
+initial
+begin
+	Address_OUT_expected[25] = 1'bX;
+end 
+// expected Address_OUT[ 24 ]
+initial
+begin
+	Address_OUT_expected[24] = 1'bX;
+end 
+// expected Address_OUT[ 23 ]
+initial
+begin
+	Address_OUT_expected[23] = 1'bX;
+end 
+// expected Address_OUT[ 22 ]
+initial
+begin
+	Address_OUT_expected[22] = 1'bX;
+end 
+// expected Address_OUT[ 21 ]
+initial
+begin
+	Address_OUT_expected[21] = 1'bX;
+end 
+// expected Address_OUT[ 20 ]
+initial
+begin
+	Address_OUT_expected[20] = 1'bX;
+end 
+// expected Address_OUT[ 19 ]
+initial
+begin
+	Address_OUT_expected[19] = 1'bX;
+end 
+// expected Address_OUT[ 18 ]
+initial
+begin
+	Address_OUT_expected[18] = 1'bX;
+end 
+// expected Address_OUT[ 17 ]
+initial
+begin
+	Address_OUT_expected[17] = 1'bX;
+end 
+// expected Address_OUT[ 16 ]
+initial
+begin
+	Address_OUT_expected[16] = 1'bX;
+end 
+// expected Address_OUT[ 15 ]
+initial
+begin
+	Address_OUT_expected[15] = 1'bX;
+end 
+// expected Address_OUT[ 14 ]
+initial
+begin
+	Address_OUT_expected[14] = 1'bX;
+end 
+// expected Address_OUT[ 13 ]
+initial
+begin
+	Address_OUT_expected[13] = 1'bX;
+end 
+// expected Address_OUT[ 12 ]
+initial
+begin
+	Address_OUT_expected[12] = 1'bX;
+end 
+// expected Address_OUT[ 11 ]
+initial
+begin
+	Address_OUT_expected[11] = 1'bX;
+end 
+// expected Address_OUT[ 10 ]
+initial
+begin
+	Address_OUT_expected[10] = 1'bX;
+end 
+// expected Address_OUT[ 9 ]
+initial
+begin
+	Address_OUT_expected[9] = 1'bX;
+end 
+// expected Address_OUT[ 8 ]
+initial
+begin
+	Address_OUT_expected[8] = 1'bX;
+end 
+// expected Address_OUT[ 7 ]
+initial
+begin
+	Address_OUT_expected[7] = 1'bX;
+end 
+// expected Address_OUT[ 6 ]
+initial
+begin
+	Address_OUT_expected[6] = 1'bX;
+end 
+// expected Address_OUT[ 5 ]
+initial
+begin
+	Address_OUT_expected[5] = 1'bX;
+end 
+// expected Address_OUT[ 4 ]
+initial
+begin
+	Address_OUT_expected[4] = 1'bX;
+end 
+// expected Address_OUT[ 3 ]
+initial
+begin
+	Address_OUT_expected[3] = 1'bX;
+end 
+// expected Address_OUT[ 2 ]
+initial
+begin
+	Address_OUT_expected[2] = 1'bX;
+end 
+// expected Address_OUT[ 1 ]
+initial
+begin
+	Address_OUT_expected[1] = 1'bX;
+end 
+// expected Address_OUT[ 0 ]
+initial
+begin
+	Address_OUT_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(Address_OUT_expected or Address_OUT or AS_L_expected or AS_L or AS_OUT_L_expected or AS_OUT_L or BG_L_expected or BG_L or BGACK_L_expected or BGACK_L or BlueOut_expected or BlueOut or BR_L_expected or BR_L or CPU_RW_expected or CPU_RW or CPUClock_expected or CPUClock or DMA_DataOut_expected or DMA_DataOut or DramDtack_L_expected or DramDtack_L or DramSelect_H_expected or DramSelect_H or Dtack_L_expected or Dtack_L or FlashAddress_expected or FlashAddress or FlashCE_L_expected or FlashCE_L or FlashData_expected or FlashData or FlashOE_L_expected or FlashOE_L or FlashReset_L_expected or FlashReset_L or FlashWE_L_expected or FlashWE_L or GreenLEDS_expected or GreenLEDS or GreenOut_expected or GreenOut or HexDisplay0_expected or HexDisplay0 or HexDisplay1_expected or HexDisplay1 or HexDisplay2_expected or HexDisplay2 or HexDisplay3_expected or HexDisplay3 or HexDisplay4_expected or HexDisplay4 or HexDisplay5_expected or HexDisplay5 or HexDisplay6_expected or HexDisplay6 or HexDisplay7_expected or HexDisplay7 or horiz_sync_out_expected or horiz_sync_out or LCD_BLON_DE2_expected or LCD_BLON_DE2 or LCD_Contrast_DE1_expected or LCD_Contrast_DE1 or LCD_E_expected or LCD_E or LCD_ON_DE2_expected or LCD_ON_DE2 or LCD_RS_expected or LCD_RS or LCD_RW_expected or LCD_RW or LCDDataOut_expected or LCDDataOut or LDS_L_expected or LDS_L or LDS_OUT_L_expected or LDS_OUT_L or OnChipRamSelect_H_expected or OnChipRamSelect_H or OutPortE_expected or OutPortE or RedLEDSA_expected or RedLEDSA or RedLEDSB_expected or RedLEDSB or RedLEDSC_expected or RedLEDSC or RedOut_expected or RedOut or ResetOut_expected or ResetOut or RomSelect_H_expected or RomSelect_H or RS232_TxData_expected or RS232_TxData or RW_OUT_expected or RW_OUT or sdram_a_expected or sdram_a or sdram_ba_expected or sdram_ba or sdram_cas_n_expected or sdram_cas_n or sdram_cke_expected or sdram_cke or sdram_clock_expected or sdram_clock or sdram_cs_n_expected or sdram_cs_n or sdram_dq_expected or sdram_dq or sdram_dqm_expected or sdram_dqm or sdram_ras_n_expected or sdram_ras_n or sdram_we_n_expected or sdram_we_n or SRam_CE_L_expected or SRam_CE_L or SRam_Data_expected or SRam_Data or SRam_LB_L_expected or SRam_LB_L or SRam_OE_L_expected or SRam_OE_L or SRam_UB_L_expected or SRam_UB_L or SRam_WE_L_expected or SRam_WE_L or SRamAddress_expected or SRamAddress or UDS_L_expected or UDS_L or UDS_OUT_L_expected or UDS_OUT_L or vert_sync_out_expected or vert_sync_out or VideoDAC_Blank_L_expected or VideoDAC_Blank_L or VideoDac_Clock_expected or VideoDac_Clock or VideoDac_Sync_L_expected or VideoDac_Sync_L or VideoRamSelect_H_expected or VideoRamSelect_H)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected Address_OUT = %b | expected AS_L = %b | expected AS_OUT_L = %b | expected BG_L = %b | expected BGACK_L = %b | expected BlueOut = %b | expected BR_L = %b | expected CPU_RW = %b | expected CPUClock = %b | expected DMA_DataOut = %b | expected DramDtack_L = %b | expected DramSelect_H = %b | expected Dtack_L = %b | expected FlashAddress = %b | expected FlashCE_L = %b | expected FlashData = %b | expected FlashOE_L = %b | expected FlashReset_L = %b | expected FlashWE_L = %b | expected GreenLEDS = %b | expected GreenOut = %b | expected HexDisplay0 = %b | expected HexDisplay1 = %b | expected HexDisplay2 = %b | expected HexDisplay3 = %b | expected HexDisplay4 = %b | expected HexDisplay5 = %b | expected HexDisplay6 = %b | expected HexDisplay7 = %b | expected horiz_sync_out = %b | expected LCD_BLON_DE2 = %b | expected LCD_Contrast_DE1 = %b | expected LCD_E = %b | expected LCD_ON_DE2 = %b | expected LCD_RS = %b | expected LCD_RW = %b | expected LCDDataOut = %b | expected LDS_L = %b | expected LDS_OUT_L = %b | expected OnChipRamSelect_H = %b | expected OutPortE = %b | expected RedLEDSA = %b | expected RedLEDSB = %b | expected RedLEDSC = %b | expected RedOut = %b | expected ResetOut = %b | expected RomSelect_H = %b | expected RS232_TxData = %b | expected RW_OUT = %b | expected sdram_a = %b | expected sdram_ba = %b | expected sdram_cas_n = %b | expected sdram_cke = %b | expected sdram_clock = %b | expected sdram_cs_n = %b | expected sdram_dq = %b | expected sdram_dqm = %b | expected sdram_ras_n = %b | expected sdram_we_n = %b | expected SRam_CE_L = %b | expected SRam_Data = %b | expected SRam_LB_L = %b | expected SRam_OE_L = %b | expected SRam_UB_L = %b | expected SRam_WE_L = %b | expected SRamAddress = %b | expected UDS_L = %b | expected UDS_OUT_L = %b | expected vert_sync_out = %b | expected VideoDAC_Blank_L = %b | expected VideoDac_Clock = %b | expected VideoDac_Sync_L = %b | expected VideoRamSelect_H = %b | ",Address_OUT_expected_prev,AS_L_expected_prev,AS_OUT_L_expected_prev,BG_L_expected_prev,BGACK_L_expected_prev,BlueOut_expected_prev,BR_L_expected_prev,CPU_RW_expected_prev,CPUClock_expected_prev,DMA_DataOut_expected_prev,DramDtack_L_expected_prev,DramSelect_H_expected_prev,Dtack_L_expected_prev,FlashAddress_expected_prev,FlashCE_L_expected_prev,FlashData_expected_prev,FlashOE_L_expected_prev,FlashReset_L_expected_prev,FlashWE_L_expected_prev,GreenLEDS_expected_prev,GreenOut_expected_prev,HexDisplay0_expected_prev,HexDisplay1_expected_prev,HexDisplay2_expected_prev,HexDisplay3_expected_prev,HexDisplay4_expected_prev,HexDisplay5_expected_prev,HexDisplay6_expected_prev,HexDisplay7_expected_prev,horiz_sync_out_expected_prev,LCD_BLON_DE2_expected_prev,LCD_Contrast_DE1_expected_prev,LCD_E_expected_prev,LCD_ON_DE2_expected_prev,LCD_RS_expected_prev,LCD_RW_expected_prev,LCDDataOut_expected_prev,LDS_L_expected_prev,LDS_OUT_L_expected_prev,OnChipRamSelect_H_expected_prev,OutPortE_expected_prev,RedLEDSA_expected_prev,RedLEDSB_expected_prev,RedLEDSC_expected_prev,RedOut_expected_prev,ResetOut_expected_prev,RomSelect_H_expected_prev,RS232_TxData_expected_prev,RW_OUT_expected_prev,sdram_a_expected_prev,sdram_ba_expected_prev,sdram_cas_n_expected_prev,sdram_cke_expected_prev,sdram_clock_expected_prev,sdram_cs_n_expected_prev,sdram_dq_expected_prev,sdram_dqm_expected_prev,sdram_ras_n_expected_prev,sdram_we_n_expected_prev,SRam_CE_L_expected_prev,SRam_Data_expected_prev,SRam_LB_L_expected_prev,SRam_OE_L_expected_prev,SRam_UB_L_expected_prev,SRam_WE_L_expected_prev,SRamAddress_expected_prev,UDS_L_expected_prev,UDS_OUT_L_expected_prev,vert_sync_out_expected_prev,VideoDAC_Blank_L_expected_prev,VideoDac_Clock_expected_prev,VideoDac_Sync_L_expected_prev,VideoRamSelect_H_expected_prev);
+	$display("| real Address_OUT = %b | real AS_L = %b | real AS_OUT_L = %b | real BG_L = %b | real BGACK_L = %b | real BlueOut = %b | real BR_L = %b | real CPU_RW = %b | real CPUClock = %b | real DMA_DataOut = %b | real DramDtack_L = %b | real DramSelect_H = %b | real Dtack_L = %b | real FlashAddress = %b | real FlashCE_L = %b | real FlashData = %b | real FlashOE_L = %b | real FlashReset_L = %b | real FlashWE_L = %b | real GreenLEDS = %b | real GreenOut = %b | real HexDisplay0 = %b | real HexDisplay1 = %b | real HexDisplay2 = %b | real HexDisplay3 = %b | real HexDisplay4 = %b | real HexDisplay5 = %b | real HexDisplay6 = %b | real HexDisplay7 = %b | real horiz_sync_out = %b | real LCD_BLON_DE2 = %b | real LCD_Contrast_DE1 = %b | real LCD_E = %b | real LCD_ON_DE2 = %b | real LCD_RS = %b | real LCD_RW = %b | real LCDDataOut = %b | real LDS_L = %b | real LDS_OUT_L = %b | real OnChipRamSelect_H = %b | real OutPortE = %b | real RedLEDSA = %b | real RedLEDSB = %b | real RedLEDSC = %b | real RedOut = %b | real ResetOut = %b | real RomSelect_H = %b | real RS232_TxData = %b | real RW_OUT = %b | real sdram_a = %b | real sdram_ba = %b | real sdram_cas_n = %b | real sdram_cke = %b | real sdram_clock = %b | real sdram_cs_n = %b | real sdram_dq = %b | real sdram_dqm = %b | real sdram_ras_n = %b | real sdram_we_n = %b | real SRam_CE_L = %b | real SRam_Data = %b | real SRam_LB_L = %b | real SRam_OE_L = %b | real SRam_UB_L = %b | real SRam_WE_L = %b | real SRamAddress = %b | real UDS_L = %b | real UDS_OUT_L = %b | real vert_sync_out = %b | real VideoDAC_Blank_L = %b | real VideoDac_Clock = %b | real VideoDac_Sync_L = %b | real VideoRamSelect_H = %b | ",Address_OUT_prev,AS_L_prev,AS_OUT_L_prev,BG_L_prev,BGACK_L_prev,BlueOut_prev,BR_L_prev,CPU_RW_prev,CPUClock_prev,DMA_DataOut_prev,DramDtack_L_prev,DramSelect_H_prev,Dtack_L_prev,FlashAddress_prev,FlashCE_L_prev,FlashData_prev,FlashOE_L_prev,FlashReset_L_prev,FlashWE_L_prev,GreenLEDS_prev,GreenOut_prev,HexDisplay0_prev,HexDisplay1_prev,HexDisplay2_prev,HexDisplay3_prev,HexDisplay4_prev,HexDisplay5_prev,HexDisplay6_prev,HexDisplay7_prev,horiz_sync_out_prev,LCD_BLON_DE2_prev,LCD_Contrast_DE1_prev,LCD_E_prev,LCD_ON_DE2_prev,LCD_RS_prev,LCD_RW_prev,LCDDataOut_prev,LDS_L_prev,LDS_OUT_L_prev,OnChipRamSelect_H_prev,OutPortE_prev,RedLEDSA_prev,RedLEDSB_prev,RedLEDSC_prev,RedOut_prev,ResetOut_prev,RomSelect_H_prev,RS232_TxData_prev,RW_OUT_prev,sdram_a_prev,sdram_ba_prev,sdram_cas_n_prev,sdram_cke_prev,sdram_clock_prev,sdram_cs_n_prev,sdram_dq_prev,sdram_dqm_prev,sdram_ras_n_prev,sdram_we_n_prev,SRam_CE_L_prev,SRam_Data_prev,SRam_LB_L_prev,SRam_OE_L_prev,SRam_UB_L_prev,SRam_WE_L_prev,SRamAddress_prev,UDS_L_prev,UDS_OUT_L_prev,vert_sync_out_prev,VideoDAC_Blank_L_prev,VideoDac_Clock_prev,VideoDac_Sync_L_prev,VideoRamSelect_H_prev);
+`endif
+	if (
+		( Address_OUT_expected_prev[0] !== 1'bx ) && ( Address_OUT_prev[0] !== Address_OUT_expected_prev[0] )
+		&& ((Address_OUT_expected_prev[0] !== last_Address_OUT_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[0] = Address_OUT_expected_prev[0];
+	end
+	if (
+		( Address_OUT_expected_prev[1] !== 1'bx ) && ( Address_OUT_prev[1] !== Address_OUT_expected_prev[1] )
+		&& ((Address_OUT_expected_prev[1] !== last_Address_OUT_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[1] = Address_OUT_expected_prev[1];
+	end
+	if (
+		( Address_OUT_expected_prev[2] !== 1'bx ) && ( Address_OUT_prev[2] !== Address_OUT_expected_prev[2] )
+		&& ((Address_OUT_expected_prev[2] !== last_Address_OUT_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[2] = Address_OUT_expected_prev[2];
+	end
+	if (
+		( Address_OUT_expected_prev[3] !== 1'bx ) && ( Address_OUT_prev[3] !== Address_OUT_expected_prev[3] )
+		&& ((Address_OUT_expected_prev[3] !== last_Address_OUT_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[3] = Address_OUT_expected_prev[3];
+	end
+	if (
+		( Address_OUT_expected_prev[4] !== 1'bx ) && ( Address_OUT_prev[4] !== Address_OUT_expected_prev[4] )
+		&& ((Address_OUT_expected_prev[4] !== last_Address_OUT_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[4] = Address_OUT_expected_prev[4];
+	end
+	if (
+		( Address_OUT_expected_prev[5] !== 1'bx ) && ( Address_OUT_prev[5] !== Address_OUT_expected_prev[5] )
+		&& ((Address_OUT_expected_prev[5] !== last_Address_OUT_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[5] = Address_OUT_expected_prev[5];
+	end
+	if (
+		( Address_OUT_expected_prev[6] !== 1'bx ) && ( Address_OUT_prev[6] !== Address_OUT_expected_prev[6] )
+		&& ((Address_OUT_expected_prev[6] !== last_Address_OUT_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[6] = Address_OUT_expected_prev[6];
+	end
+	if (
+		( Address_OUT_expected_prev[7] !== 1'bx ) && ( Address_OUT_prev[7] !== Address_OUT_expected_prev[7] )
+		&& ((Address_OUT_expected_prev[7] !== last_Address_OUT_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[7] = Address_OUT_expected_prev[7];
+	end
+	if (
+		( Address_OUT_expected_prev[8] !== 1'bx ) && ( Address_OUT_prev[8] !== Address_OUT_expected_prev[8] )
+		&& ((Address_OUT_expected_prev[8] !== last_Address_OUT_exp[8]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[8] = Address_OUT_expected_prev[8];
+	end
+	if (
+		( Address_OUT_expected_prev[9] !== 1'bx ) && ( Address_OUT_prev[9] !== Address_OUT_expected_prev[9] )
+		&& ((Address_OUT_expected_prev[9] !== last_Address_OUT_exp[9]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[9] = Address_OUT_expected_prev[9];
+	end
+	if (
+		( Address_OUT_expected_prev[10] !== 1'bx ) && ( Address_OUT_prev[10] !== Address_OUT_expected_prev[10] )
+		&& ((Address_OUT_expected_prev[10] !== last_Address_OUT_exp[10]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[10] = Address_OUT_expected_prev[10];
+	end
+	if (
+		( Address_OUT_expected_prev[11] !== 1'bx ) && ( Address_OUT_prev[11] !== Address_OUT_expected_prev[11] )
+		&& ((Address_OUT_expected_prev[11] !== last_Address_OUT_exp[11]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[11] = Address_OUT_expected_prev[11];
+	end
+	if (
+		( Address_OUT_expected_prev[12] !== 1'bx ) && ( Address_OUT_prev[12] !== Address_OUT_expected_prev[12] )
+		&& ((Address_OUT_expected_prev[12] !== last_Address_OUT_exp[12]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[12] = Address_OUT_expected_prev[12];
+	end
+	if (
+		( Address_OUT_expected_prev[13] !== 1'bx ) && ( Address_OUT_prev[13] !== Address_OUT_expected_prev[13] )
+		&& ((Address_OUT_expected_prev[13] !== last_Address_OUT_exp[13]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[13] = Address_OUT_expected_prev[13];
+	end
+	if (
+		( Address_OUT_expected_prev[14] !== 1'bx ) && ( Address_OUT_prev[14] !== Address_OUT_expected_prev[14] )
+		&& ((Address_OUT_expected_prev[14] !== last_Address_OUT_exp[14]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[14] = Address_OUT_expected_prev[14];
+	end
+	if (
+		( Address_OUT_expected_prev[15] !== 1'bx ) && ( Address_OUT_prev[15] !== Address_OUT_expected_prev[15] )
+		&& ((Address_OUT_expected_prev[15] !== last_Address_OUT_exp[15]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[15] = Address_OUT_expected_prev[15];
+	end
+	if (
+		( Address_OUT_expected_prev[16] !== 1'bx ) && ( Address_OUT_prev[16] !== Address_OUT_expected_prev[16] )
+		&& ((Address_OUT_expected_prev[16] !== last_Address_OUT_exp[16]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[16] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[16] = Address_OUT_expected_prev[16];
+	end
+	if (
+		( Address_OUT_expected_prev[17] !== 1'bx ) && ( Address_OUT_prev[17] !== Address_OUT_expected_prev[17] )
+		&& ((Address_OUT_expected_prev[17] !== last_Address_OUT_exp[17]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[17] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[17] = Address_OUT_expected_prev[17];
+	end
+	if (
+		( Address_OUT_expected_prev[18] !== 1'bx ) && ( Address_OUT_prev[18] !== Address_OUT_expected_prev[18] )
+		&& ((Address_OUT_expected_prev[18] !== last_Address_OUT_exp[18]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[18] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[18] = Address_OUT_expected_prev[18];
+	end
+	if (
+		( Address_OUT_expected_prev[19] !== 1'bx ) && ( Address_OUT_prev[19] !== Address_OUT_expected_prev[19] )
+		&& ((Address_OUT_expected_prev[19] !== last_Address_OUT_exp[19]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[19] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[19] = Address_OUT_expected_prev[19];
+	end
+	if (
+		( Address_OUT_expected_prev[20] !== 1'bx ) && ( Address_OUT_prev[20] !== Address_OUT_expected_prev[20] )
+		&& ((Address_OUT_expected_prev[20] !== last_Address_OUT_exp[20]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[20] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[20] = Address_OUT_expected_prev[20];
+	end
+	if (
+		( Address_OUT_expected_prev[21] !== 1'bx ) && ( Address_OUT_prev[21] !== Address_OUT_expected_prev[21] )
+		&& ((Address_OUT_expected_prev[21] !== last_Address_OUT_exp[21]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[21] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[21] = Address_OUT_expected_prev[21];
+	end
+	if (
+		( Address_OUT_expected_prev[22] !== 1'bx ) && ( Address_OUT_prev[22] !== Address_OUT_expected_prev[22] )
+		&& ((Address_OUT_expected_prev[22] !== last_Address_OUT_exp[22]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[22] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[22] = Address_OUT_expected_prev[22];
+	end
+	if (
+		( Address_OUT_expected_prev[23] !== 1'bx ) && ( Address_OUT_prev[23] !== Address_OUT_expected_prev[23] )
+		&& ((Address_OUT_expected_prev[23] !== last_Address_OUT_exp[23]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[23] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[23] = Address_OUT_expected_prev[23];
+	end
+	if (
+		( Address_OUT_expected_prev[24] !== 1'bx ) && ( Address_OUT_prev[24] !== Address_OUT_expected_prev[24] )
+		&& ((Address_OUT_expected_prev[24] !== last_Address_OUT_exp[24]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[24] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[24] = Address_OUT_expected_prev[24];
+	end
+	if (
+		( Address_OUT_expected_prev[25] !== 1'bx ) && ( Address_OUT_prev[25] !== Address_OUT_expected_prev[25] )
+		&& ((Address_OUT_expected_prev[25] !== last_Address_OUT_exp[25]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[25] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[25] = Address_OUT_expected_prev[25];
+	end
+	if (
+		( Address_OUT_expected_prev[26] !== 1'bx ) && ( Address_OUT_prev[26] !== Address_OUT_expected_prev[26] )
+		&& ((Address_OUT_expected_prev[26] !== last_Address_OUT_exp[26]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[26] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[26] = Address_OUT_expected_prev[26];
+	end
+	if (
+		( Address_OUT_expected_prev[27] !== 1'bx ) && ( Address_OUT_prev[27] !== Address_OUT_expected_prev[27] )
+		&& ((Address_OUT_expected_prev[27] !== last_Address_OUT_exp[27]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[27] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[27] = Address_OUT_expected_prev[27];
+	end
+	if (
+		( Address_OUT_expected_prev[28] !== 1'bx ) && ( Address_OUT_prev[28] !== Address_OUT_expected_prev[28] )
+		&& ((Address_OUT_expected_prev[28] !== last_Address_OUT_exp[28]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[28] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[28] = Address_OUT_expected_prev[28];
+	end
+	if (
+		( Address_OUT_expected_prev[29] !== 1'bx ) && ( Address_OUT_prev[29] !== Address_OUT_expected_prev[29] )
+		&& ((Address_OUT_expected_prev[29] !== last_Address_OUT_exp[29]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[29] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[29] = Address_OUT_expected_prev[29];
+	end
+	if (
+		( Address_OUT_expected_prev[30] !== 1'bx ) && ( Address_OUT_prev[30] !== Address_OUT_expected_prev[30] )
+		&& ((Address_OUT_expected_prev[30] !== last_Address_OUT_exp[30]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[30] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[30] = Address_OUT_expected_prev[30];
+	end
+	if (
+		( Address_OUT_expected_prev[31] !== 1'bx ) && ( Address_OUT_prev[31] !== Address_OUT_expected_prev[31] )
+		&& ((Address_OUT_expected_prev[31] !== last_Address_OUT_exp[31]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Address_OUT[31] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Address_OUT_expected_prev);
+		$display ("     Real value = %b", Address_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Address_OUT_exp[31] = Address_OUT_expected_prev[31];
+	end
+	if (
+		( AS_L_expected_prev !== 1'bx ) && ( AS_L_prev !== AS_L_expected_prev )
+		&& ((AS_L_expected_prev !== last_AS_L_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AS_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AS_L_expected_prev);
+		$display ("     Real value = %b", AS_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_AS_L_exp = AS_L_expected_prev;
+	end
+	if (
+		( BG_L_expected_prev !== 1'bx ) && ( BG_L_prev !== BG_L_expected_prev )
+		&& ((BG_L_expected_prev !== last_BG_L_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BG_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BG_L_expected_prev);
+		$display ("     Real value = %b", BG_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_BG_L_exp = BG_L_expected_prev;
+	end
+	if (
+		( BGACK_L_expected_prev !== 1'bx ) && ( BGACK_L_prev !== BGACK_L_expected_prev )
+		&& ((BGACK_L_expected_prev !== last_BGACK_L_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BGACK_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BGACK_L_expected_prev);
+		$display ("     Real value = %b", BGACK_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_BGACK_L_exp = BGACK_L_expected_prev;
+	end
+	if (
+		( BR_L_expected_prev !== 1'bx ) && ( BR_L_prev !== BR_L_expected_prev )
+		&& ((BR_L_expected_prev !== last_BR_L_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BR_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BR_L_expected_prev);
+		$display ("     Real value = %b", BR_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_BR_L_exp = BR_L_expected_prev;
+	end
+	if (
+		( CPU_RW_expected_prev !== 1'bx ) && ( CPU_RW_prev !== CPU_RW_expected_prev )
+		&& ((CPU_RW_expected_prev !== last_CPU_RW_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CPU_RW :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CPU_RW_expected_prev);
+		$display ("     Real value = %b", CPU_RW_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_CPU_RW_exp = CPU_RW_expected_prev;
+	end
+	if (
+		( CPUClock_expected_prev !== 1'bx ) && ( CPUClock_prev !== CPUClock_expected_prev )
+		&& ((CPUClock_expected_prev !== last_CPUClock_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CPUClock :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CPUClock_expected_prev);
+		$display ("     Real value = %b", CPUClock_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_CPUClock_exp = CPUClock_expected_prev;
+	end
+	if (
+		( DramDtack_L_expected_prev !== 1'bx ) && ( DramDtack_L_prev !== DramDtack_L_expected_prev )
+		&& ((DramDtack_L_expected_prev !== last_DramDtack_L_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port DramDtack_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DramDtack_L_expected_prev);
+		$display ("     Real value = %b", DramDtack_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_DramDtack_L_exp = DramDtack_L_expected_prev;
+	end
+	if (
+		( Dtack_L_expected_prev !== 1'bx ) && ( Dtack_L_prev !== Dtack_L_expected_prev )
+		&& ((Dtack_L_expected_prev !== last_Dtack_L_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Dtack_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Dtack_L_expected_prev);
+		$display ("     Real value = %b", Dtack_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_Dtack_L_exp = Dtack_L_expected_prev;
+	end
+	if (
+		( LDS_L_expected_prev !== 1'bx ) && ( LDS_L_prev !== LDS_L_expected_prev )
+		&& ((LDS_L_expected_prev !== last_LDS_L_exp) ||
+			on_first_change[38])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port LDS_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", LDS_L_expected_prev);
+		$display ("     Real value = %b", LDS_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[38] = 1'b0;
+		last_LDS_L_exp = LDS_L_expected_prev;
+	end
+	if (
+		( ResetOut_expected_prev !== 1'bx ) && ( ResetOut_prev !== ResetOut_expected_prev )
+		&& ((ResetOut_expected_prev !== last_ResetOut_exp) ||
+			on_first_change[46])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ResetOut :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ResetOut_expected_prev);
+		$display ("     Real value = %b", ResetOut_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[46] = 1'b0;
+		last_ResetOut_exp = ResetOut_expected_prev;
+	end
+	if (
+		( sdram_a_expected_prev[0] !== 1'bx ) && ( sdram_a_prev[0] !== sdram_a_expected_prev[0] )
+		&& ((sdram_a_expected_prev[0] !== last_sdram_a_exp[0]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[0] = sdram_a_expected_prev[0];
+	end
+	if (
+		( sdram_a_expected_prev[1] !== 1'bx ) && ( sdram_a_prev[1] !== sdram_a_expected_prev[1] )
+		&& ((sdram_a_expected_prev[1] !== last_sdram_a_exp[1]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[1] = sdram_a_expected_prev[1];
+	end
+	if (
+		( sdram_a_expected_prev[2] !== 1'bx ) && ( sdram_a_prev[2] !== sdram_a_expected_prev[2] )
+		&& ((sdram_a_expected_prev[2] !== last_sdram_a_exp[2]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[2] = sdram_a_expected_prev[2];
+	end
+	if (
+		( sdram_a_expected_prev[3] !== 1'bx ) && ( sdram_a_prev[3] !== sdram_a_expected_prev[3] )
+		&& ((sdram_a_expected_prev[3] !== last_sdram_a_exp[3]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[3] = sdram_a_expected_prev[3];
+	end
+	if (
+		( sdram_a_expected_prev[4] !== 1'bx ) && ( sdram_a_prev[4] !== sdram_a_expected_prev[4] )
+		&& ((sdram_a_expected_prev[4] !== last_sdram_a_exp[4]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[4] = sdram_a_expected_prev[4];
+	end
+	if (
+		( sdram_a_expected_prev[5] !== 1'bx ) && ( sdram_a_prev[5] !== sdram_a_expected_prev[5] )
+		&& ((sdram_a_expected_prev[5] !== last_sdram_a_exp[5]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[5] = sdram_a_expected_prev[5];
+	end
+	if (
+		( sdram_a_expected_prev[6] !== 1'bx ) && ( sdram_a_prev[6] !== sdram_a_expected_prev[6] )
+		&& ((sdram_a_expected_prev[6] !== last_sdram_a_exp[6]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[6] = sdram_a_expected_prev[6];
+	end
+	if (
+		( sdram_a_expected_prev[7] !== 1'bx ) && ( sdram_a_prev[7] !== sdram_a_expected_prev[7] )
+		&& ((sdram_a_expected_prev[7] !== last_sdram_a_exp[7]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[7] = sdram_a_expected_prev[7];
+	end
+	if (
+		( sdram_a_expected_prev[8] !== 1'bx ) && ( sdram_a_prev[8] !== sdram_a_expected_prev[8] )
+		&& ((sdram_a_expected_prev[8] !== last_sdram_a_exp[8]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[8] = sdram_a_expected_prev[8];
+	end
+	if (
+		( sdram_a_expected_prev[9] !== 1'bx ) && ( sdram_a_prev[9] !== sdram_a_expected_prev[9] )
+		&& ((sdram_a_expected_prev[9] !== last_sdram_a_exp[9]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[9] = sdram_a_expected_prev[9];
+	end
+	if (
+		( sdram_a_expected_prev[10] !== 1'bx ) && ( sdram_a_prev[10] !== sdram_a_expected_prev[10] )
+		&& ((sdram_a_expected_prev[10] !== last_sdram_a_exp[10]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[10] = sdram_a_expected_prev[10];
+	end
+	if (
+		( sdram_a_expected_prev[11] !== 1'bx ) && ( sdram_a_prev[11] !== sdram_a_expected_prev[11] )
+		&& ((sdram_a_expected_prev[11] !== last_sdram_a_exp[11]) ||
+			on_first_change[50])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_a[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_a_expected_prev);
+		$display ("     Real value = %b", sdram_a_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[50] = 1'b0;
+		last_sdram_a_exp[11] = sdram_a_expected_prev[11];
+	end
+	if (
+		( sdram_ba_expected_prev[0] !== 1'bx ) && ( sdram_ba_prev[0] !== sdram_ba_expected_prev[0] )
+		&& ((sdram_ba_expected_prev[0] !== last_sdram_ba_exp[0]) ||
+			on_first_change[51])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_ba[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_ba_expected_prev);
+		$display ("     Real value = %b", sdram_ba_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[51] = 1'b0;
+		last_sdram_ba_exp[0] = sdram_ba_expected_prev[0];
+	end
+	if (
+		( sdram_ba_expected_prev[1] !== 1'bx ) && ( sdram_ba_prev[1] !== sdram_ba_expected_prev[1] )
+		&& ((sdram_ba_expected_prev[1] !== last_sdram_ba_exp[1]) ||
+			on_first_change[51])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_ba[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_ba_expected_prev);
+		$display ("     Real value = %b", sdram_ba_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[51] = 1'b0;
+		last_sdram_ba_exp[1] = sdram_ba_expected_prev[1];
+	end
+	if (
+		( sdram_cas_n_expected_prev !== 1'bx ) && ( sdram_cas_n_prev !== sdram_cas_n_expected_prev )
+		&& ((sdram_cas_n_expected_prev !== last_sdram_cas_n_exp) ||
+			on_first_change[52])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_cas_n :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_cas_n_expected_prev);
+		$display ("     Real value = %b", sdram_cas_n_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[52] = 1'b0;
+		last_sdram_cas_n_exp = sdram_cas_n_expected_prev;
+	end
+	if (
+		( sdram_cke_expected_prev !== 1'bx ) && ( sdram_cke_prev !== sdram_cke_expected_prev )
+		&& ((sdram_cke_expected_prev !== last_sdram_cke_exp) ||
+			on_first_change[53])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_cke :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_cke_expected_prev);
+		$display ("     Real value = %b", sdram_cke_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[53] = 1'b0;
+		last_sdram_cke_exp = sdram_cke_expected_prev;
+	end
+	if (
+		( sdram_clock_expected_prev !== 1'bx ) && ( sdram_clock_prev !== sdram_clock_expected_prev )
+		&& ((sdram_clock_expected_prev !== last_sdram_clock_exp) ||
+			on_first_change[54])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_clock :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_clock_expected_prev);
+		$display ("     Real value = %b", sdram_clock_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[54] = 1'b0;
+		last_sdram_clock_exp = sdram_clock_expected_prev;
+	end
+	if (
+		( sdram_cs_n_expected_prev !== 1'bx ) && ( sdram_cs_n_prev !== sdram_cs_n_expected_prev )
+		&& ((sdram_cs_n_expected_prev !== last_sdram_cs_n_exp) ||
+			on_first_change[55])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_cs_n :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_cs_n_expected_prev);
+		$display ("     Real value = %b", sdram_cs_n_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[55] = 1'b0;
+		last_sdram_cs_n_exp = sdram_cs_n_expected_prev;
+	end
+	if (
+		( sdram_dqm_expected_prev[0] !== 1'bx ) && ( sdram_dqm_prev[0] !== sdram_dqm_expected_prev[0] )
+		&& ((sdram_dqm_expected_prev[0] !== last_sdram_dqm_exp[0]) ||
+			on_first_change[57])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_dqm[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_dqm_expected_prev);
+		$display ("     Real value = %b", sdram_dqm_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[57] = 1'b0;
+		last_sdram_dqm_exp[0] = sdram_dqm_expected_prev[0];
+	end
+	if (
+		( sdram_dqm_expected_prev[1] !== 1'bx ) && ( sdram_dqm_prev[1] !== sdram_dqm_expected_prev[1] )
+		&& ((sdram_dqm_expected_prev[1] !== last_sdram_dqm_exp[1]) ||
+			on_first_change[57])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_dqm[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_dqm_expected_prev);
+		$display ("     Real value = %b", sdram_dqm_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[57] = 1'b0;
+		last_sdram_dqm_exp[1] = sdram_dqm_expected_prev[1];
+	end
+	if (
+		( sdram_ras_n_expected_prev !== 1'bx ) && ( sdram_ras_n_prev !== sdram_ras_n_expected_prev )
+		&& ((sdram_ras_n_expected_prev !== last_sdram_ras_n_exp) ||
+			on_first_change[58])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_ras_n :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_ras_n_expected_prev);
+		$display ("     Real value = %b", sdram_ras_n_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[58] = 1'b0;
+		last_sdram_ras_n_exp = sdram_ras_n_expected_prev;
+	end
+	if (
+		( sdram_we_n_expected_prev !== 1'bx ) && ( sdram_we_n_prev !== sdram_we_n_expected_prev )
+		&& ((sdram_we_n_expected_prev !== last_sdram_we_n_exp) ||
+			on_first_change[59])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sdram_we_n :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sdram_we_n_expected_prev);
+		$display ("     Real value = %b", sdram_we_n_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[59] = 1'b0;
+		last_sdram_we_n_exp = sdram_we_n_expected_prev;
+	end
+	if (
+		( UDS_L_expected_prev !== 1'bx ) && ( UDS_L_prev !== UDS_L_expected_prev )
+		&& ((UDS_L_expected_prev !== last_UDS_L_exp) ||
+			on_first_change[67])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port UDS_L :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", UDS_L_expected_prev);
+		$display ("     Real value = %b", UDS_L_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[67] = 1'b0;
+		last_UDS_L_exp = UDS_L_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#100000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module MC68K_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Bus_Request_SW8_H;
+reg CLK_50Mhz;
+reg [7:0] treg_FlashData;
+reg [7:0] InPortA;
+reg [7:0] InPortB;
+reg [7:0] InPortC;
+reg [7:0] InPortE;
+reg IRQ2_Key2_L;
+reg IRQ4_Key1_L;
+reg RESET_Key0_L;
+reg RS232_RxData;
+reg [15:0] treg_sdram_dq;
+reg [15:0] treg_SRam_Data;
+reg Trace_Request_Key3_L;
+// wires                                               
+wire [31:0] Address_OUT;
+wire AS_L;
+wire AS_OUT_L;
+wire BG_L;
+wire BGACK_L;
+wire [9:0] BlueOut;
+wire BR_L;
+wire CPU_RW;
+wire CPUClock;
+wire [15:0] DMA_DataOut;
+wire DramDtack_L;
+wire DramSelect_H;
+wire Dtack_L;
+wire [21:0] FlashAddress;
+wire FlashCE_L;
+wire [7:0] FlashData;
+wire FlashOE_L;
+wire FlashReset_L;
+wire FlashWE_L;
+wire [7:0] GreenLEDS;
+wire [9:0] GreenOut;
+wire [6:0] HexDisplay0;
+wire [6:0] HexDisplay1;
+wire [6:0] HexDisplay2;
+wire [6:0] HexDisplay3;
+wire [6:0] HexDisplay4;
+wire [6:0] HexDisplay5;
+wire [6:0] HexDisplay6;
+wire [6:0] HexDisplay7;
+wire horiz_sync_out;
+wire LCD_BLON_DE2;
+wire LCD_Contrast_DE1;
+wire LCD_E;
+wire LCD_ON_DE2;
+wire LCD_RS;
+wire LCD_RW;
+wire [7:0] LCDDataOut;
+wire LDS_L;
+wire LDS_OUT_L;
+wire OnChipRamSelect_H;
+wire [7:0] OutPortE;
+wire [7:0] RedLEDSA;
+wire [7:0] RedLEDSB;
+wire [7:0] RedLEDSC;
+wire [9:0] RedOut;
+wire ResetOut;
+wire RomSelect_H;
+wire RS232_TxData;
+wire RW_OUT;
+wire [11:0] sdram_a;
+wire [1:0] sdram_ba;
+wire sdram_cas_n;
+wire sdram_cke;
+wire sdram_clock;
+wire sdram_cs_n;
+wire [15:0] sdram_dq;
+wire [1:0] sdram_dqm;
+wire sdram_ras_n;
+wire sdram_we_n;
+wire SRam_CE_L;
+wire [15:0] SRam_Data;
+wire SRam_LB_L;
+wire SRam_OE_L;
+wire SRam_UB_L;
+wire SRam_WE_L;
+wire [17:0] SRamAddress;
+wire UDS_L;
+wire UDS_OUT_L;
+wire vert_sync_out;
+wire VideoDAC_Blank_L;
+wire VideoDac_Clock;
+wire VideoDac_Sync_L;
+wire VideoRamSelect_H;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+assign FlashData = treg_FlashData;
+assign sdram_dq = treg_sdram_dq;
+assign SRam_Data = treg_SRam_Data;
+MC68K i1 (
+// port map - connection between master ports and signals/registers   
+	.Address_OUT(Address_OUT),
+	.AS_L(AS_L),
+	.AS_OUT_L(AS_OUT_L),
+	.BG_L(BG_L),
+	.BGACK_L(BGACK_L),
+	.BlueOut(BlueOut),
+	.BR_L(BR_L),
+	.Bus_Request_SW8_H(Bus_Request_SW8_H),
+	.CLK_50Mhz(CLK_50Mhz),
+	.CPU_RW(CPU_RW),
+	.CPUClock(CPUClock),
+	.DMA_DataOut(DMA_DataOut),
+	.DramDtack_L(DramDtack_L),
+	.DramSelect_H(DramSelect_H),
+	.Dtack_L(Dtack_L),
+	.FlashAddress(FlashAddress),
+	.FlashCE_L(FlashCE_L),
+	.FlashData(FlashData),
+	.FlashOE_L(FlashOE_L),
+	.FlashReset_L(FlashReset_L),
+	.FlashWE_L(FlashWE_L),
+	.GreenLEDS(GreenLEDS),
+	.GreenOut(GreenOut),
+	.HexDisplay0(HexDisplay0),
+	.HexDisplay1(HexDisplay1),
+	.HexDisplay2(HexDisplay2),
+	.HexDisplay3(HexDisplay3),
+	.HexDisplay4(HexDisplay4),
+	.HexDisplay5(HexDisplay5),
+	.HexDisplay6(HexDisplay6),
+	.HexDisplay7(HexDisplay7),
+	.horiz_sync_out(horiz_sync_out),
+	.InPortA(InPortA),
+	.InPortB(InPortB),
+	.InPortC(InPortC),
+	.InPortE(InPortE),
+	.IRQ2_Key2_L(IRQ2_Key2_L),
+	.IRQ4_Key1_L(IRQ4_Key1_L),
+	.LCD_BLON_DE2(LCD_BLON_DE2),
+	.LCD_Contrast_DE1(LCD_Contrast_DE1),
+	.LCD_E(LCD_E),
+	.LCD_ON_DE2(LCD_ON_DE2),
+	.LCD_RS(LCD_RS),
+	.LCD_RW(LCD_RW),
+	.LCDDataOut(LCDDataOut),
+	.LDS_L(LDS_L),
+	.LDS_OUT_L(LDS_OUT_L),
+	.OnChipRamSelect_H(OnChipRamSelect_H),
+	.OutPortE(OutPortE),
+	.RedLEDSA(RedLEDSA),
+	.RedLEDSB(RedLEDSB),
+	.RedLEDSC(RedLEDSC),
+	.RedOut(RedOut),
+	.RESET_Key0_L(RESET_Key0_L),
+	.ResetOut(ResetOut),
+	.RomSelect_H(RomSelect_H),
+	.RS232_RxData(RS232_RxData),
+	.RS232_TxData(RS232_TxData),
+	.RW_OUT(RW_OUT),
+	.sdram_a(sdram_a),
+	.sdram_ba(sdram_ba),
+	.sdram_cas_n(sdram_cas_n),
+	.sdram_cke(sdram_cke),
+	.sdram_clock(sdram_clock),
+	.sdram_cs_n(sdram_cs_n),
+	.sdram_dq(sdram_dq),
+	.sdram_dqm(sdram_dqm),
+	.sdram_ras_n(sdram_ras_n),
+	.sdram_we_n(sdram_we_n),
+	.SRam_CE_L(SRam_CE_L),
+	.SRam_Data(SRam_Data),
+	.SRam_LB_L(SRam_LB_L),
+	.SRam_OE_L(SRam_OE_L),
+	.SRam_UB_L(SRam_UB_L),
+	.SRam_WE_L(SRam_WE_L),
+	.SRamAddress(SRamAddress),
+	.Trace_Request_Key3_L(Trace_Request_Key3_L),
+	.UDS_L(UDS_L),
+	.UDS_OUT_L(UDS_OUT_L),
+	.vert_sync_out(vert_sync_out),
+	.VideoDAC_Blank_L(VideoDAC_Blank_L),
+	.VideoDac_Clock(VideoDac_Clock),
+	.VideoDac_Sync_L(VideoDac_Sync_L),
+	.VideoRamSelect_H(VideoRamSelect_H)
+);
+
+// RESET_Key0_L
+initial
+begin
+	RESET_Key0_L = 1'b0;
+	RESET_Key0_L = #90000 1'b1;
+end 
+
+// Bus_Request_SW8_H
+initial
+begin
+	Bus_Request_SW8_H = 1'b0;
+end 
+
+// IRQ4_Key1_L
+initial
+begin
+	IRQ4_Key1_L = 1'b0;
+end 
+
+// Trace_Request_Key3_L
+initial
+begin
+	Trace_Request_Key3_L = 1'b1;
+end 
+
+// CLK_50Mhz
+always
+begin
+	CLK_50Mhz = 1'b0;
+	CLK_50Mhz = #10000 1'b1;
+	#10000;
+end 
+
+MC68K_vlg_sample_tst tb_sample (
+	.Bus_Request_SW8_H(Bus_Request_SW8_H),
+	.CLK_50Mhz(CLK_50Mhz),
+	.FlashData(FlashData),
+	.InPortA(InPortA),
+	.InPortB(InPortB),
+	.InPortC(InPortC),
+	.InPortE(InPortE),
+	.IRQ2_Key2_L(IRQ2_Key2_L),
+	.IRQ4_Key1_L(IRQ4_Key1_L),
+	.RESET_Key0_L(RESET_Key0_L),
+	.RS232_RxData(RS232_RxData),
+	.sdram_dq(sdram_dq),
+	.SRam_Data(SRam_Data),
+	.Trace_Request_Key3_L(Trace_Request_Key3_L),
+	.sampler_tx(sampler)
+);
+
+MC68K_vlg_check_tst tb_out(
+	.Address_OUT(Address_OUT),
+	.AS_L(AS_L),
+	.AS_OUT_L(AS_OUT_L),
+	.BG_L(BG_L),
+	.BGACK_L(BGACK_L),
+	.BlueOut(BlueOut),
+	.BR_L(BR_L),
+	.CPU_RW(CPU_RW),
+	.CPUClock(CPUClock),
+	.DMA_DataOut(DMA_DataOut),
+	.DramDtack_L(DramDtack_L),
+	.DramSelect_H(DramSelect_H),
+	.Dtack_L(Dtack_L),
+	.FlashAddress(FlashAddress),
+	.FlashCE_L(FlashCE_L),
+	.FlashData(FlashData),
+	.FlashOE_L(FlashOE_L),
+	.FlashReset_L(FlashReset_L),
+	.FlashWE_L(FlashWE_L),
+	.GreenLEDS(GreenLEDS),
+	.GreenOut(GreenOut),
+	.HexDisplay0(HexDisplay0),
+	.HexDisplay1(HexDisplay1),
+	.HexDisplay2(HexDisplay2),
+	.HexDisplay3(HexDisplay3),
+	.HexDisplay4(HexDisplay4),
+	.HexDisplay5(HexDisplay5),
+	.HexDisplay6(HexDisplay6),
+	.HexDisplay7(HexDisplay7),
+	.horiz_sync_out(horiz_sync_out),
+	.LCD_BLON_DE2(LCD_BLON_DE2),
+	.LCD_Contrast_DE1(LCD_Contrast_DE1),
+	.LCD_E(LCD_E),
+	.LCD_ON_DE2(LCD_ON_DE2),
+	.LCD_RS(LCD_RS),
+	.LCD_RW(LCD_RW),
+	.LCDDataOut(LCDDataOut),
+	.LDS_L(LDS_L),
+	.LDS_OUT_L(LDS_OUT_L),
+	.OnChipRamSelect_H(OnChipRamSelect_H),
+	.OutPortE(OutPortE),
+	.RedLEDSA(RedLEDSA),
+	.RedLEDSB(RedLEDSB),
+	.RedLEDSC(RedLEDSC),
+	.RedOut(RedOut),
+	.ResetOut(ResetOut),
+	.RomSelect_H(RomSelect_H),
+	.RS232_TxData(RS232_TxData),
+	.RW_OUT(RW_OUT),
+	.sdram_a(sdram_a),
+	.sdram_ba(sdram_ba),
+	.sdram_cas_n(sdram_cas_n),
+	.sdram_cke(sdram_cke),
+	.sdram_clock(sdram_clock),
+	.sdram_cs_n(sdram_cs_n),
+	.sdram_dq(sdram_dq),
+	.sdram_dqm(sdram_dqm),
+	.sdram_ras_n(sdram_ras_n),
+	.sdram_we_n(sdram_we_n),
+	.SRam_CE_L(SRam_CE_L),
+	.SRam_Data(SRam_Data),
+	.SRam_LB_L(SRam_LB_L),
+	.SRam_OE_L(SRam_OE_L),
+	.SRam_UB_L(SRam_UB_L),
+	.SRam_WE_L(SRam_WE_L),
+	.SRamAddress(SRamAddress),
+	.UDS_L(UDS_L),
+	.UDS_OUT_L(UDS_OUT_L),
+	.vert_sync_out(vert_sync_out),
+	.VideoDAC_Blank_L(VideoDAC_Blank_L),
+	.VideoDac_Clock(VideoDac_Clock),
+	.VideoDac_Sync_L(VideoDac_Sync_L),
+	.VideoRamSelect_H(VideoRamSelect_H),
+	.sampler_rx(sampler)
+);
+endmodule
+

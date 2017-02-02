@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+short x[10] ;
+
+void main()
+{
+    int i ;
+
+    for(i = 0; i < 10; i ++)
+        x[i] = i ;
+
+}

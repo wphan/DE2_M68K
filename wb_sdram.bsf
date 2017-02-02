@@ -1,0 +1,258 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 264 336)
+	(text "wb_sdram" (rect 5 0 54 12)(font "Arial" ))
+	(text "inst" (rect 8 304 25 316)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "wb_clk_i" (rect 0 0 41 12)(font "Arial" ))
+		(text "wb_clk_i" (rect 21 27 62 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "wb_rst_i" (rect 0 0 40 12)(font "Arial" ))
+		(text "wb_rst_i" (rect 21 43 61 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "wb_adr_i[31..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "wb_adr_i[31..0]" (rect 21 59 95 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "wb_dat_i[15..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "wb_dat_i[15..0]" (rect 21 75 95 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "wb_sel_i[1..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "wb_sel_i[1..0]" (rect 21 91 88 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "wb_we_i" (rect 0 0 40 12)(font "Arial" ))
+		(text "wb_we_i" (rect 21 107 61 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "wb_cyc_i" (rect 0 0 46 12)(font "Arial" ))
+		(text "wb_cyc_i" (rect 21 123 67 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "wb_stb_i" (rect 0 0 42 12)(font "Arial" ))
+		(text "wb_stb_i" (rect 21 139 63 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "wb_dat_o[15..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "wb_dat_o[15..0]" (rect 150 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "wb_ack_o" (rect 0 0 48 12)(font "Arial" ))
+		(text "wb_ack_o" (rect 179 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 1))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "wb_err_o" (rect 0 0 43 12)(font "Arial" ))
+		(text "wb_err_o" (rect 184 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 1))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "wb_rty_o" (rect 0 0 44 12)(font "Arial" ))
+		(text "wb_rty_o" (rect 183 75 227 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 1))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "Timer_out[31..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "Timer_out[31..0]" (rect 147 91 227 103)(font "Arial" ))
+		(line (pt 248 96)(pt 232 96)(line_width 3))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "Refresh_timer_reg[31..0]" (rect 0 0 123 12)(font "Arial" ))
+		(text "Refresh_timer_reg[31..0]" (rect 104 107 227 119)(font "Arial" ))
+		(line (pt 248 112)(pt 232 112)(line_width 3))
+	)
+	(port
+		(pt 248 128)
+		(output)
+		(text "State_out[31..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "State_out[31..0]" (rect 148 123 227 135)(font "Arial" ))
+		(line (pt 248 128)(pt 232 128)(line_width 3))
+	)
+	(port
+		(pt 248 144)
+		(output)
+		(text "sdram_cke" (rect 0 0 54 12)(font "Arial" ))
+		(text "sdram_cke" (rect 173 139 227 151)(font "Arial" ))
+		(line (pt 248 144)(pt 232 144)(line_width 1))
+	)
+	(port
+		(pt 248 160)
+		(output)
+		(text "sdram_cs_n" (rect 0 0 60 12)(font "Arial" ))
+		(text "sdram_cs_n" (rect 167 155 227 167)(font "Arial" ))
+		(line (pt 248 160)(pt 232 160)(line_width 1))
+	)
+	(port
+		(pt 248 176)
+		(output)
+		(text "sdram_ras_n" (rect 0 0 63 12)(font "Arial" ))
+		(text "sdram_ras_n" (rect 164 171 227 183)(font "Arial" ))
+		(line (pt 248 176)(pt 232 176)(line_width 1))
+	)
+	(port
+		(pt 248 192)
+		(output)
+		(text "sdram_cas_n" (rect 0 0 66 12)(font "Arial" ))
+		(text "sdram_cas_n" (rect 161 187 227 199)(font "Arial" ))
+		(line (pt 248 192)(pt 232 192)(line_width 1))
+	)
+	(port
+		(pt 248 208)
+		(output)
+		(text "sdram_we_n" (rect 0 0 61 12)(font "Arial" ))
+		(text "sdram_we_n" (rect 166 203 227 215)(font "Arial" ))
+		(line (pt 248 208)(pt 232 208)(line_width 1))
+	)
+	(port
+		(pt 248 224)
+		(output)
+		(text "sdram_a[11..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "sdram_a[11..0]" (rect 153 219 227 231)(font "Arial" ))
+		(line (pt 248 224)(pt 232 224)(line_width 3))
+	)
+	(port
+		(pt 248 240)
+		(output)
+		(text "sdram_ba[1..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "sdram_ba[1..0]" (rect 153 235 227 247)(font "Arial" ))
+		(line (pt 248 240)(pt 232 240)(line_width 3))
+	)
+	(port
+		(pt 248 256)
+		(output)
+		(text "sdram_dqm[1..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "sdram_dqm[1..0]" (rect 144 251 227 263)(font "Arial" ))
+		(line (pt 248 256)(pt 232 256)(line_width 3))
+	)
+	(port
+		(pt 248 272)
+		(bidir)
+		(text "sdram_dq[15..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "sdram_dq[15..0]" (rect 147 267 227 279)(font "Arial" ))
+		(line (pt 248 272)(pt 232 272)(line_width 3))
+	)
+	(parameter
+		"DATA_BITS"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"COLADDR_BITS"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"BANKADDR_BITS"
+		"2"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"ROWADDR_BITS"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"CAS_LATENCY"
+		"010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CLOCK_RATE"
+		"50000000"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TIME_Trp"
+		"18"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TIME_Trcd"
+		"18"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TIME_Trfc"
+		"58"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TIME_Refresh"
+		"15625"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TIME_InitDelay"
+		"2000000"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TIME_InitFinal"
+		"20"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 232 304)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 264 -64 364 16))
+)

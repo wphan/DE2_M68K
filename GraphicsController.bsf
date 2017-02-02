@@ -1,0 +1,183 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 304 256)
+	(text "GraphicsController" (rect 5 0 78 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 12 12)(font "Arial" ))
+		(text "Clk" (rect 21 27 33 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Reset_L" (rect 0 0 36 12)(font "Arial" ))
+		(text "Reset_L" (rect 21 43 57 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "AddressIn[31..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "AddressIn[31..0]" (rect 21 59 87 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn68k[15..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "DataIn68k[15..0]" (rect 21 75 84 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "AS_L" (rect 0 0 25 12)(font "Arial" ))
+		(text "AS_L" (rect 21 91 46 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "UDS_L" (rect 0 0 31 12)(font "Arial" ))
+		(text "UDS_L" (rect 21 107 52 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "LDS_L" (rect 0 0 30 12)(font "Arial" ))
+		(text "LDS_L" (rect 21 123 51 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "RW" (rect 0 0 18 12)(font "Arial" ))
+		(text "RW" (rect 21 139 39 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "GraphicsCS_L" (rect 0 0 60 12)(font "Arial" ))
+		(text "GraphicsCS_L" (rect 21 155 81 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "HSync_L" (rect 0 0 40 12)(font "Arial" ))
+		(text "HSync_L" (rect 21 171 61 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "InterleaveDraw_L" (rect 0 0 71 12)(font "Arial" ))
+		(text "InterleaveDraw_L" (rect 21 187 92 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "SRam_DataIn[15..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "SRam_DataIn[15..0]" (rect 21 203 103 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut68k[15..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "DataOut68k[15..0]" (rect 197 27 267 39)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Sram_AddressOut[17..0]" (rect 0 0 101 12)(font "Arial" ))
+		(text "Sram_AddressOut[17..0]" (rect 166 43 267 55)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Sram_DataOut[15..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "Sram_DataOut[15..0]" (rect 183 59 267 71)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64)(line_width 3))
+	)
+	(port
+		(pt 288 80)
+		(output)
+		(text "Sram_UDS_Out_L" (rect 0 0 80 12)(font "Arial" ))
+		(text "Sram_UDS_Out_L" (rect 187 75 267 87)(font "Arial" ))
+		(line (pt 288 80)(pt 272 80)(line_width 1))
+	)
+	(port
+		(pt 288 96)
+		(output)
+		(text "Sram_LDS_Out_L" (rect 0 0 79 12)(font "Arial" ))
+		(text "Sram_LDS_Out_L" (rect 188 91 267 103)(font "Arial" ))
+		(line (pt 288 96)(pt 272 96)(line_width 1))
+	)
+	(port
+		(pt 288 112)
+		(output)
+		(text "Sram_RW_Out" (rect 0 0 67 12)(font "Arial" ))
+		(text "Sram_RW_Out" (rect 200 107 267 119)(font "Arial" ))
+		(line (pt 288 112)(pt 272 112)(line_width 1))
+	)
+	(port
+		(pt 288 128)
+		(output)
+		(text "Sram_CE_L" (rect 0 0 54 12)(font "Arial" ))
+		(text "Sram_CE_L" (rect 213 123 267 135)(font "Arial" ))
+		(line (pt 288 128)(pt 272 128)(line_width 1))
+	)
+	(port
+		(pt 288 144)
+		(output)
+		(text "Sram_OE_L" (rect 0 0 54 12)(font "Arial" ))
+		(text "Sram_OE_L" (rect 213 139 267 151)(font "Arial" ))
+		(line (pt 288 144)(pt 272 144)(line_width 1))
+	)
+	(port
+		(pt 288 160)
+		(output)
+		(text "ScrollValue[9..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "ScrollValue[9..0]" (rect 203 155 267 167)(font "Arial" ))
+		(line (pt 288 160)(pt 272 160)(line_width 3))
+	)
+	(port
+		(pt 288 176)
+		(output)
+		(text "GraphicsBusy_H" (rect 0 0 69 12)(font "Arial" ))
+		(text "GraphicsBusy_H" (rect 198 171 267 183)(font "Arial" ))
+		(line (pt 288 176)(pt 272 176)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 224)(line_width 1))
+	)
+)

@@ -1,0 +1,134 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 328 208)
+	(text "StaticRamController" (rect 5 0 115 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "DataBusOut[15..0]" (rect 0 0 103 14)(font "Arial" (font_size 8)))
+		(text "DataBusOut[15..0]" (rect 21 27 124 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Address[18..1]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "Address[18..1]" (rect 21 43 105 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "AS_L" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "AS_L" (rect 21 59 52 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "RW" (rect 0 0 20 14)(font "Arial" (font_size 8)))
+		(text "RW" (rect 21 75 41 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "LDS_L" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "LDS_L" (rect 21 91 58 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "UDS_L" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "UDS_L" (rect 21 107 59 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "DE2_512kSramSelect_H" (rect 0 0 136 14)(font "Arial" (font_size 8)))
+		(text "DE2_512kSramSelect_H" (rect 21 123 157 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 312 32)
+		(output)
+		(text "DataBusIn[15..0]" (rect 0 0 93 14)(font "Arial" (font_size 8)))
+		(text "DataBusIn[15..0]" (rect 198 27 291 41)(font "Arial" (font_size 8)))
+		(line (pt 312 32)(pt 296 32)(line_width 3))
+	)
+	(port
+		(pt 312 64)
+		(output)
+		(text "SRamAddress[17..0]" (rect 0 0 118 14)(font "Arial" (font_size 8)))
+		(text "SRamAddress[17..0]" (rect 173 59 291 73)(font "Arial" (font_size 8)))
+		(line (pt 312 64)(pt 296 64)(line_width 3))
+	)
+	(port
+		(pt 312 80)
+		(output)
+		(text "SRam_OE_L" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "SRam_OE_L" (rect 221 75 291 89)(font "Arial" (font_size 8)))
+		(line (pt 312 80)(pt 296 80))
+	)
+	(port
+		(pt 312 96)
+		(output)
+		(text "SRam_CE_L" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "SRam_CE_L" (rect 222 91 291 105)(font "Arial" (font_size 8)))
+		(line (pt 312 96)(pt 296 96))
+	)
+	(port
+		(pt 312 112)
+		(output)
+		(text "SRam_WE_L" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "SRam_WE_L" (rect 218 107 291 121)(font "Arial" (font_size 8)))
+		(line (pt 312 112)(pt 296 112))
+	)
+	(port
+		(pt 312 128)
+		(output)
+		(text "SRam_LB_L" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "SRam_LB_L" (rect 222 123 291 137)(font "Arial" (font_size 8)))
+		(line (pt 312 128)(pt 296 128))
+	)
+	(port
+		(pt 312 144)
+		(output)
+		(text "SRam_UB_L" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "SRam_UB_L" (rect 221 139 291 153)(font "Arial" (font_size 8)))
+		(line (pt 312 144)(pt 296 144))
+	)
+	(port
+		(pt 312 48)
+		(bidir)
+		(text "SRam_Data[15..0]" (rect 0 0 101 14)(font "Arial" (font_size 8)))
+		(text "SRam_Data[15..0]" (rect 190 43 291 57)(font "Arial" (font_size 8)))
+		(line (pt 312 48)(pt 296 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 296 176))
+	)
+)

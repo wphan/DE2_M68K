@@ -1,0 +1,28 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all; 
+use ieee.std_logic_unsigned.all; 
+
+entity Dtack_Generator is
+	Port (
+		AS_L	: in std_logic ;  -- address strobe
+		DramSelect_H : in std_logic ;	-- from address decoder
+		FlashSelect_H : in std_logic ;
+	   DramDtack_L : in std_logic ;	-- from Dram controller
+	   FlashDtack_L : in std_logic ;	-- from Flash controller
+	   DtackOut_L : out std_logic 	-- to CPU
+	);
+end ;
+
+
+architecture bhvr of Dtack_Generator is
+Begin
+	process(AS_L, DramSelect_H, FlashSelect_H, DramDtack_L, FlashDtack_L)
+	begin
+		DtackOut_L <= '1' ;					-- default is no dtack
+		if(AS_L = '0')	then 					-- AS active
+			DtackOut_L <= '0' ;				-- assume for the moment nothing needs wait states
+		end if ;	
+	end process ;
+END ;
+

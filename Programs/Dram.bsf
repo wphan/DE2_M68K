@@ -1,0 +1,183 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 296 304)
+	(text "Dram" (rect 5 0 34 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Dram_RW" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "Dram_RW" (rect 21 27 77 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Dram_Clk24Mhz" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "Dram_Clk24Mhz" (rect 21 43 111 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Dram_Reset" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "Dram_Reset" (rect 21 59 90 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DramAddress[31..0]" (rect 0 0 114 14)(font "Arial" (font_size 8)))
+		(text "DramAddress[31..0]" (rect 21 75 135 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "DramDataIn[15..0]" (rect 0 0 100 14)(font "Arial" (font_size 8)))
+		(text "DramDataIn[15..0]" (rect 21 91 121 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "DramSelect" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "DramSelect" (rect 21 107 85 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Dram_LDS" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "Dram_LDS" (rect 21 123 81 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "Dram_UDS" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "Dram_UDS" (rect 21 139 82 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "sdram_clock" (rect 0 0 71 14)(font "Arial" (font_size 8)))
+		(text "sdram_clock" (rect 188 27 259 41)(font "Arial" (font_size 8)))
+		(line (pt 280 32)(pt 264 32)(line_width 1))
+	)
+	(port
+		(pt 280 48)
+		(output)
+		(text "DramDataOut[15..0]" (rect 0 0 110 14)(font "Arial" (font_size 8)))
+		(text "DramDataOut[15..0]" (rect 149 43 259 57)(font "Arial" (font_size 8)))
+		(line (pt 280 48)(pt 264 48)(line_width 3))
+	)
+	(port
+		(pt 280 64)
+		(output)
+		(text "sdram_cke" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "sdram_cke" (rect 197 59 259 73)(font "Arial" (font_size 8)))
+		(line (pt 280 64)(pt 264 64)(line_width 1))
+	)
+	(port
+		(pt 280 80)
+		(output)
+		(text "sdram_cs_n" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "sdram_cs_n" (rect 189 75 259 89)(font "Arial" (font_size 8)))
+		(line (pt 280 80)(pt 264 80)(line_width 1))
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "sdram_ras_n" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "sdram_ras_n" (rect 184 91 259 105)(font "Arial" (font_size 8)))
+		(line (pt 280 96)(pt 264 96)(line_width 1))
+	)
+	(port
+		(pt 280 112)
+		(output)
+		(text "sdram_cas_n" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "sdram_cas_n" (rect 182 107 259 121)(font "Arial" (font_size 8)))
+		(line (pt 280 112)(pt 264 112)(line_width 1))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "sdram_we_n" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "sdram_we_n" (rect 184 123 259 137)(font "Arial" (font_size 8)))
+		(line (pt 280 128)(pt 264 128)(line_width 1))
+	)
+	(port
+		(pt 280 144)
+		(output)
+		(text "sdram_a[11..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "sdram_a[11..0]" (rect 175 139 259 153)(font "Arial" (font_size 8)))
+		(line (pt 280 144)(pt 264 144)(line_width 3))
+	)
+	(port
+		(pt 280 160)
+		(output)
+		(text "sdram_ba[1..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "sdram_ba[1..0]" (rect 175 155 259 169)(font "Arial" (font_size 8)))
+		(line (pt 280 160)(pt 264 160)(line_width 3))
+	)
+	(port
+		(pt 280 192)
+		(output)
+		(text "DramDtack_L" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "DramDtack_L" (rect 184 187 259 201)(font "Arial" (font_size 8)))
+		(line (pt 280 192)(pt 264 192)(line_width 1))
+	)
+	(port
+		(pt 280 208)
+		(output)
+		(text "ResetOut_L" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "ResetOut_L" (rect 192 203 259 217)(font "Arial" (font_size 8)))
+		(line (pt 280 208)(pt 264 208)(line_width 1))
+	)
+	(port
+		(pt 280 224)
+		(output)
+		(text "sdram_dqm[0]" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "sdram_dqm[0]" (rect 179 219 259 233)(font "Arial" (font_size 8)))
+		(line (pt 280 224)(pt 264 224)(line_width 1))
+	)
+	(port
+		(pt 280 240)
+		(output)
+		(text "sdram_dqm[1]" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "sdram_dqm[1]" (rect 179 235 259 249)(font "Arial" (font_size 8)))
+		(line (pt 280 240)(pt 264 240)(line_width 1))
+	)
+	(port
+		(pt 280 176)
+		(bidir)
+		(text "sdram_dq[15..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "sdram_dq[15..0]" (rect 167 171 259 185)(font "Arial" (font_size 8)))
+		(line (pt 280 176)(pt 264 176)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 272)(line_width 1))
+	)
+)

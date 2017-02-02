@@ -1,0 +1,481 @@
+# do MC68K.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MC68K
+# 
+# Top level modules:
+# 	MC68K
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MC68K_vlg_sample_tst
+# -- Compiling module MC68K_vlg_check_tst
+# -- Compiling module MC68K_vlg_vec_tst
+# 
+# Top level modules:
+# 	MC68K_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.MC68K_vlg_vec_tst 
+# Loading work.MC68K_vlg_vec_tst
+# Loading work.MC68K
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_ram_block
+# Loading cycloneii_ver.cycloneii_ram_register
+# Loading cycloneii_ver.cycloneii_ram_pulse_generator
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_jtag
+# Loading work.MC68K_vlg_sample_tst
+# Loading work.MC68K_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from MC68K_v.sdo
+# ** Warning: (vsim-3017) MC68K.vt(12079): [TFMPC] - Too few port connections. Expected 91, found 87.
+# 
+#         Region: /MC68K_vlg_vec_tst/i1
+# ** Warning: (vsim-3722) MC68K.vt(12079): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# 
+# ** Warning: (vsim-3722) MC68K.vt(12079): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# 
+# ** Warning: (vsim-3722) MC68K.vt(12079): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# 
+# ** Warning: (vsim-3722) MC68K.vt(12079): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# 
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# Loading timing data from MC68K_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /MC68K_vlg_vec_tst File: MC68K.vt
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Paul  Hostname: PAUL-MACPRO  ProcessID: 7144
+# 
+#           Attempting to use alternate WLF file "./wlftmss20e".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftmss20e
+# 
+# ERROR! Vector Mismatch for output port AddressBus[0] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[1] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[2] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[3] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[4] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[5] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[6] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[7] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[8] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[9] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[10] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[11] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[12] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[13] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[14] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[15] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[16] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[17] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[18] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[19] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[20] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[21] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[22] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[23] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[24] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[25] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[26] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[27] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[28] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[29] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[30] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AddressBus[31] :: @time = 2542.000 ps
+#      Expected value = 11111111111111111111111111111111
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port AS_L :: @time = 2542.000 ps
+#      Expected value = 1
+#      Real value = x
+# ERROR! Vector Mismatch for output port BG_L :: @time = 2542.000 ps
+#      Expected value = 1
+#      Real value = x
+# ERROR! Vector Mismatch for output port CPU_RW :: @time = 2542.000 ps
+#      Expected value = 1
+#      Real value = x
+# ERROR! Vector Mismatch for output port CPUClock :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port DataBusIn[0] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[1] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[2] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[3] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[4] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[5] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[6] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[7] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[8] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[9] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[10] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[11] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[12] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[13] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[14] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusIn[15] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[0] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[1] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[2] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[3] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[4] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[5] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[6] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[7] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[8] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[9] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[10] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[11] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[12] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[13] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[14] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port DataBusOut[15] :: @time = 2542.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = xxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port Dtack_L :: @time = 2542.000 ps
+#      Expected value = 1
+#      Real value = x
+# ERROR! Vector Mismatch for output port LDS_L :: @time = 2542.000 ps
+#      Expected value = 1
+#      Real value = x
+# ERROR! Vector Mismatch for output port sdram_cas_n :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port sdram_cke :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port sdram_clock :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port sdram_dqm[0] :: @time = 2542.000 ps
+#      Expected value = 11
+#      Real value = xx
+# ERROR! Vector Mismatch for output port sdram_dqm[1] :: @time = 2542.000 ps
+#      Expected value = 11
+#      Real value = xx
+# ERROR! Vector Mismatch for output port sdram_ras_n :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port sdram_we_n :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port SRam_CE_L :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port SRam_LB_L :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port SRam_OE_L :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port SRam_UB_L :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port SRam_WE_L :: @time = 2542.000 ps
+#      Expected value = 0
+#      Real value = x
+# ERROR! Vector Mismatch for output port SRamAddress[0] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[1] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[2] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[3] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[4] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[5] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[6] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[7] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[8] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[9] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[10] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[11] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[12] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[13] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[14] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[15] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[16] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port SRamAddress[17] :: @time = 2542.000 ps
+#      Expected value = 000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port UDS_L :: @time = 2542.000 ps
+#      Expected value = 1
+#      Real value = x
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5351): $hold( posedge clk &&& nosloadsclr:2977 ps, datain:3105 ps, 266 ps );
+#    Time: 3105 ps  Iteration: 1  Instance: /MC68K_vlg_vec_tst/i1/\inst6|inst4|altsyncram_component|auto_generated|address_reg_a[0] 
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5354): $hold( posedge clk &&& sloaddata:2977 ps, sdata:3203 ps, 266 ps );
+#    Time: 3203 ps  Iteration: 1  Instance: /MC68K_vlg_vec_tst/i1/\inst16|inst1|altsyncram_component|auto_generated|altsyncram1|address_reg_a[1] 
+# ERROR! Vector Mismatch for output port DataBusIn[0] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[1] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[2] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[3] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[4] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[5] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[6] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[7] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[8] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[9] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[10] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[11] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[12] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[13] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[14] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[15] :: @time = 130000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[10] :: @time = 650000.000 ps
+#      Expected value = 0000010000000000
+#      Real value = 0000000000000000
+# ERROR! Vector Mismatch for output port DataBusIn[9] :: @time = 810000.000 ps
+#      Expected value = 0100011011111100
+#      Real value = 0100010011111100
+# ERROR! Vector Mismatch for output port DataBusIn[9] :: @time = 970000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[10] :: @time = 970000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = zzzzzzzzzzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[8] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[9] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[10] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[11] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[12] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[13] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[14] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[15] :: @time = 2530000.000 ps
+#      Expected value = zzzzzzzzzzzzzzzz
+#      Real value = 00000000zzzzzzzz
+# ERROR! Vector Mismatch for output port DataBusIn[8] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[9] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[10] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[11] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[12] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[13] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[14] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[15] :: @time = 2690000.000 ps
+#      Expected value = 0000000010001000
+#      Real value = zzzzzzzz10001000
+# ERROR! Vector Mismatch for output port DataBusIn[9] :: @time = 2730000.000 ps
+#      Expected value = 0001001111111100
+#      Real value = 0001000111111100

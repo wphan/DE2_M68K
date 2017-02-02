@@ -1,0 +1,302 @@
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>423</line>
+	<callstack>
+	0x0041e6a2: quartus_cdb + 0x1e6a2 (Dbm_Uninit + 0x1a3b2)
+	0x0016a128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x00161cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x00c227a7: CCL_FIO + 0x27a7 (??1FIO_PATH@@QAE@XZ + 0xc7)
+	0x00eb23b2: ccl_cfg_ini + 0x23b2 (?cfg_force_qexe_mode_off@@YIXXZ + 0x10f2)
+	0x0041dd3a: quartus_cdb + 0x1dd3a (Dbm_Uninit + 0x19a4a)
+	0x001694f2: ccl_mem + 0x94f2 (?locked_allocate@MEM_SEGMENT_INTERNAL@@AAIPAXPADKKPAVMEM_TRACKER_DATA@@@Z + 0x62)
+	0x001680b5: ccl_mem + 0x80b5 (?allocate@MEM_SEGMENT_INTERNAL@@QAIPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x95)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Mon Apr 18 14:58:17 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>423</line>
+	<callstack>
+	0x0041e6a2: quartus_cdb + 0x1e6a2 (Dbm_Uninit + 0x1a3b2)
+	0x0023a128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x00231cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x00c227a7: CCL_FIO + 0x27a7 (??1FIO_PATH@@QAE@XZ + 0xc7)
+	0x00eb23b2: ccl_cfg_ini + 0x23b2 (?cfg_force_qexe_mode_off@@YIXXZ + 0x10f2)
+	0x0041dd3a: quartus_cdb + 0x1dd3a (Dbm_Uninit + 0x19a4a)
+	0x002394f2: ccl_mem + 0x94f2 (?locked_allocate@MEM_SEGMENT_INTERNAL@@AAIPAXPADKKPAVMEM_TRACKER_DATA@@@Z + 0x62)
+	0x002380b5: ccl_mem + 0x80b5 (?allocate@MEM_SEGMENT_INTERNAL@@QAIPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x95)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Mon Apr 18 14:59:25 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>423</line>
+	<callstack>
+	0x0041e6a2: quartus_cdb + 0x1e6a2 (Dbm_Uninit + 0x1a3b2)
+	0x0016a128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x00161cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x002927a7: CCL_FIO + 0x27a7 (??1FIO_PATH@@QAE@XZ + 0xc7)
+	0x00db23b2: ccl_cfg_ini + 0x23b2 (?cfg_force_qexe_mode_off@@YIXXZ + 0x10f2)
+	0x0041dd3a: quartus_cdb + 0x1dd3a (Dbm_Uninit + 0x19a4a)
+	0x001694f2: ccl_mem + 0x94f2 (?locked_allocate@MEM_SEGMENT_INTERNAL@@AAIPAXPADKKPAVMEM_TRACKER_DATA@@@Z + 0x62)
+	0x001680b5: ccl_mem + 0x80b5 (?allocate@MEM_SEGMENT_INTERNAL@@QAIPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x95)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Mon Apr 18 14:59:38 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>423</line>
+	<callstack>
+	0x0041e6a2: quartus_cdb + 0x1e6a2 (Dbm_Uninit + 0x1a3b2)
+	0x0031a128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x00311cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x00d227a7: CCL_FIO + 0x27a7 (??1FIO_PATH@@QAE@XZ + 0xc7)
+	0x00eb23b2: ccl_cfg_ini + 0x23b2 (?cfg_force_qexe_mode_off@@YIXXZ + 0x10f2)
+	0x0041dd3a: quartus_cdb + 0x1dd3a (Dbm_Uninit + 0x19a4a)
+	0x003194f2: ccl_mem + 0x94f2 (?locked_allocate@MEM_SEGMENT_INTERNAL@@AAIPAXPADKKPAVMEM_TRACKER_DATA@@@Z + 0x62)
+	0x003180b5: ccl_mem + 0x80b5 (?allocate@MEM_SEGMENT_INTERNAL@@QAIPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x95)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Mon Apr 18 15:00:17 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>423</line>
+	<callstack>
+	0x0041e6a2: quartus_cdb + 0x1e6a2 (Dbm_Uninit + 0x1a3b2)
+	0x002fa128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x002f1cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x00d227a7: CCL_FIO + 0x27a7 (??1FIO_PATH@@QAE@XZ + 0xc7)
+	0x00eb23b2: ccl_cfg_ini + 0x23b2 (?cfg_force_qexe_mode_off@@YIXXZ + 0x10f2)
+	0x0041dd3a: quartus_cdb + 0x1dd3a (Dbm_Uninit + 0x19a4a)
+	0x002f94f2: ccl_mem + 0x94f2 (?locked_allocate@MEM_SEGMENT_INTERNAL@@AAIPAXPADKKPAVMEM_TRACKER_DATA@@@Z + 0x62)
+	0x002f80b5: ccl_mem + 0x80b5 (?allocate@MEM_SEGMENT_INTERNAL@@QAIPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x95)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Mon Apr 18 15:11:20 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>576</line>
+	<callstack>
+	0x0041e9b2: quartus_cdb + 0x1e9b2 (Dbm_Uninit + 0x1a6c2)
+	0x03524ea6: db_cdb_mgr + 0x4ea6 (?get_voltage_at_pin@CDB_CHIP_DB_ENTRY@@QBI?AW4DEV_VOLTAGE_ENUM@@I@Z + 0x56)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Mon Apr 18 15:13:44 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x00f62200: DB_HDB + 0x92200 (?stack_pop_front@HDB_NAME_MGR@@AAIXXZ + 0x50)
+	0x00f686cd: DB_HDB + 0x986cd (?close_cap_inst@HDB_NAME_MGR@@QAIXXZ + 0x3d)
+	0x012d4694: DB_DBMUI + 0x4694 (?unget_hdb_cmp_action_pt_instance@DBMUI_MANAGER@@QAIXPAPAVHDB_CMP_ACTION_PT_INSTANCE@@PBD@Z + 0xe4)
+	0x00681cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x052e376f: ace_adb + 0x13376f (?check_cap@ADB_CAP_AGENT@@UAI_N_N@Z + 0x38f)
+	0x00961ef2: ccl_cfg_ini + 0x1ef2 (?cfg_force_qexe_mode_off@@YIXXZ + 0xc32)
+	0x0025255a: ccl_thr + 0x255a (thr_mutex_unlock + 0x5a)
+	0x065f3394: ACE_ECO + 0x3394 (?on_compile_end@ECO_WND@@IAEJIJ@Z + 0x94)
+	0x100062ac: GCL_AFC + 0x62ac (?OnWndMsg@AFC_NESTED_FRAME@@UAEHIIJPAJ@Z + 0x3c)
+	0x678aba48: mfc90 + 0x5ba48
+	0x678b79fe: mfc90 + 0x679fe
+	0x065f394b: ACE_ECO + 0x394b (?WindowProc@ECO_WND@@UAEJIIJ@Z + 0x8b)
+	0x678aa63c: mfc90 + 0x5a63c
+	0x678aa8c8: mfc90 + 0x5a8c8
+	0x678a85b2: mfc90 + 0x585b2
+	0x769462f9: USER32 + 0x162f9 (gapfnScSendMessage + 0x331)
+	0x76946d39: USER32 + 0x16d39 (GetThreadDesktop + 0xd6)
+	0x769477c3: USER32 + 0x177c3 (CharPrevW + 0x137)
+	0x76947bc9: USER32 + 0x17bc9 (DispatchMessageA + 0xe)
+	0x678ea866: mfc90 + 0x9a866
+	0x00251968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x678b71e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x76153399: kernel32 + 0x13399 (BaseThreadInitThunk + 0x11)
+	0x775b9ed1: ntdll + 0x39ed1 (RtlInitializeExceptionChain + 0x62)
+	0x775b9ea4: ntdll + 0x39ea4 (RtlInitializeExceptionChain + 0x35)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: OAW</error>
+	<date>Thu Oct 20 16:51:56 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>Access Violation at 0X00F62200
+Current editor: OAW
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>576</line>
+	<callstack>
+	0x0041e9b2: quartus_cdb + 0x1e9b2 (Dbm_Uninit + 0x1a6c2)
+	0x03524ea6: db_cdb_mgr + 0x4ea6 (?get_voltage_at_pin@CDB_CHIP_DB_ENTRY@@QBI?AW4DEV_VOLTAGE_ENUM@@I@Z + 0x56)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Wed Oct 26 09:17:33 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>576</line>
+	<callstack>
+	0x0041e9b2: quartus_cdb + 0x1e9b2 (Dbm_Uninit + 0x1a6c2)
+	0x03524ea6: db_cdb_mgr + 0x4ea6 (?get_voltage_at_pin@CDB_CHIP_DB_ENTRY@@QBI?AW4DEV_VOLTAGE_ENUM@@I@Z + 0x56)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Wed Oct 26 09:18:13 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>576</line>
+	<callstack>
+	0x0041e9b2: quartus_cdb + 0x1e9b2 (Dbm_Uninit + 0x1a6c2)
+	0x03524ea6: db_cdb_mgr + 0x4ea6 (?get_voltage_at_pin@CDB_CHIP_DB_ENTRY@@QBI?AW4DEV_VOLTAGE_ENUM@@I@Z + 0x56)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Wed Oct 26 09:19:01 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_cdb.exe</executable>
+	<sub_system>QATM</sub_system>
+	<file>/quartus/atm/qatm/qatm_mif_update.cpp</file>
+	<line>576</line>
+	<callstack>
+	0x0041e9b2: quartus_cdb + 0x1e9b2 (Dbm_Uninit + 0x1a6c2)
+	0x03524ea6: db_cdb_mgr + 0x4ea6 (?get_voltage_at_pin@CDB_CHIP_DB_ENTRY@@QBI?AW4DEV_VOLTAGE_ENUM@@I@Z + 0x56)
+	</callstack>
+	<error>RAM/CAM MIF reconfig failed</error>
+	<date>Tue Nov 01 12:17:39 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>RAM/CAM MIF reconfig failed
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0e692291: pgm_pgmw + 0x12291 (pgm_pgmw_dll_get_template_classes + 0x2031)
+	</callstack>
+	<error>Current editor: RPW, STED, GED, GED, WED, RPW</error>
+	<date>Mon Dec 05 10:11:07 2011</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>Access Violation at 0X0E692291
+Current editor: RPW, STED, GED, GED, WED, RPW
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0xffffffffffffffff:
+	0x1003909b: GCL_AFC + 0x3909b (?OnClose@AFC_CHILD_FRAME@@QAEXXZ + 0x13b)
+	0x716cbe7f: mfc90 + 0x5be7f
+	0x716cb147: mfc90 + 0x5b147
+	0x77cc3cc2: ntdll + 0x33cc2 (RtlImageNtHeader + 0xb3e)
+	0x100091a5: GCL_AFC + 0x91a5 (?OnWndMsg@AFC_CHILD_FRAME@@UAEHIIJPAJ@Z + 0x75)
+	0x716cba48: mfc90 + 0x5ba48
+	0x716ca63c: mfc90 + 0x5a63c
+	0x716ca8c8: mfc90 + 0x5a8c8
+	0x716c85b2: mfc90 + 0x585b2
+	0x770762f9: USER32 + 0x162f9 (gapfnScSendMessage + 0x331)
+	0x77076d39: USER32 + 0x16d39 (GetThreadDesktop + 0xd6)
+	0x7707965d: USER32 + 0x1965d (GetWindow + 0x3ef)
+	0x77086179: USER32 + 0x26179 (SendMessageA + 0x4b)
+	0x10011207: GCL_AFC + 0x11207 (?OnNcActivate@AFC_MDI_FRAME@@QAEHH@Z + 0x77)
+	0x716f9874: mfc90 + 0x89874
+	0x716d1693: mfc90 + 0x61693
+	0x4c0d19a6: AOT803AS + 0xd19a6 (SECMDIFrameWnd::OnCmdMsg + 0xe6)
+	0x716cc2d2: mfc90 + 0x5c2d2
+	0x716d0b7f: mfc90 + 0x60b7f
+	0x4c0d187c: AOT803AS + 0xd187c (SECMDIFrameWnd::OnCommand + 0x5c)
+	0x10047ef0: GCL_AFC + 0x47ef0 (?OnCommand@AFC_MDI_FRAME@@UAEHIJ@Z + 0x20)
+	0x716cba48: mfc90 + 0x5ba48
+	0x4c0d1c3a: AOT803AS + 0xd1c3a (SECMDIFrameWnd::WindowProc + 0x8a)
+	0x716ca63c: mfc90 + 0x5a63c
+	0x716ca8c8: mfc90 + 0x5a8c8
+	0x716c85b2: mfc90 + 0x585b2
+	0x770762f9: USER32 + 0x162f9 (gapfnScSendMessage + 0x331)
+	0x77076d39: USER32 + 0x16d39 (GetThreadDesktop + 0xd6)
+	0x770777c3: USER32 + 0x177c3 (CharPrevW + 0x137)
+	0x77077bc9: USER32 + 0x17bc9 (DispatchMessageA + 0xe)
+	0x7170a866: mfc90 + 0x9a866
+	0x002a1968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x716d71e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x75a43399: kernel32 + 0x13399 (BaseThreadInitThunk + 0x11)
+	0x77cc9ef1: ntdll + 0x39ef1 (RtlInitializeExceptionChain + 0x62)
+	0x77cc9ec4: ntdll + 0x39ec4 (RtlInitializeExceptionChain + 0x35)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: GED, STED, GED</error>
+	<date>Tue Jun 12 12:36:16 2012</date>
+	<version>Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition</version>
+	<full_error>Access Violation at 0XFFFFFFFF
+Current editor: GED, STED, GED
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition </full_error>
+</internal_error>
+

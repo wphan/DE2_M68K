@@ -1,0 +1,127 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 64 64 312 296)
+	(text "M68000CPU" (rect 5 0 73 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(port
+		(pt 248 64)
+		(input)
+		(text "DataBusIn[15..0]" (rect 0 0 93 14)(font "Arial" (font_size 8)))
+		(text "DataBusIn[15..0]" (rect 131 56 224 70)(font "Arial" (font_size 8)))
+		(line (pt 232 64)(pt 248 64)(line_width 3))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "Clk" (rect 21 27 37 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Reset_L" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "Reset_L" (rect 21 43 68 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "IPL[2..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "IPL[2..0]" (rect 21 59 65 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Dtack_L" (rect 0 0 46 14)(font "Arial" (font_size 8)))
+		(text "Dtack_L" (rect 21 75 67 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 248 160)
+		(input)
+		(text "BR_L" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "BR_L" (rect 194 152 224 166)(font "Arial" (font_size 8)))
+		(line (pt 232 160)(pt 248 160)(line_width 1))
+	)
+	(port
+		(pt 248 192)
+		(input)
+		(text "BGACK_L" (rect 0 0 57 14)(font "Arial" (font_size 8)))
+		(text "BGACK_L" (rect 167 184 224 198)(font "Arial" (font_size 8)))
+		(line (pt 232 192)(pt 248 192)(line_width 1))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "Address[31..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "Address[31..0]" (rect 143 27 227 41)(font "Arial" (font_size 8)))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "DataBusOut[15..0]" (rect 0 0 103 14)(font "Arial" (font_size 8)))
+		(text "DataBusOut[15..0]" (rect 124 43 227 57)(font "Arial" (font_size 8)))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "AS_L" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "AS_L" (rect 196 75 227 89)(font "Arial" (font_size 8)))
+		(line (pt 248 80)(pt 232 80)(line_width 1))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "UDS_L" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "UDS_L" (rect 189 91 227 105)(font "Arial" (font_size 8)))
+		(line (pt 248 96)(pt 232 96)(line_width 1))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "LDS_L" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "LDS_L" (rect 190 107 227 121)(font "Arial" (font_size 8)))
+		(line (pt 248 112)(pt 232 112)(line_width 1))
+	)
+	(port
+		(pt 248 128)
+		(output)
+		(text "RW" (rect 0 0 20 14)(font "Arial" (font_size 8)))
+		(text "RW" (rect 207 123 227 137)(font "Arial" (font_size 8)))
+		(line (pt 248 128)(pt 232 128)(line_width 1))
+	)
+	(port
+		(pt 248 176)
+		(output)
+		(text "BG_L" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "BG_L" (rect 196 171 227 185)(font "Arial" (font_size 8)))
+		(line (pt 248 176)(pt 232 176)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 216)(line_width 1))
+	)
+)

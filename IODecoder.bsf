@@ -1,0 +1,288 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 272 592)
+	(text "IODecoder" (rect 5 0 58 12)(font "Arial" ))
+	(text "inst" (rect 8 560 25 572)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Address[31..0]" (rect 0 0 71 12)(font "Arial" ))
+		(text "Address[31..0]" (rect 21 27 92 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "IOSelect_H" (rect 0 0 56 12)(font "Arial" ))
+		(text "IOSelect_H" (rect 21 43 77 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WE_L" (rect 0 0 29 12)(font "Arial" ))
+		(text "WE_L" (rect 21 59 50 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "UDS_L" (rect 0 0 35 12)(font "Arial" ))
+		(text "UDS_L" (rect 21 75 56 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "OutputPortA_Enable" (rect 0 0 99 12)(font "Arial" ))
+		(text "OutputPortA_Enable" (rect 136 27 235 39)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 1))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "InputPortA_Enable" (rect 0 0 90 12)(font "Arial" ))
+		(text "InputPortA_Enable" (rect 145 43 235 55)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48)(line_width 1))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "OutputPortB_Enable" (rect 0 0 99 12)(font "Arial" ))
+		(text "OutputPortB_Enable" (rect 136 59 235 71)(font "Arial" ))
+		(line (pt 256 64)(pt 240 64)(line_width 1))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "InputPortB_Enable" (rect 0 0 90 12)(font "Arial" ))
+		(text "InputPortB_Enable" (rect 145 75 235 87)(font "Arial" ))
+		(line (pt 256 80)(pt 240 80)(line_width 1))
+	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "OutputPortC_Enable" (rect 0 0 100 12)(font "Arial" ))
+		(text "OutputPortC_Enable" (rect 135 91 235 103)(font "Arial" ))
+		(line (pt 256 96)(pt 240 96)(line_width 1))
+	)
+	(port
+		(pt 256 112)
+		(output)
+		(text "InputPortC_Enable" (rect 0 0 92 12)(font "Arial" ))
+		(text "InputPortC_Enable" (rect 143 107 235 119)(font "Arial" ))
+		(line (pt 256 112)(pt 240 112)(line_width 1))
+	)
+	(port
+		(pt 256 128)
+		(output)
+		(text "OutputPortD_Enable" (rect 0 0 100 12)(font "Arial" ))
+		(text "OutputPortD_Enable" (rect 135 123 235 135)(font "Arial" ))
+		(line (pt 256 128)(pt 240 128)(line_width 1))
+	)
+	(port
+		(pt 256 144)
+		(output)
+		(text "InputPortD_Enable" (rect 0 0 92 12)(font "Arial" ))
+		(text "InputPortD_Enable" (rect 143 139 235 151)(font "Arial" ))
+		(line (pt 256 144)(pt 240 144)(line_width 1))
+	)
+	(port
+		(pt 256 160)
+		(output)
+		(text "OutputPortE_Enable" (rect 0 0 99 12)(font "Arial" ))
+		(text "OutputPortE_Enable" (rect 136 155 235 167)(font "Arial" ))
+		(line (pt 256 160)(pt 240 160)(line_width 1))
+	)
+	(port
+		(pt 256 176)
+		(output)
+		(text "InputPortE_Enable" (rect 0 0 90 12)(font "Arial" ))
+		(text "InputPortE_Enable" (rect 145 171 235 183)(font "Arial" ))
+		(line (pt 256 176)(pt 240 176)(line_width 1))
+	)
+	(port
+		(pt 256 192)
+		(output)
+		(text "LCDCommandOrData" (rect 0 0 108 12)(font "Arial" ))
+		(text "LCDCommandOrData" (rect 127 187 235 199)(font "Arial" ))
+		(line (pt 256 192)(pt 240 192)(line_width 1))
+	)
+	(port
+		(pt 256 208)
+		(output)
+		(text "LCDWrite" (rect 0 0 48 12)(font "Arial" ))
+		(text "LCDWrite" (rect 187 203 235 215)(font "Arial" ))
+		(line (pt 256 208)(pt 240 208)(line_width 1))
+	)
+	(port
+		(pt 256 224)
+		(output)
+		(text "Timer1ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer1ControlReg_Enable" (rect 108 219 235 231)(font "Arial" ))
+		(line (pt 256 224)(pt 240 224)(line_width 1))
+	)
+	(port
+		(pt 256 240)
+		(output)
+		(text "Timer1DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer1DataReg_Enable" (rect 120 235 235 247)(font "Arial" ))
+		(line (pt 256 240)(pt 240 240)(line_width 1))
+	)
+	(port
+		(pt 256 256)
+		(output)
+		(text "Timer2ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer2ControlReg_Enable" (rect 108 251 235 263)(font "Arial" ))
+		(line (pt 256 256)(pt 240 256)(line_width 1))
+	)
+	(port
+		(pt 256 272)
+		(output)
+		(text "Timer2DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer2DataReg_Enable" (rect 120 267 235 279)(font "Arial" ))
+		(line (pt 256 272)(pt 240 272)(line_width 1))
+	)
+	(port
+		(pt 256 288)
+		(output)
+		(text "Timer3ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer3ControlReg_Enable" (rect 108 283 235 295)(font "Arial" ))
+		(line (pt 256 288)(pt 240 288)(line_width 1))
+	)
+	(port
+		(pt 256 304)
+		(output)
+		(text "Timer3DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer3DataReg_Enable" (rect 120 299 235 311)(font "Arial" ))
+		(line (pt 256 304)(pt 240 304)(line_width 1))
+	)
+	(port
+		(pt 256 320)
+		(output)
+		(text "Timer4ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer4ControlReg_Enable" (rect 108 315 235 327)(font "Arial" ))
+		(line (pt 256 320)(pt 240 320)(line_width 1))
+	)
+	(port
+		(pt 256 336)
+		(output)
+		(text "Timer4DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer4DataReg_Enable" (rect 120 331 235 343)(font "Arial" ))
+		(line (pt 256 336)(pt 240 336)(line_width 1))
+	)
+	(port
+		(pt 256 352)
+		(output)
+		(text "Timer5ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer5ControlReg_Enable" (rect 108 347 235 359)(font "Arial" ))
+		(line (pt 256 352)(pt 240 352)(line_width 1))
+	)
+	(port
+		(pt 256 368)
+		(output)
+		(text "Timer5DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer5DataReg_Enable" (rect 120 363 235 375)(font "Arial" ))
+		(line (pt 256 368)(pt 240 368)(line_width 1))
+	)
+	(port
+		(pt 256 384)
+		(output)
+		(text "Timer6ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer6ControlReg_Enable" (rect 108 379 235 391)(font "Arial" ))
+		(line (pt 256 384)(pt 240 384)(line_width 1))
+	)
+	(port
+		(pt 256 400)
+		(output)
+		(text "Timer6DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer6DataReg_Enable" (rect 120 395 235 407)(font "Arial" ))
+		(line (pt 256 400)(pt 240 400)(line_width 1))
+	)
+	(port
+		(pt 256 416)
+		(output)
+		(text "Timer7ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer7ControlReg_Enable" (rect 108 411 235 423)(font "Arial" ))
+		(line (pt 256 416)(pt 240 416)(line_width 1))
+	)
+	(port
+		(pt 256 432)
+		(output)
+		(text "Timer7DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer7DataReg_Enable" (rect 120 427 235 439)(font "Arial" ))
+		(line (pt 256 432)(pt 240 432)(line_width 1))
+	)
+	(port
+		(pt 256 448)
+		(output)
+		(text "Timer8ControlReg_Enable" (rect 0 0 127 12)(font "Arial" ))
+		(text "Timer8ControlReg_Enable" (rect 108 443 235 455)(font "Arial" ))
+		(line (pt 256 448)(pt 240 448)(line_width 1))
+	)
+	(port
+		(pt 256 464)
+		(output)
+		(text "Timer8DataReg_Enable" (rect 0 0 115 12)(font "Arial" ))
+		(text "Timer8DataReg_Enable" (rect 120 459 235 471)(font "Arial" ))
+		(line (pt 256 464)(pt 240 464)(line_width 1))
+	)
+	(port
+		(pt 256 480)
+		(output)
+		(text "HexDisplay7and6Enable" (rect 0 0 120 12)(font "Arial" ))
+		(text "HexDisplay7and6Enable" (rect 115 475 235 487)(font "Arial" ))
+		(line (pt 256 480)(pt 240 480)(line_width 1))
+	)
+	(port
+		(pt 256 496)
+		(output)
+		(text "HexDisplay5and4Enable" (rect 0 0 120 12)(font "Arial" ))
+		(text "HexDisplay5and4Enable" (rect 115 491 235 503)(font "Arial" ))
+		(line (pt 256 496)(pt 240 496)(line_width 1))
+	)
+	(port
+		(pt 256 512)
+		(output)
+		(text "HexDisplay3and2Enable" (rect 0 0 120 12)(font "Arial" ))
+		(text "HexDisplay3and2Enable" (rect 115 507 235 519)(font "Arial" ))
+		(line (pt 256 512)(pt 240 512)(line_width 1))
+	)
+	(port
+		(pt 256 528)
+		(output)
+		(text "HexDisplay1and0Enable" (rect 0 0 120 12)(font "Arial" ))
+		(text "HexDisplay1and0Enable" (rect 115 523 235 535)(font "Arial" ))
+		(line (pt 256 528)(pt 240 528)(line_width 1))
+	)
+	(port
+		(pt 256 544)
+		(output)
+		(text "TraceExceptionEnable" (rect 0 0 108 12)(font "Arial" ))
+		(text "TraceExceptionEnable" (rect 127 539 235 551)(font "Arial" ))
+		(line (pt 256 544)(pt 240 544)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 560)(line_width 1))
+	)
+)

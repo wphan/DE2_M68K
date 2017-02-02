@@ -1,0 +1,676 @@
+TimeQuest Timing Analyzer report for MC68K
+Wed Feb 01 21:45:48 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Minimum Pulse Width: 'altera_reserved_tck'
+ 12. Propagation Delay
+ 13. Minimum Propagation Delay
+ 14. Fast Model Setup Summary
+ 15. Fast Model Hold Summary
+ 16. Fast Model Recovery Summary
+ 17. Fast Model Removal Summary
+ 18. Fast Model Minimum Pulse Width Summary
+ 19. Fast Model Minimum Pulse Width: 'altera_reserved_tck'
+ 20. Propagation Delay
+ 21. Minimum Propagation Delay
+ 22. Multicorner Timing Analysis Summary
+ 23. Progagation Delay
+ 24. Minimum Progagation Delay
+ 25. Clock Transfers
+ 26. Report TCCS
+ 27. Report RSKM
+ 28. Unconstrained Paths
+ 29. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; MC68K                                                             ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                    ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period  ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; altera_reserved_tck ; Base ; 100.000 ; 10.0 MHz  ; 0.000 ; 50.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { altera_reserved_tck } ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------+
+; Slow Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; altera_reserved_tck ; 97.778 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'altera_reserved_tck'                                                       ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type      ; Clock               ; Clock Edge ; Target              ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; 97.778 ; 100.000      ; 2.222          ; Port Rate ; altera_reserved_tck ; Rise       ; altera_reserved_tck ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+
+
++-----------------------------------------------------------+
+; Propagation Delay                                         ;
++---------------+---------------+--------+----+----+--------+
+; Input Port    ; Output Port   ; RR     ; RF ; FR ; FF     ;
++---------------+---------------+--------+----+----+--------+
+; CLK_50Mhz     ; sdram_clock   ; 5.423  ;    ;    ; 5.423  ;
+; FlashData[0]  ; DataBusIn[8]  ; 14.433 ;    ;    ; 14.433 ;
+; FlashData[1]  ; DataBusIn[9]  ; 13.864 ;    ;    ; 13.864 ;
+; FlashData[2]  ; DataBusIn[10] ; 13.391 ;    ;    ; 13.391 ;
+; FlashData[3]  ; DataBusIn[11] ; 14.284 ;    ;    ; 14.284 ;
+; FlashData[4]  ; DataBusIn[12] ; 14.329 ;    ;    ; 14.329 ;
+; FlashData[5]  ; DataBusIn[13] ; 15.896 ;    ;    ; 15.896 ;
+; FlashData[6]  ; DataBusIn[14] ; 13.798 ;    ;    ; 13.798 ;
+; FlashData[7]  ; DataBusIn[15] ; 15.713 ;    ;    ; 15.713 ;
+; InPortA[0]    ; DataBusIn[8]  ; 8.152  ;    ;    ; 8.152  ;
+; InPortA[1]    ; DataBusIn[9]  ; 7.788  ;    ;    ; 7.788  ;
+; InPortA[2]    ; DataBusIn[10] ; 7.540  ;    ;    ; 7.540  ;
+; InPortA[3]    ; DataBusIn[11] ; 8.022  ;    ;    ; 8.022  ;
+; InPortA[4]    ; DataBusIn[12] ; 9.021  ;    ;    ; 9.021  ;
+; InPortA[5]    ; DataBusIn[13] ; 10.239 ;    ;    ; 10.239 ;
+; InPortA[6]    ; DataBusIn[14] ; 8.383  ;    ;    ; 8.383  ;
+; InPortA[7]    ; DataBusIn[15] ; 10.499 ;    ;    ; 10.499 ;
+; InPortB[0]    ; DataBusIn[8]  ; 9.642  ;    ;    ; 9.642  ;
+; InPortB[1]    ; DataBusIn[9]  ; 8.693  ;    ;    ; 8.693  ;
+; InPortB[2]    ; DataBusIn[10] ; 8.487  ;    ;    ; 8.487  ;
+; InPortB[3]    ; DataBusIn[11] ; 9.052  ;    ;    ; 9.052  ;
+; InPortB[4]    ; DataBusIn[12] ; 8.420  ;    ;    ; 8.420  ;
+; InPortB[5]    ; DataBusIn[13] ; 14.079 ;    ;    ; 14.079 ;
+; InPortB[6]    ; DataBusIn[14] ; 12.403 ;    ;    ; 12.403 ;
+; InPortB[7]    ; DataBusIn[15] ; 14.511 ;    ;    ; 14.511 ;
+; InPortC[0]    ; DataBusIn[8]  ; 13.036 ;    ;    ; 13.036 ;
+; InPortC[1]    ; DataBusIn[9]  ; 12.979 ;    ;    ; 12.979 ;
+; InPortC[2]    ; DataBusIn[10] ; 12.206 ;    ;    ; 12.206 ;
+; InPortC[3]    ; DataBusIn[11] ; 12.530 ;    ;    ; 12.530 ;
+; InPortC[4]    ; DataBusIn[12] ; 12.390 ;    ;    ; 12.390 ;
+; InPortC[5]    ; DataBusIn[13] ; 13.327 ;    ;    ; 13.327 ;
+; InPortC[6]    ; DataBusIn[14] ; 11.795 ;    ;    ; 11.795 ;
+; InPortC[7]    ; DataBusIn[15] ; 13.602 ;    ;    ; 13.602 ;
+; InPortE[0]    ; DataBusIn[8]  ; 12.298 ;    ;    ; 12.298 ;
+; InPortE[1]    ; DataBusIn[9]  ; 11.245 ;    ;    ; 11.245 ;
+; InPortE[2]    ; DataBusIn[10] ; 10.261 ;    ;    ; 10.261 ;
+; InPortE[3]    ; DataBusIn[11] ; 11.005 ;    ;    ; 11.005 ;
+; InPortE[4]    ; DataBusIn[12] ; 11.641 ;    ;    ; 11.641 ;
+; InPortE[5]    ; DataBusIn[13] ; 12.904 ;    ;    ; 12.904 ;
+; InPortE[6]    ; DataBusIn[14] ; 11.851 ;    ;    ; 11.851 ;
+; InPortE[7]    ; DataBusIn[15] ; 12.777 ;    ;    ; 12.777 ;
+; RESET_Key0_L  ; FlashReset_L  ; 9.987  ;    ;    ; 9.987  ;
+; SRam_Data[0]  ; DataBusIn[0]  ; 11.711 ;    ;    ; 11.711 ;
+; SRam_Data[1]  ; DataBusIn[1]  ; 12.715 ;    ;    ; 12.715 ;
+; SRam_Data[2]  ; DataBusIn[2]  ; 11.751 ;    ;    ; 11.751 ;
+; SRam_Data[3]  ; DataBusIn[3]  ; 12.164 ;    ;    ; 12.164 ;
+; SRam_Data[4]  ; DataBusIn[4]  ; 12.100 ;    ;    ; 12.100 ;
+; SRam_Data[5]  ; DataBusIn[5]  ; 11.921 ;    ;    ; 11.921 ;
+; SRam_Data[6]  ; DataBusIn[6]  ; 12.115 ;    ;    ; 12.115 ;
+; SRam_Data[7]  ; DataBusIn[7]  ; 12.581 ;    ;    ; 12.581 ;
+; SRam_Data[8]  ; DataBusIn[8]  ; 15.659 ;    ;    ; 15.659 ;
+; SRam_Data[9]  ; DataBusIn[9]  ; 15.702 ;    ;    ; 15.702 ;
+; SRam_Data[10] ; DataBusIn[10] ; 14.085 ;    ;    ; 14.085 ;
+; SRam_Data[11] ; DataBusIn[11] ; 15.767 ;    ;    ; 15.767 ;
+; SRam_Data[12] ; DataBusIn[12] ; 14.862 ;    ;    ; 14.862 ;
+; SRam_Data[13] ; DataBusIn[13] ; 17.192 ;    ;    ; 17.192 ;
+; SRam_Data[14] ; DataBusIn[14] ; 15.560 ;    ;    ; 15.560 ;
+; SRam_Data[15] ; DataBusIn[15] ; 17.105 ;    ;    ; 17.105 ;
++---------------+---------------+--------+----+----+--------+
+
+
++-----------------------------------------------------------+
+; Minimum Propagation Delay                                 ;
++---------------+---------------+--------+----+----+--------+
+; Input Port    ; Output Port   ; RR     ; RF ; FR ; FF     ;
++---------------+---------------+--------+----+----+--------+
+; CLK_50Mhz     ; sdram_clock   ; 5.423  ;    ;    ; 5.423  ;
+; FlashData[0]  ; DataBusIn[8]  ; 14.433 ;    ;    ; 14.433 ;
+; FlashData[1]  ; DataBusIn[9]  ; 13.864 ;    ;    ; 13.864 ;
+; FlashData[2]  ; DataBusIn[10] ; 13.391 ;    ;    ; 13.391 ;
+; FlashData[3]  ; DataBusIn[11] ; 14.284 ;    ;    ; 14.284 ;
+; FlashData[4]  ; DataBusIn[12] ; 14.329 ;    ;    ; 14.329 ;
+; FlashData[5]  ; DataBusIn[13] ; 15.896 ;    ;    ; 15.896 ;
+; FlashData[6]  ; DataBusIn[14] ; 13.798 ;    ;    ; 13.798 ;
+; FlashData[7]  ; DataBusIn[15] ; 15.713 ;    ;    ; 15.713 ;
+; InPortA[0]    ; DataBusIn[8]  ; 8.152  ;    ;    ; 8.152  ;
+; InPortA[1]    ; DataBusIn[9]  ; 7.788  ;    ;    ; 7.788  ;
+; InPortA[2]    ; DataBusIn[10] ; 7.540  ;    ;    ; 7.540  ;
+; InPortA[3]    ; DataBusIn[11] ; 8.022  ;    ;    ; 8.022  ;
+; InPortA[4]    ; DataBusIn[12] ; 9.021  ;    ;    ; 9.021  ;
+; InPortA[5]    ; DataBusIn[13] ; 10.239 ;    ;    ; 10.239 ;
+; InPortA[6]    ; DataBusIn[14] ; 8.383  ;    ;    ; 8.383  ;
+; InPortA[7]    ; DataBusIn[15] ; 10.499 ;    ;    ; 10.499 ;
+; InPortB[0]    ; DataBusIn[8]  ; 9.642  ;    ;    ; 9.642  ;
+; InPortB[1]    ; DataBusIn[9]  ; 8.693  ;    ;    ; 8.693  ;
+; InPortB[2]    ; DataBusIn[10] ; 8.487  ;    ;    ; 8.487  ;
+; InPortB[3]    ; DataBusIn[11] ; 9.052  ;    ;    ; 9.052  ;
+; InPortB[4]    ; DataBusIn[12] ; 8.420  ;    ;    ; 8.420  ;
+; InPortB[5]    ; DataBusIn[13] ; 14.079 ;    ;    ; 14.079 ;
+; InPortB[6]    ; DataBusIn[14] ; 12.403 ;    ;    ; 12.403 ;
+; InPortB[7]    ; DataBusIn[15] ; 14.511 ;    ;    ; 14.511 ;
+; InPortC[0]    ; DataBusIn[8]  ; 13.036 ;    ;    ; 13.036 ;
+; InPortC[1]    ; DataBusIn[9]  ; 12.979 ;    ;    ; 12.979 ;
+; InPortC[2]    ; DataBusIn[10] ; 12.206 ;    ;    ; 12.206 ;
+; InPortC[3]    ; DataBusIn[11] ; 12.530 ;    ;    ; 12.530 ;
+; InPortC[4]    ; DataBusIn[12] ; 12.390 ;    ;    ; 12.390 ;
+; InPortC[5]    ; DataBusIn[13] ; 13.327 ;    ;    ; 13.327 ;
+; InPortC[6]    ; DataBusIn[14] ; 11.795 ;    ;    ; 11.795 ;
+; InPortC[7]    ; DataBusIn[15] ; 13.602 ;    ;    ; 13.602 ;
+; InPortE[0]    ; DataBusIn[8]  ; 12.298 ;    ;    ; 12.298 ;
+; InPortE[1]    ; DataBusIn[9]  ; 11.245 ;    ;    ; 11.245 ;
+; InPortE[2]    ; DataBusIn[10] ; 10.261 ;    ;    ; 10.261 ;
+; InPortE[3]    ; DataBusIn[11] ; 11.005 ;    ;    ; 11.005 ;
+; InPortE[4]    ; DataBusIn[12] ; 11.641 ;    ;    ; 11.641 ;
+; InPortE[5]    ; DataBusIn[13] ; 12.904 ;    ;    ; 12.904 ;
+; InPortE[6]    ; DataBusIn[14] ; 11.851 ;    ;    ; 11.851 ;
+; InPortE[7]    ; DataBusIn[15] ; 12.777 ;    ;    ; 12.777 ;
+; RESET_Key0_L  ; FlashReset_L  ; 9.987  ;    ;    ; 9.987  ;
+; SRam_Data[0]  ; DataBusIn[0]  ; 11.711 ;    ;    ; 11.711 ;
+; SRam_Data[1]  ; DataBusIn[1]  ; 12.715 ;    ;    ; 12.715 ;
+; SRam_Data[2]  ; DataBusIn[2]  ; 11.751 ;    ;    ; 11.751 ;
+; SRam_Data[3]  ; DataBusIn[3]  ; 12.164 ;    ;    ; 12.164 ;
+; SRam_Data[4]  ; DataBusIn[4]  ; 12.100 ;    ;    ; 12.100 ;
+; SRam_Data[5]  ; DataBusIn[5]  ; 11.921 ;    ;    ; 11.921 ;
+; SRam_Data[6]  ; DataBusIn[6]  ; 12.115 ;    ;    ; 12.115 ;
+; SRam_Data[7]  ; DataBusIn[7]  ; 12.581 ;    ;    ; 12.581 ;
+; SRam_Data[8]  ; DataBusIn[8]  ; 15.659 ;    ;    ; 15.659 ;
+; SRam_Data[9]  ; DataBusIn[9]  ; 15.702 ;    ;    ; 15.702 ;
+; SRam_Data[10] ; DataBusIn[10] ; 14.085 ;    ;    ; 14.085 ;
+; SRam_Data[11] ; DataBusIn[11] ; 15.767 ;    ;    ; 15.767 ;
+; SRam_Data[12] ; DataBusIn[12] ; 14.862 ;    ;    ; 14.862 ;
+; SRam_Data[13] ; DataBusIn[13] ; 17.192 ;    ;    ; 17.192 ;
+; SRam_Data[14] ; DataBusIn[14] ; 15.560 ;    ;    ; 15.560 ;
+; SRam_Data[15] ; DataBusIn[15] ; 17.105 ;    ;    ; 17.105 ;
++---------------+---------------+--------+----+----+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------+
+; Fast Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; altera_reserved_tck ; 97.778 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'altera_reserved_tck'                                                       ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type      ; Clock               ; Clock Edge ; Target              ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; 97.778 ; 100.000      ; 2.222          ; Port Rate ; altera_reserved_tck ; Rise       ; altera_reserved_tck ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+
+
++---------------------------------------------------------+
+; Propagation Delay                                       ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; CLK_50Mhz     ; sdram_clock   ; 3.173 ;    ;    ; 3.173 ;
+; FlashData[0]  ; DataBusIn[8]  ; 7.680 ;    ;    ; 7.680 ;
+; FlashData[1]  ; DataBusIn[9]  ; 7.463 ;    ;    ; 7.463 ;
+; FlashData[2]  ; DataBusIn[10] ; 7.249 ;    ;    ; 7.249 ;
+; FlashData[3]  ; DataBusIn[11] ; 7.666 ;    ;    ; 7.666 ;
+; FlashData[4]  ; DataBusIn[12] ; 7.701 ;    ;    ; 7.701 ;
+; FlashData[5]  ; DataBusIn[13] ; 8.445 ;    ;    ; 8.445 ;
+; FlashData[6]  ; DataBusIn[14] ; 7.469 ;    ;    ; 7.469 ;
+; FlashData[7]  ; DataBusIn[15] ; 8.361 ;    ;    ; 8.361 ;
+; InPortA[0]    ; DataBusIn[8]  ; 4.177 ;    ;    ; 4.177 ;
+; InPortA[1]    ; DataBusIn[9]  ; 4.048 ;    ;    ; 4.048 ;
+; InPortA[2]    ; DataBusIn[10] ; 3.949 ;    ;    ; 3.949 ;
+; InPortA[3]    ; DataBusIn[11] ; 4.200 ;    ;    ; 4.200 ;
+; InPortA[4]    ; DataBusIn[12] ; 4.686 ;    ;    ; 4.686 ;
+; InPortA[5]    ; DataBusIn[13] ; 5.218 ;    ;    ; 5.218 ;
+; InPortA[6]    ; DataBusIn[14] ; 4.392 ;    ;    ; 4.392 ;
+; InPortA[7]    ; DataBusIn[15] ; 5.363 ;    ;    ; 5.363 ;
+; InPortB[0]    ; DataBusIn[8]  ; 4.907 ;    ;    ; 4.907 ;
+; InPortB[1]    ; DataBusIn[9]  ; 4.553 ;    ;    ; 4.553 ;
+; InPortB[2]    ; DataBusIn[10] ; 4.403 ;    ;    ; 4.403 ;
+; InPortB[3]    ; DataBusIn[11] ; 4.657 ;    ;    ; 4.657 ;
+; InPortB[4]    ; DataBusIn[12] ; 4.362 ;    ;    ; 4.362 ;
+; InPortB[5]    ; DataBusIn[13] ; 7.640 ;    ;    ; 7.640 ;
+; InPortB[6]    ; DataBusIn[14] ; 6.860 ;    ;    ; 6.860 ;
+; InPortB[7]    ; DataBusIn[15] ; 7.799 ;    ;    ; 7.799 ;
+; InPortC[0]    ; DataBusIn[8]  ; 7.023 ;    ;    ; 7.023 ;
+; InPortC[1]    ; DataBusIn[9]  ; 7.103 ;    ;    ; 7.103 ;
+; InPortC[2]    ; DataBusIn[10] ; 6.697 ;    ;    ; 6.697 ;
+; InPortC[3]    ; DataBusIn[11] ; 6.837 ;    ;    ; 6.837 ;
+; InPortC[4]    ; DataBusIn[12] ; 6.747 ;    ;    ; 6.747 ;
+; InPortC[5]    ; DataBusIn[13] ; 7.216 ;    ;    ; 7.216 ;
+; InPortC[6]    ; DataBusIn[14] ; 6.523 ;    ;    ; 6.523 ;
+; InPortC[7]    ; DataBusIn[15] ; 7.333 ;    ;    ; 7.333 ;
+; InPortE[0]    ; DataBusIn[8]  ; 6.739 ;    ;    ; 6.739 ;
+; InPortE[1]    ; DataBusIn[9]  ; 6.255 ;    ;    ; 6.255 ;
+; InPortE[2]    ; DataBusIn[10] ; 5.847 ;    ;    ; 5.847 ;
+; InPortE[3]    ; DataBusIn[11] ; 6.163 ;    ;    ; 6.163 ;
+; InPortE[4]    ; DataBusIn[12] ; 6.449 ;    ;    ; 6.449 ;
+; InPortE[5]    ; DataBusIn[13] ; 7.053 ;    ;    ; 7.053 ;
+; InPortE[6]    ; DataBusIn[14] ; 6.527 ;    ;    ; 6.527 ;
+; InPortE[7]    ; DataBusIn[15] ; 6.999 ;    ;    ; 6.999 ;
+; RESET_Key0_L  ; FlashReset_L  ; 5.804 ;    ;    ; 5.804 ;
+; SRam_Data[0]  ; DataBusIn[0]  ; 6.552 ;    ;    ; 6.552 ;
+; SRam_Data[1]  ; DataBusIn[1]  ; 6.956 ;    ;    ; 6.956 ;
+; SRam_Data[2]  ; DataBusIn[2]  ; 6.546 ;    ;    ; 6.546 ;
+; SRam_Data[3]  ; DataBusIn[3]  ; 6.723 ;    ;    ; 6.723 ;
+; SRam_Data[4]  ; DataBusIn[4]  ; 6.649 ;    ;    ; 6.649 ;
+; SRam_Data[5]  ; DataBusIn[5]  ; 6.561 ;    ;    ; 6.561 ;
+; SRam_Data[6]  ; DataBusIn[6]  ; 6.688 ;    ;    ; 6.688 ;
+; SRam_Data[7]  ; DataBusIn[7]  ; 6.853 ;    ;    ; 6.853 ;
+; SRam_Data[8]  ; DataBusIn[8]  ; 8.253 ;    ;    ; 8.253 ;
+; SRam_Data[9]  ; DataBusIn[9]  ; 8.286 ;    ;    ; 8.286 ;
+; SRam_Data[10] ; DataBusIn[10] ; 7.583 ;    ;    ; 7.583 ;
+; SRam_Data[11] ; DataBusIn[11] ; 8.369 ;    ;    ; 8.369 ;
+; SRam_Data[12] ; DataBusIn[12] ; 7.928 ;    ;    ; 7.928 ;
+; SRam_Data[13] ; DataBusIn[13] ; 8.968 ;    ;    ; 8.968 ;
+; SRam_Data[14] ; DataBusIn[14] ; 8.210 ;    ;    ; 8.210 ;
+; SRam_Data[15] ; DataBusIn[15] ; 8.995 ;    ;    ; 8.995 ;
++---------------+---------------+-------+----+----+-------+
+
+
++---------------------------------------------------------+
+; Minimum Propagation Delay                               ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; CLK_50Mhz     ; sdram_clock   ; 3.173 ;    ;    ; 3.173 ;
+; FlashData[0]  ; DataBusIn[8]  ; 7.680 ;    ;    ; 7.680 ;
+; FlashData[1]  ; DataBusIn[9]  ; 7.463 ;    ;    ; 7.463 ;
+; FlashData[2]  ; DataBusIn[10] ; 7.249 ;    ;    ; 7.249 ;
+; FlashData[3]  ; DataBusIn[11] ; 7.666 ;    ;    ; 7.666 ;
+; FlashData[4]  ; DataBusIn[12] ; 7.701 ;    ;    ; 7.701 ;
+; FlashData[5]  ; DataBusIn[13] ; 8.445 ;    ;    ; 8.445 ;
+; FlashData[6]  ; DataBusIn[14] ; 7.469 ;    ;    ; 7.469 ;
+; FlashData[7]  ; DataBusIn[15] ; 8.361 ;    ;    ; 8.361 ;
+; InPortA[0]    ; DataBusIn[8]  ; 4.177 ;    ;    ; 4.177 ;
+; InPortA[1]    ; DataBusIn[9]  ; 4.048 ;    ;    ; 4.048 ;
+; InPortA[2]    ; DataBusIn[10] ; 3.949 ;    ;    ; 3.949 ;
+; InPortA[3]    ; DataBusIn[11] ; 4.200 ;    ;    ; 4.200 ;
+; InPortA[4]    ; DataBusIn[12] ; 4.686 ;    ;    ; 4.686 ;
+; InPortA[5]    ; DataBusIn[13] ; 5.218 ;    ;    ; 5.218 ;
+; InPortA[6]    ; DataBusIn[14] ; 4.392 ;    ;    ; 4.392 ;
+; InPortA[7]    ; DataBusIn[15] ; 5.363 ;    ;    ; 5.363 ;
+; InPortB[0]    ; DataBusIn[8]  ; 4.907 ;    ;    ; 4.907 ;
+; InPortB[1]    ; DataBusIn[9]  ; 4.553 ;    ;    ; 4.553 ;
+; InPortB[2]    ; DataBusIn[10] ; 4.403 ;    ;    ; 4.403 ;
+; InPortB[3]    ; DataBusIn[11] ; 4.657 ;    ;    ; 4.657 ;
+; InPortB[4]    ; DataBusIn[12] ; 4.362 ;    ;    ; 4.362 ;
+; InPortB[5]    ; DataBusIn[13] ; 7.640 ;    ;    ; 7.640 ;
+; InPortB[6]    ; DataBusIn[14] ; 6.860 ;    ;    ; 6.860 ;
+; InPortB[7]    ; DataBusIn[15] ; 7.799 ;    ;    ; 7.799 ;
+; InPortC[0]    ; DataBusIn[8]  ; 7.023 ;    ;    ; 7.023 ;
+; InPortC[1]    ; DataBusIn[9]  ; 7.103 ;    ;    ; 7.103 ;
+; InPortC[2]    ; DataBusIn[10] ; 6.697 ;    ;    ; 6.697 ;
+; InPortC[3]    ; DataBusIn[11] ; 6.837 ;    ;    ; 6.837 ;
+; InPortC[4]    ; DataBusIn[12] ; 6.747 ;    ;    ; 6.747 ;
+; InPortC[5]    ; DataBusIn[13] ; 7.216 ;    ;    ; 7.216 ;
+; InPortC[6]    ; DataBusIn[14] ; 6.523 ;    ;    ; 6.523 ;
+; InPortC[7]    ; DataBusIn[15] ; 7.333 ;    ;    ; 7.333 ;
+; InPortE[0]    ; DataBusIn[8]  ; 6.739 ;    ;    ; 6.739 ;
+; InPortE[1]    ; DataBusIn[9]  ; 6.255 ;    ;    ; 6.255 ;
+; InPortE[2]    ; DataBusIn[10] ; 5.847 ;    ;    ; 5.847 ;
+; InPortE[3]    ; DataBusIn[11] ; 6.163 ;    ;    ; 6.163 ;
+; InPortE[4]    ; DataBusIn[12] ; 6.449 ;    ;    ; 6.449 ;
+; InPortE[5]    ; DataBusIn[13] ; 7.053 ;    ;    ; 7.053 ;
+; InPortE[6]    ; DataBusIn[14] ; 6.527 ;    ;    ; 6.527 ;
+; InPortE[7]    ; DataBusIn[15] ; 6.999 ;    ;    ; 6.999 ;
+; RESET_Key0_L  ; FlashReset_L  ; 5.804 ;    ;    ; 5.804 ;
+; SRam_Data[0]  ; DataBusIn[0]  ; 6.552 ;    ;    ; 6.552 ;
+; SRam_Data[1]  ; DataBusIn[1]  ; 6.956 ;    ;    ; 6.956 ;
+; SRam_Data[2]  ; DataBusIn[2]  ; 6.546 ;    ;    ; 6.546 ;
+; SRam_Data[3]  ; DataBusIn[3]  ; 6.723 ;    ;    ; 6.723 ;
+; SRam_Data[4]  ; DataBusIn[4]  ; 6.649 ;    ;    ; 6.649 ;
+; SRam_Data[5]  ; DataBusIn[5]  ; 6.561 ;    ;    ; 6.561 ;
+; SRam_Data[6]  ; DataBusIn[6]  ; 6.688 ;    ;    ; 6.688 ;
+; SRam_Data[7]  ; DataBusIn[7]  ; 6.853 ;    ;    ; 6.853 ;
+; SRam_Data[8]  ; DataBusIn[8]  ; 8.253 ;    ;    ; 8.253 ;
+; SRam_Data[9]  ; DataBusIn[9]  ; 8.286 ;    ;    ; 8.286 ;
+; SRam_Data[10] ; DataBusIn[10] ; 7.583 ;    ;    ; 7.583 ;
+; SRam_Data[11] ; DataBusIn[11] ; 8.369 ;    ;    ; 8.369 ;
+; SRam_Data[12] ; DataBusIn[12] ; 7.928 ;    ;    ; 7.928 ;
+; SRam_Data[13] ; DataBusIn[13] ; 8.968 ;    ;    ; 8.968 ;
+; SRam_Data[14] ; DataBusIn[14] ; 8.210 ;    ;    ; 8.210 ;
+; SRam_Data[15] ; DataBusIn[15] ; 8.995 ;    ;    ; 8.995 ;
++---------------+---------------+-------+----+----+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++----------------------+-------+------+----------+---------+---------------------+
+; Clock                ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack     ; N/A   ; N/A  ; N/A      ; N/A     ; 97.778              ;
+;  altera_reserved_tck ; N/A   ; N/A  ; N/A      ; N/A     ; 97.778              ;
+; Design-wide TNS      ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
+;  altera_reserved_tck ; N/A   ; N/A  ; N/A      ; N/A     ; 0.000               ;
++----------------------+-------+------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------+
+; Progagation Delay                                         ;
++---------------+---------------+--------+----+----+--------+
+; Input Port    ; Output Port   ; RR     ; RF ; FR ; FF     ;
++---------------+---------------+--------+----+----+--------+
+; CLK_50Mhz     ; sdram_clock   ; 5.423  ;    ;    ; 5.423  ;
+; FlashData[0]  ; DataBusIn[8]  ; 14.433 ;    ;    ; 14.433 ;
+; FlashData[1]  ; DataBusIn[9]  ; 13.864 ;    ;    ; 13.864 ;
+; FlashData[2]  ; DataBusIn[10] ; 13.391 ;    ;    ; 13.391 ;
+; FlashData[3]  ; DataBusIn[11] ; 14.284 ;    ;    ; 14.284 ;
+; FlashData[4]  ; DataBusIn[12] ; 14.329 ;    ;    ; 14.329 ;
+; FlashData[5]  ; DataBusIn[13] ; 15.896 ;    ;    ; 15.896 ;
+; FlashData[6]  ; DataBusIn[14] ; 13.798 ;    ;    ; 13.798 ;
+; FlashData[7]  ; DataBusIn[15] ; 15.713 ;    ;    ; 15.713 ;
+; InPortA[0]    ; DataBusIn[8]  ; 8.152  ;    ;    ; 8.152  ;
+; InPortA[1]    ; DataBusIn[9]  ; 7.788  ;    ;    ; 7.788  ;
+; InPortA[2]    ; DataBusIn[10] ; 7.540  ;    ;    ; 7.540  ;
+; InPortA[3]    ; DataBusIn[11] ; 8.022  ;    ;    ; 8.022  ;
+; InPortA[4]    ; DataBusIn[12] ; 9.021  ;    ;    ; 9.021  ;
+; InPortA[5]    ; DataBusIn[13] ; 10.239 ;    ;    ; 10.239 ;
+; InPortA[6]    ; DataBusIn[14] ; 8.383  ;    ;    ; 8.383  ;
+; InPortA[7]    ; DataBusIn[15] ; 10.499 ;    ;    ; 10.499 ;
+; InPortB[0]    ; DataBusIn[8]  ; 9.642  ;    ;    ; 9.642  ;
+; InPortB[1]    ; DataBusIn[9]  ; 8.693  ;    ;    ; 8.693  ;
+; InPortB[2]    ; DataBusIn[10] ; 8.487  ;    ;    ; 8.487  ;
+; InPortB[3]    ; DataBusIn[11] ; 9.052  ;    ;    ; 9.052  ;
+; InPortB[4]    ; DataBusIn[12] ; 8.420  ;    ;    ; 8.420  ;
+; InPortB[5]    ; DataBusIn[13] ; 14.079 ;    ;    ; 14.079 ;
+; InPortB[6]    ; DataBusIn[14] ; 12.403 ;    ;    ; 12.403 ;
+; InPortB[7]    ; DataBusIn[15] ; 14.511 ;    ;    ; 14.511 ;
+; InPortC[0]    ; DataBusIn[8]  ; 13.036 ;    ;    ; 13.036 ;
+; InPortC[1]    ; DataBusIn[9]  ; 12.979 ;    ;    ; 12.979 ;
+; InPortC[2]    ; DataBusIn[10] ; 12.206 ;    ;    ; 12.206 ;
+; InPortC[3]    ; DataBusIn[11] ; 12.530 ;    ;    ; 12.530 ;
+; InPortC[4]    ; DataBusIn[12] ; 12.390 ;    ;    ; 12.390 ;
+; InPortC[5]    ; DataBusIn[13] ; 13.327 ;    ;    ; 13.327 ;
+; InPortC[6]    ; DataBusIn[14] ; 11.795 ;    ;    ; 11.795 ;
+; InPortC[7]    ; DataBusIn[15] ; 13.602 ;    ;    ; 13.602 ;
+; InPortE[0]    ; DataBusIn[8]  ; 12.298 ;    ;    ; 12.298 ;
+; InPortE[1]    ; DataBusIn[9]  ; 11.245 ;    ;    ; 11.245 ;
+; InPortE[2]    ; DataBusIn[10] ; 10.261 ;    ;    ; 10.261 ;
+; InPortE[3]    ; DataBusIn[11] ; 11.005 ;    ;    ; 11.005 ;
+; InPortE[4]    ; DataBusIn[12] ; 11.641 ;    ;    ; 11.641 ;
+; InPortE[5]    ; DataBusIn[13] ; 12.904 ;    ;    ; 12.904 ;
+; InPortE[6]    ; DataBusIn[14] ; 11.851 ;    ;    ; 11.851 ;
+; InPortE[7]    ; DataBusIn[15] ; 12.777 ;    ;    ; 12.777 ;
+; RESET_Key0_L  ; FlashReset_L  ; 9.987  ;    ;    ; 9.987  ;
+; SRam_Data[0]  ; DataBusIn[0]  ; 11.711 ;    ;    ; 11.711 ;
+; SRam_Data[1]  ; DataBusIn[1]  ; 12.715 ;    ;    ; 12.715 ;
+; SRam_Data[2]  ; DataBusIn[2]  ; 11.751 ;    ;    ; 11.751 ;
+; SRam_Data[3]  ; DataBusIn[3]  ; 12.164 ;    ;    ; 12.164 ;
+; SRam_Data[4]  ; DataBusIn[4]  ; 12.100 ;    ;    ; 12.100 ;
+; SRam_Data[5]  ; DataBusIn[5]  ; 11.921 ;    ;    ; 11.921 ;
+; SRam_Data[6]  ; DataBusIn[6]  ; 12.115 ;    ;    ; 12.115 ;
+; SRam_Data[7]  ; DataBusIn[7]  ; 12.581 ;    ;    ; 12.581 ;
+; SRam_Data[8]  ; DataBusIn[8]  ; 15.659 ;    ;    ; 15.659 ;
+; SRam_Data[9]  ; DataBusIn[9]  ; 15.702 ;    ;    ; 15.702 ;
+; SRam_Data[10] ; DataBusIn[10] ; 14.085 ;    ;    ; 14.085 ;
+; SRam_Data[11] ; DataBusIn[11] ; 15.767 ;    ;    ; 15.767 ;
+; SRam_Data[12] ; DataBusIn[12] ; 14.862 ;    ;    ; 14.862 ;
+; SRam_Data[13] ; DataBusIn[13] ; 17.192 ;    ;    ; 17.192 ;
+; SRam_Data[14] ; DataBusIn[14] ; 15.560 ;    ;    ; 15.560 ;
+; SRam_Data[15] ; DataBusIn[15] ; 17.105 ;    ;    ; 17.105 ;
++---------------+---------------+--------+----+----+--------+
+
+
++---------------------------------------------------------+
+; Minimum Progagation Delay                               ;
++---------------+---------------+-------+----+----+-------+
+; Input Port    ; Output Port   ; RR    ; RF ; FR ; FF    ;
++---------------+---------------+-------+----+----+-------+
+; CLK_50Mhz     ; sdram_clock   ; 3.173 ;    ;    ; 3.173 ;
+; FlashData[0]  ; DataBusIn[8]  ; 7.680 ;    ;    ; 7.680 ;
+; FlashData[1]  ; DataBusIn[9]  ; 7.463 ;    ;    ; 7.463 ;
+; FlashData[2]  ; DataBusIn[10] ; 7.249 ;    ;    ; 7.249 ;
+; FlashData[3]  ; DataBusIn[11] ; 7.666 ;    ;    ; 7.666 ;
+; FlashData[4]  ; DataBusIn[12] ; 7.701 ;    ;    ; 7.701 ;
+; FlashData[5]  ; DataBusIn[13] ; 8.445 ;    ;    ; 8.445 ;
+; FlashData[6]  ; DataBusIn[14] ; 7.469 ;    ;    ; 7.469 ;
+; FlashData[7]  ; DataBusIn[15] ; 8.361 ;    ;    ; 8.361 ;
+; InPortA[0]    ; DataBusIn[8]  ; 4.177 ;    ;    ; 4.177 ;
+; InPortA[1]    ; DataBusIn[9]  ; 4.048 ;    ;    ; 4.048 ;
+; InPortA[2]    ; DataBusIn[10] ; 3.949 ;    ;    ; 3.949 ;
+; InPortA[3]    ; DataBusIn[11] ; 4.200 ;    ;    ; 4.200 ;
+; InPortA[4]    ; DataBusIn[12] ; 4.686 ;    ;    ; 4.686 ;
+; InPortA[5]    ; DataBusIn[13] ; 5.218 ;    ;    ; 5.218 ;
+; InPortA[6]    ; DataBusIn[14] ; 4.392 ;    ;    ; 4.392 ;
+; InPortA[7]    ; DataBusIn[15] ; 5.363 ;    ;    ; 5.363 ;
+; InPortB[0]    ; DataBusIn[8]  ; 4.907 ;    ;    ; 4.907 ;
+; InPortB[1]    ; DataBusIn[9]  ; 4.553 ;    ;    ; 4.553 ;
+; InPortB[2]    ; DataBusIn[10] ; 4.403 ;    ;    ; 4.403 ;
+; InPortB[3]    ; DataBusIn[11] ; 4.657 ;    ;    ; 4.657 ;
+; InPortB[4]    ; DataBusIn[12] ; 4.362 ;    ;    ; 4.362 ;
+; InPortB[5]    ; DataBusIn[13] ; 7.640 ;    ;    ; 7.640 ;
+; InPortB[6]    ; DataBusIn[14] ; 6.860 ;    ;    ; 6.860 ;
+; InPortB[7]    ; DataBusIn[15] ; 7.799 ;    ;    ; 7.799 ;
+; InPortC[0]    ; DataBusIn[8]  ; 7.023 ;    ;    ; 7.023 ;
+; InPortC[1]    ; DataBusIn[9]  ; 7.103 ;    ;    ; 7.103 ;
+; InPortC[2]    ; DataBusIn[10] ; 6.697 ;    ;    ; 6.697 ;
+; InPortC[3]    ; DataBusIn[11] ; 6.837 ;    ;    ; 6.837 ;
+; InPortC[4]    ; DataBusIn[12] ; 6.747 ;    ;    ; 6.747 ;
+; InPortC[5]    ; DataBusIn[13] ; 7.216 ;    ;    ; 7.216 ;
+; InPortC[6]    ; DataBusIn[14] ; 6.523 ;    ;    ; 6.523 ;
+; InPortC[7]    ; DataBusIn[15] ; 7.333 ;    ;    ; 7.333 ;
+; InPortE[0]    ; DataBusIn[8]  ; 6.739 ;    ;    ; 6.739 ;
+; InPortE[1]    ; DataBusIn[9]  ; 6.255 ;    ;    ; 6.255 ;
+; InPortE[2]    ; DataBusIn[10] ; 5.847 ;    ;    ; 5.847 ;
+; InPortE[3]    ; DataBusIn[11] ; 6.163 ;    ;    ; 6.163 ;
+; InPortE[4]    ; DataBusIn[12] ; 6.449 ;    ;    ; 6.449 ;
+; InPortE[5]    ; DataBusIn[13] ; 7.053 ;    ;    ; 7.053 ;
+; InPortE[6]    ; DataBusIn[14] ; 6.527 ;    ;    ; 6.527 ;
+; InPortE[7]    ; DataBusIn[15] ; 6.999 ;    ;    ; 6.999 ;
+; RESET_Key0_L  ; FlashReset_L  ; 5.804 ;    ;    ; 5.804 ;
+; SRam_Data[0]  ; DataBusIn[0]  ; 6.552 ;    ;    ; 6.552 ;
+; SRam_Data[1]  ; DataBusIn[1]  ; 6.956 ;    ;    ; 6.956 ;
+; SRam_Data[2]  ; DataBusIn[2]  ; 6.546 ;    ;    ; 6.546 ;
+; SRam_Data[3]  ; DataBusIn[3]  ; 6.723 ;    ;    ; 6.723 ;
+; SRam_Data[4]  ; DataBusIn[4]  ; 6.649 ;    ;    ; 6.649 ;
+; SRam_Data[5]  ; DataBusIn[5]  ; 6.561 ;    ;    ; 6.561 ;
+; SRam_Data[6]  ; DataBusIn[6]  ; 6.688 ;    ;    ; 6.688 ;
+; SRam_Data[7]  ; DataBusIn[7]  ; 6.853 ;    ;    ; 6.853 ;
+; SRam_Data[8]  ; DataBusIn[8]  ; 8.253 ;    ;    ; 8.253 ;
+; SRam_Data[9]  ; DataBusIn[9]  ; 8.286 ;    ;    ; 8.286 ;
+; SRam_Data[10] ; DataBusIn[10] ; 7.583 ;    ;    ; 7.583 ;
+; SRam_Data[11] ; DataBusIn[11] ; 8.369 ;    ;    ; 8.369 ;
+; SRam_Data[12] ; DataBusIn[12] ; 7.928 ;    ;    ; 7.928 ;
+; SRam_Data[13] ; DataBusIn[13] ; 8.968 ;    ;    ; 8.968 ;
+; SRam_Data[14] ; DataBusIn[14] ; 8.210 ;    ;    ; 8.210 ;
+; SRam_Data[15] ; DataBusIn[15] ; 8.995 ;    ;    ; 8.995 ;
++---------------+---------------+-------+----+----+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 3     ; 3    ;
+; Unconstrained Input Ports       ; 63    ; 63   ;
+; Unconstrained Input Port Paths  ; 2629  ; 2629 ;
+; Unconstrained Output Ports      ; 280   ; 280  ;
+; Unconstrained Output Port Paths ; 4568  ; 4568 ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Feb 01 21:45:45 2017
+Info: Command: quartus_sta MC68K -c MC68K
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity sld_jtag_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'MC68K.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning (332060): Node: inst13 was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: CLK_50Mhz was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: Video_Controller640x480:inst1|VGA_Controller_256Pallette:inst6|V_Clock was determined to be a clock but was found without an associated clock assignment.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 97.778
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    97.778         0.000 altera_reserved_tck 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Warning (332060): Node: inst13 was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: CLK_50Mhz was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: Video_Controller640x480:inst1|VGA_Controller_256Pallette:inst6|V_Clock was determined to be a clock but was found without an associated clock assignment.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 97.778
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    97.778         0.000 altera_reserved_tck 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 501 megabytes
+    Info: Processing ended: Wed Feb 01 21:45:48 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

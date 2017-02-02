@@ -1,0 +1,169 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 336 272)
+	(text "DMAController" (rect 5 0 86 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 240 25 252)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clock" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "Clock" (rect 21 27 51 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Reset_L" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "Reset_L" (rect 21 43 68 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "DataInFromMemory[15..0]" (rect 0 0 143 14)(font "Arial" (font_size 8)))
+		(text "DataInFromMemory[15..0]" (rect 21 59 164 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Dtack_IN_L" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "Dtack_IN_L" (rect 21 75 84 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "CS_L" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CS_L" (rect 21 91 51 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "DataInFromCPU[15..0]" (rect 0 0 122 14)(font "Arial" (font_size 8)))
+		(text "DataInFromCPU[15..0]" (rect 21 107 143 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "AddressIn[31..0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
+		(text "AddressIn[31..0]" (rect 21 123 115 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "UDS_IN_L" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "UDS_IN_L" (rect 21 139 77 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "LDS_IN_L" (rect 0 0 55 14)(font "Arial" (font_size 8)))
+		(text "LDS_IN_L" (rect 21 155 76 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "RW_IN" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "RW_IN" (rect 21 171 58 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "AS_L" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "AS_L" (rect 21 187 52 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "BG_L" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "BG_L" (rect 21 203 52 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208)(line_width 1))
+	)
+	(port
+		(pt 320 32)
+		(output)
+		(text "DMA_Address[31..0]" (rect 0 0 119 14)(font "Arial" (font_size 8)))
+		(text "DMA_Address[31..0]" (rect 180 27 299 41)(font "Arial" (font_size 8)))
+		(line (pt 320 32)(pt 304 32)(line_width 3))
+	)
+	(port
+		(pt 320 48)
+		(output)
+		(text "DMA_UDS_L" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "DMA_UDS_L" (rect 226 43 299 57)(font "Arial" (font_size 8)))
+		(line (pt 320 48)(pt 304 48)(line_width 1))
+	)
+	(port
+		(pt 320 64)
+		(output)
+		(text "DMA_LDS_L" (rect 0 0 71 14)(font "Arial" (font_size 8)))
+		(text "DMA_LDS_L" (rect 228 59 299 73)(font "Arial" (font_size 8)))
+		(line (pt 320 64)(pt 304 64)(line_width 1))
+	)
+	(port
+		(pt 320 80)
+		(output)
+		(text "DMA_RW" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "DMA_RW" (rect 245 75 299 89)(font "Arial" (font_size 8)))
+		(line (pt 320 80)(pt 304 80)(line_width 1))
+	)
+	(port
+		(pt 320 96)
+		(output)
+		(text "DMA_AS_L" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "DMA_AS_L" (rect 233 91 299 105)(font "Arial" (font_size 8)))
+		(line (pt 320 96)(pt 304 96)(line_width 1))
+	)
+	(port
+		(pt 320 112)
+		(output)
+		(text "DMA_DataOut[15..0]" (rect 0 0 115 14)(font "Arial" (font_size 8)))
+		(text "DMA_DataOut[15..0]" (rect 184 107 299 121)(font "Arial" (font_size 8)))
+		(line (pt 320 112)(pt 304 112)(line_width 3))
+	)
+	(port
+		(pt 320 128)
+		(output)
+		(text "BR_L" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "BR_L" (rect 269 123 299 137)(font "Arial" (font_size 8)))
+		(line (pt 320 128)(pt 304 128)(line_width 1))
+	)
+	(port
+		(pt 320 144)
+		(output)
+		(text "BGACK_L" (rect 0 0 57 14)(font "Arial" (font_size 8)))
+		(text "BGACK_L" (rect 242 139 299 153)(font "Arial" (font_size 8)))
+		(line (pt 320 144)(pt 304 144)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 304 240)(line_width 1))
+	)
+)

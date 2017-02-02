@@ -1,0 +1,513 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 14:00:58  November 17, 2011
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		MC68K_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 18:04:07  April 07, 2011
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		MC68K_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY MC68K
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:04:07  APRIL 07, 2011"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_W24 -to HexDisplay3[6]
+set_location_assignment PIN_U22 -to HexDisplay3[5]
+set_location_assignment PIN_Y25 -to HexDisplay3[4]
+set_location_assignment PIN_Y26 -to HexDisplay3[3]
+set_location_assignment PIN_AA26 -to HexDisplay3[2]
+set_location_assignment PIN_AA25 -to HexDisplay3[1]
+set_location_assignment PIN_Y23 -to HexDisplay3[0]
+set_location_assignment PIN_Y24 -to HexDisplay2[6]
+set_location_assignment PIN_AB25 -to HexDisplay2[5]
+set_location_assignment PIN_AB26 -to HexDisplay2[4]
+set_location_assignment PIN_AC26 -to HexDisplay2[3]
+set_location_assignment PIN_AC25 -to HexDisplay2[2]
+set_location_assignment PIN_V22 -to HexDisplay2[1]
+set_location_assignment PIN_AB23 -to HexDisplay2[0]
+set_location_assignment PIN_AB24 -to HexDisplay1[6]
+set_location_assignment PIN_AA23 -to HexDisplay1[5]
+set_location_assignment PIN_AA24 -to HexDisplay1[4]
+set_location_assignment PIN_Y22 -to HexDisplay1[3]
+set_location_assignment PIN_W21 -to HexDisplay1[2]
+set_location_assignment PIN_V21 -to HexDisplay1[1]
+set_location_assignment PIN_V20 -to HexDisplay1[0]
+set_location_assignment PIN_V13 -to HexDisplay0[6]
+set_location_assignment PIN_V14 -to HexDisplay0[5]
+set_location_assignment PIN_AE11 -to HexDisplay0[4]
+set_location_assignment PIN_AD11 -to HexDisplay0[3]
+set_location_assignment PIN_AC12 -to HexDisplay0[2]
+set_location_assignment PIN_AB12 -to HexDisplay0[1]
+set_location_assignment PIN_AF10 -to HexDisplay0[0]
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS OFF
+set_location_assignment PIN_D10 -to GreenOut[3]
+set_location_assignment PIN_C10 -to GreenOut[2]
+set_location_assignment PIN_A9 -to GreenOut[1]
+set_location_assignment PIN_B9 -to GreenOut[0]
+set_location_assignment PIN_A7 -to horiz_sync_out
+set_global_assignment -name END_TIME "300 us"
+set_global_assignment -name VECTOR_COMPARE_TRIGGER_MODE INPUT_EDGE
+set_global_assignment -name STRATIX_CONFIGURATION_DEVICE EPCS16
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_PIN_LOAD 5 -section_id "3.3-V LVTTL"
+set_global_assignment -name OUTPUT_PIN_LOAD 5 -section_id "3.3-V LVCMOS"
+set_global_assignment -name OUTPUT_PIN_LOAD 5 -section_id "2.5 V"
+set_global_assignment -name OUTPUT_PIN_LOAD 5 -section_id "1.8 V"
+set_global_assignment -name OUTPUT_PIN_LOAD 5 -section_id "1.5 V"
+set_location_assignment PIN_AC18 -to FlashAddress[0]
+set_location_assignment PIN_AB18 -to FlashAddress[1]
+set_location_assignment PIN_AE19 -to FlashAddress[2]
+set_location_assignment PIN_AF19 -to FlashAddress[3]
+set_location_assignment PIN_AE18 -to FlashAddress[4]
+set_location_assignment PIN_AF18 -to FlashAddress[5]
+set_location_assignment PIN_Y16 -to FlashAddress[6]
+set_location_assignment PIN_AA16 -to FlashAddress[7]
+set_location_assignment PIN_AD17 -to FlashAddress[8]
+set_location_assignment PIN_AC17 -to FlashAddress[9]
+set_location_assignment PIN_AE17 -to FlashAddress[10]
+set_location_assignment PIN_AF17 -to FlashAddress[11]
+set_location_assignment PIN_W16 -to FlashAddress[12]
+set_location_assignment PIN_W15 -to FlashAddress[13]
+set_location_assignment PIN_AC16 -to FlashAddress[14]
+set_location_assignment PIN_AD16 -to FlashAddress[15]
+set_location_assignment PIN_AE16 -to FlashAddress[16]
+set_location_assignment PIN_AC15 -to FlashAddress[17]
+set_location_assignment PIN_AB15 -to FlashAddress[18]
+set_location_assignment PIN_AA15 -to FlashAddress[19]
+set_location_assignment PIN_Y15 -to FlashAddress[20]
+set_location_assignment PIN_Y14 -to FlashAddress[21]
+set_location_assignment PIN_AD19 -to FlashData[0]
+set_location_assignment PIN_AC19 -to FlashData[1]
+set_location_assignment PIN_AF20 -to FlashData[2]
+set_location_assignment PIN_AE20 -to FlashData[3]
+set_location_assignment PIN_AB20 -to FlashData[4]
+set_location_assignment PIN_AC20 -to FlashData[5]
+set_location_assignment PIN_AF21 -to FlashData[6]
+set_location_assignment PIN_AE21 -to FlashData[7]
+set_location_assignment PIN_W17 -to FlashOE_L
+set_location_assignment PIN_AA18 -to FlashReset_L
+set_location_assignment PIN_AA17 -to FlashWE_L
+set_location_assignment PIN_V17 -to FlashCE_L
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name DO_COMBINED_ANALYSIS ON
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name IGNORE_CLOCK_SETTINGS ON
+set_global_assignment -name FMAX_REQUIREMENT "25 MHz"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name IGNORE_LCELL_BUFFERS ON
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE BALANCED
+set_global_assignment -name VHDL_FILE AddressDecoder.vhd
+set_global_assignment -name SOURCE_FILE lpm_bustri0.cmp
+set_global_assignment -name QIP_FILE lpm_bustri0.qip
+set_global_assignment -name VHDL_FILE lpm_bustri0.vhd
+set_global_assignment -name SOURCE_FILE lpm_rom0.cmp
+set_global_assignment -name QIP_FILE lpm_rom0.qip
+set_global_assignment -name VHDL_FILE lpm_rom0.vhd
+set_global_assignment -name BDF_FILE MC68K.bdf
+set_global_assignment -name SOURCE_FILE Ram4kbyte.cmp
+set_global_assignment -name QIP_FILE Ram4kbyte.qip
+set_global_assignment -name VHDL_FILE Ram4kbyte.vhd
+set_global_assignment -name SOURCE_FILE Rom4kword.cmp
+set_global_assignment -name QIP_FILE Rom4kword.qip
+set_global_assignment -name VHDL_FILE Rom4kword.vhd
+set_global_assignment -name VHDL_FILE Latch8Bit.vhd
+set_global_assignment -name BDF_FILE OnChipIO.bdf
+set_global_assignment -name VHDL_FILE "InterruptPriority Encoder.vhd"
+set_global_assignment -name QIP_FILE VideoRam.qip
+set_global_assignment -name VHDL_FILE RamAddressMapper.vhd
+set_global_assignment -name VHDL_FILE RGBMapper.vhd
+set_global_assignment -name VHDL_FILE Dtack_Generator.vhd
+set_global_assignment -name BDF_FILE Clock_Generator.bdf
+set_global_assignment -name VHDL_FILE IODecoder.vhd
+set_global_assignment -name VHDL_FILE LCD_Controller.vhd
+set_global_assignment -name VHDL_FILE HexTo7SegmentDisplay.vhd
+set_global_assignment -name VHDL_FILE Timer.vhd
+set_global_assignment -name BDF_FILE Video_Controller640x480.bdf
+set_global_assignment -name BDF_FILE Dram.bdf
+set_global_assignment -name VHDL_FILE VideoRamMux.vhd
+set_global_assignment -name VHDL_FILE lpm_bustri1.vhd
+set_global_assignment -name QIP_FILE OnChipRom8KWord.qip
+set_global_assignment -name VHDL_FILE M68kNewDramController.vhd
+set_global_assignment -name BDF_FILE FlashInterface.bdf
+set_global_assignment -name QIP_FILE lpm_bustri2.qip
+set_global_assignment -name VHDL_FILE TG68.vhd
+set_global_assignment -name VHDL_FILE DataMapper68k.vhd
+set_global_assignment -name QIP_FILE ClockGen.qip
+set_global_assignment -name QIP_FILE VGAClockGen.qip
+set_global_assignment -name VHDL_FILE ACIA_6850.vhd
+set_global_assignment -name VHDL_FILE ACIA_RX.vhd
+set_global_assignment -name VHDL_FILE ACIA_TX.vhd
+set_global_assignment -name VHDL_FILE M68xxIODecoder.vhd
+set_global_assignment -name VHDL_FILE Latch3Bit.vhd
+set_global_assignment -name BDF_FILE OnChipM68xxIO.bdf
+set_global_assignment -name BDF_FILE ACIA_BaudRate_Generator.bdf
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name VHDL_FILE ACIA_Clock.vhd
+set_global_assignment -name VHDL_FILE pia6821.vhd
+set_global_assignment -name VHDL_FILE TG68_fast.vhd
+set_global_assignment -name VHDL_FILE VGADataMux.vhd
+set_global_assignment -name VHDL_FILE TraceExceptionGenerator.vhd
+set_global_assignment -name VHDL_FILE TraceExceptionControlBit.vhd
+set_global_assignment -name BDF_FILE M68000CPU.bdf
+set_global_assignment -name BDF_FILE OnChipROM16KBytes.bdf
+set_global_assignment -name VHDL_FILE BusRequestLogic.vhd
+set_global_assignment -name QIP_FILE AddressTriState.qip
+set_global_assignment -name QIP_FILE SingleBitTriState.qip
+set_global_assignment -name BDF_FILE OnChip8KbyteRam.bdf
+set_global_assignment -name VHDL_FILE OnChip4KRam.vhd
+set_global_assignment -name QIP_FILE OnChip8KRam.qip
+set_global_assignment -name QIP_FILE ClockGenerator.qip
+set_location_assignment PIN_C13 -to InPortA[7]
+set_location_assignment PIN_AC13 -to InPortA[6]
+set_location_assignment PIN_AD13 -to InPortA[5]
+set_location_assignment PIN_AF14 -to InPortA[4]
+set_location_assignment PIN_AE14 -to InPortA[3]
+set_location_assignment PIN_P25 -to InPortA[2]
+set_location_assignment PIN_N26 -to InPortA[1]
+set_location_assignment PIN_N25 -to InPortA[0]
+set_location_assignment PIN_A13 -to InPortB[1]
+set_location_assignment PIN_V2 -to InPortC[1]
+set_location_assignment PIN_AA5 -to sdram_dq[15]
+set_location_assignment PIN_AC1 -to sdram_dq[14]
+set_location_assignment PIN_AC2 -to sdram_dq[13]
+set_location_assignment PIN_AA3 -to sdram_dq[12]
+set_location_assignment PIN_AA4 -to sdram_dq[11]
+set_location_assignment PIN_AB1 -to sdram_dq[10]
+set_location_assignment PIN_AB2 -to sdram_dq[9]
+set_location_assignment PIN_W6 -to sdram_dq[8]
+set_location_assignment PIN_V7 -to sdram_dq[7]
+set_location_assignment PIN_T8 -to sdram_dq[6]
+set_location_assignment PIN_R8 -to sdram_dq[5]
+set_location_assignment PIN_Y4 -to sdram_dq[4]
+set_location_assignment PIN_Y3 -to sdram_dq[3]
+set_location_assignment PIN_AA1 -to sdram_dq[2]
+set_location_assignment PIN_AA2 -to sdram_dq[1]
+set_location_assignment PIN_V6 -to sdram_dq[0]
+set_location_assignment PIN_AA6 -to sdram_cke
+set_location_assignment PIN_AA7 -to sdram_clock
+set_location_assignment PIN_AC3 -to sdram_cs_n
+set_location_assignment PIN_AD3 -to sdram_we_n
+set_location_assignment PIN_AB4 -to sdram_ras_n
+set_location_assignment PIN_AB3 -to sdram_cas_n
+set_location_assignment PIN_AE2 -to sdram_ba[0]
+set_location_assignment PIN_AE3 -to sdram_ba[1]
+set_location_assignment PIN_T6 -to sdram_a[0]
+set_location_assignment PIN_V4 -to sdram_a[1]
+set_location_assignment PIN_V3 -to sdram_a[2]
+set_location_assignment PIN_W2 -to sdram_a[3]
+set_location_assignment PIN_W1 -to sdram_a[4]
+set_location_assignment PIN_U6 -to sdram_a[5]
+set_location_assignment PIN_U7 -to sdram_a[6]
+set_location_assignment PIN_U5 -to sdram_a[7]
+set_location_assignment PIN_W4 -to sdram_a[8]
+set_location_assignment PIN_W3 -to sdram_a[9]
+set_location_assignment PIN_Y1 -to sdram_a[10]
+set_location_assignment PIN_V5 -to sdram_a[11]
+set_location_assignment PIN_AD2 -to sdram_dqm[0]
+set_location_assignment PIN_Y5 -to sdram_dqm[1]
+set_location_assignment PIN_AE4 -to SRamAddress[0]
+set_location_assignment PIN_AF4 -to SRamAddress[1]
+set_location_assignment PIN_AC5 -to SRamAddress[2]
+set_location_assignment PIN_AC6 -to SRamAddress[3]
+set_location_assignment PIN_AD4 -to SRamAddress[4]
+set_location_assignment PIN_AD5 -to SRamAddress[5]
+set_location_assignment PIN_AE5 -to SRamAddress[6]
+set_location_assignment PIN_AF5 -to SRamAddress[7]
+set_location_assignment PIN_AD6 -to SRamAddress[8]
+set_location_assignment PIN_AD7 -to SRamAddress[9]
+set_location_assignment PIN_V10 -to SRamAddress[10]
+set_location_assignment PIN_V9 -to SRamAddress[11]
+set_location_assignment PIN_AC7 -to SRamAddress[12]
+set_location_assignment PIN_W8 -to SRamAddress[13]
+set_location_assignment PIN_W10 -to SRamAddress[14]
+set_location_assignment PIN_Y10 -to SRamAddress[15]
+set_location_assignment PIN_AB8 -to SRamAddress[16]
+set_location_assignment PIN_AC8 -to SRamAddress[17]
+set_location_assignment PIN_AE10 -to SRam_WE_L
+set_location_assignment PIN_AD10 -to SRam_OE_L
+set_location_assignment PIN_AE9 -to SRam_LB_L
+set_location_assignment PIN_AF9 -to SRam_UB_L
+set_location_assignment PIN_AD8 -to SRam_Data[0]
+set_location_assignment PIN_AE6 -to SRam_Data[1]
+set_location_assignment PIN_AF6 -to SRam_Data[2]
+set_location_assignment PIN_AA9 -to SRam_Data[3]
+set_location_assignment PIN_AA10 -to SRam_Data[4]
+set_location_assignment PIN_AB10 -to SRam_Data[5]
+set_location_assignment PIN_AA11 -to SRam_Data[6]
+set_location_assignment PIN_Y11 -to SRam_Data[7]
+set_location_assignment PIN_AE7 -to SRam_Data[8]
+set_location_assignment PIN_AF7 -to SRam_Data[9]
+set_location_assignment PIN_AE8 -to SRam_Data[10]
+set_location_assignment PIN_AF8 -to SRam_Data[11]
+set_location_assignment PIN_W11 -to SRam_Data[12]
+set_location_assignment PIN_W12 -to SRam_Data[13]
+set_location_assignment PIN_AC9 -to SRam_Data[14]
+set_location_assignment PIN_AC10 -to SRam_Data[15]
+set_location_assignment PIN_AC11 -to SRam_CE_L
+set_location_assignment PIN_D8 -to vert_sync_out
+set_location_assignment PIN_C25 -to RS232_RxData
+set_location_assignment PIN_B25 -to RS232_TxData
+set_location_assignment PIN_C8 -to RedOut[0]
+set_location_assignment PIN_F10 -to RedOut[1]
+set_location_assignment PIN_G10 -to RedOut[2]
+set_location_assignment PIN_D9 -to RedOut[3]
+set_location_assignment PIN_J13 -to BlueOut[0]
+set_location_assignment PIN_J14 -to BlueOut[1]
+set_location_assignment PIN_F12 -to BlueOut[2]
+set_location_assignment PIN_G12 -to BlueOut[3]
+set_location_assignment PIN_J1 -to LCDDataOut[0]
+set_location_assignment PIN_J2 -to LCDDataOut[1]
+set_location_assignment PIN_H1 -to LCDDataOut[2]
+set_location_assignment PIN_H2 -to LCDDataOut[3]
+set_location_assignment PIN_J4 -to LCDDataOut[4]
+set_location_assignment PIN_J3 -to LCDDataOut[5]
+set_location_assignment PIN_H4 -to LCDDataOut[6]
+set_location_assignment PIN_H3 -to LCDDataOut[7]
+set_location_assignment PIN_K4 -to LCD_RW
+set_location_assignment PIN_K1 -to LCD_RS
+set_location_assignment PIN_K3 -to LCD_E
+set_location_assignment PIN_L4 -to LCD_ON_DE2
+set_location_assignment PIN_K2 -to LCD_BLON_DE2
+set_location_assignment PIN_U9 -to HexDisplay4[0]
+set_location_assignment PIN_U1 -to HexDisplay4[1]
+set_location_assignment PIN_U2 -to HexDisplay4[2]
+set_location_assignment PIN_T4 -to HexDisplay4[3]
+set_location_assignment PIN_R7 -to HexDisplay4[4]
+set_location_assignment PIN_R6 -to HexDisplay4[5]
+set_location_assignment PIN_T3 -to HexDisplay4[6]
+set_location_assignment PIN_T2 -to HexDisplay5[0]
+set_location_assignment PIN_P6 -to HexDisplay5[1]
+set_location_assignment PIN_P7 -to HexDisplay5[2]
+set_location_assignment PIN_T9 -to HexDisplay5[3]
+set_location_assignment PIN_R5 -to HexDisplay5[4]
+set_location_assignment PIN_R4 -to HexDisplay5[5]
+set_location_assignment PIN_R3 -to HexDisplay5[6]
+set_location_assignment PIN_R2 -to HexDisplay6[0]
+set_location_assignment PIN_P4 -to HexDisplay6[1]
+set_location_assignment PIN_P3 -to HexDisplay6[2]
+set_location_assignment PIN_M2 -to HexDisplay6[3]
+set_location_assignment PIN_M3 -to HexDisplay6[4]
+set_location_assignment PIN_M5 -to HexDisplay6[5]
+set_location_assignment PIN_M4 -to HexDisplay6[6]
+set_location_assignment PIN_L3 -to HexDisplay7[0]
+set_location_assignment PIN_L2 -to HexDisplay7[1]
+set_location_assignment PIN_L9 -to HexDisplay7[2]
+set_location_assignment PIN_L6 -to HexDisplay7[3]
+set_location_assignment PIN_L7 -to HexDisplay7[4]
+set_location_assignment PIN_P9 -to HexDisplay7[5]
+set_location_assignment PIN_N9 -to HexDisplay7[6]
+set_global_assignment -name QIP_FILE ClockPLL.qip
+set_location_assignment PIN_N2 -to CLK_50Mhz
+set_location_assignment PIN_G26 -to RESET_Key0_L
+set_location_assignment PIN_W26 -to Trace_Request_Key3_L
+set_location_assignment PIN_N23 -to IRQ4_Key1_L
+set_location_assignment PIN_V1 -to Bus_Request_SW8_H
+set_global_assignment -name BDF_FILE DMAController.bdf
+set_global_assignment -name VHDL_FILE CPU_DMA_Mux.vhd
+set_location_assignment PIN_B7 -to VideoDac_Sync_L
+set_location_assignment PIN_B8 -to VideoDac_Clock
+set_location_assignment PIN_D6 -to VideoDAC_Blank_L
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS OUTPUT DRIVING GROUND"
+set_location_assignment PIN_E10 -to RedOut[9]
+set_location_assignment PIN_F11 -to RedOut[8]
+set_location_assignment PIN_H12 -to RedOut[7]
+set_location_assignment PIN_H11 -to RedOut[6]
+set_location_assignment PIN_A8 -to RedOut[5]
+set_location_assignment PIN_C9 -to RedOut[4]
+set_location_assignment PIN_B12 -to BlueOut[9]
+set_location_assignment PIN_C12 -to BlueOut[8]
+set_location_assignment PIN_B11 -to BlueOut[7]
+set_location_assignment PIN_C11 -to BlueOut[6]
+set_location_assignment PIN_J11 -to BlueOut[5]
+set_location_assignment PIN_J10 -to BlueOut[4]
+set_location_assignment PIN_D12 -to GreenOut[9]
+set_location_assignment PIN_E12 -to GreenOut[8]
+set_location_assignment PIN_D11 -to GreenOut[7]
+set_location_assignment PIN_G11 -to GreenOut[6]
+set_location_assignment PIN_A10 -to GreenOut[5]
+set_location_assignment PIN_B10 -to GreenOut[4]
+set_global_assignment -name VHDL_FILE HWScroll.vhd
+set_global_assignment -name VHDL_FILE AddressDecoderScroll.vhd
+set_global_assignment -name VHDL_FILE CPUAddressScroll.vhd
+set_global_assignment -name FMAX_REQUIREMENT "25 MHz" -section_id CPUClock
+set_location_assignment PIN_AC21 -to RedLEDSA[7]
+set_location_assignment PIN_AD21 -to RedLEDSA[6]
+set_location_assignment PIN_AD23 -to RedLEDSA[5]
+set_location_assignment PIN_AD22 -to RedLEDSA[4]
+set_location_assignment PIN_AC22 -to RedLEDSA[3]
+set_location_assignment PIN_AB21 -to RedLEDSA[2]
+set_location_assignment PIN_AF23 -to RedLEDSA[1]
+set_location_assignment PIN_AE23 -to RedLEDSA[0]
+set_location_assignment PIN_AE13 -to RedLEDSB[7]
+set_location_assignment PIN_AF13 -to RedLEDSB[6]
+set_location_assignment PIN_AE15 -to RedLEDSB[5]
+set_location_assignment PIN_AD15 -to RedLEDSB[4]
+set_location_assignment PIN_AC14 -to RedLEDSB[3]
+set_location_assignment PIN_AA13 -to RedLEDSB[2]
+set_location_assignment PIN_Y13 -to RedLEDSB[1]
+set_location_assignment PIN_AA14 -to RedLEDSB[0]
+set_location_assignment PIN_AD12 -to RedLEDSC[1]
+set_location_assignment PIN_AE12 -to RedLEDSC[0]
+set_location_assignment PIN_Y18 -to GreenLEDS[7]
+set_location_assignment PIN_AA20 -to GreenLEDS[6]
+set_location_assignment PIN_U17 -to GreenLEDS[5]
+set_location_assignment PIN_U18 -to GreenLEDS[4]
+set_location_assignment PIN_V18 -to GreenLEDS[3]
+set_location_assignment PIN_W19 -to GreenLEDS[2]
+set_location_assignment PIN_AF22 -to GreenLEDS[1]
+set_location_assignment PIN_AE22 -to GreenLEDS[0]
+set_location_assignment PIN_U4 -to InPortB[7]
+set_location_assignment PIN_U3 -to InPortB[6]
+set_location_assignment PIN_T7 -to InPortB[5]
+set_location_assignment PIN_P2 -to InPortB[4]
+set_location_assignment PIN_P1 -to InPortB[3]
+set_location_assignment PIN_N1 -to InPortB[2]
+set_location_assignment PIN_B13 -to InPortB[0]
+set_global_assignment -name VHDL_FILE AddressExceptionGenerator.vhd
+set_global_assignment -name BDF_FILE OnChip16KbyteRam.bdf
+set_global_assignment -name QIP_FILE Ram8Kbyte.qip
+set_location_assignment PIN_T23 -to P2[0]
+set_location_assignment PIN_T24 -to P2[1]
+set_location_assignment PIN_T25 -to P2[2]
+set_location_assignment PIN_T18 -to P2[3]
+set_location_assignment PIN_T21 -to P2[4]
+set_location_assignment PIN_T20 -to P2[5]
+set_location_assignment PIN_U26 -to P2[6]
+set_location_assignment PIN_U25 -to P2[7]
+set_location_assignment PIN_U23 -to P3[0]
+set_location_assignment PIN_U24 -to P3[1]
+set_location_assignment PIN_R19 -to P3[2]
+set_location_assignment PIN_T19 -to P3[3]
+set_location_assignment PIN_U20 -to P3[4]
+set_location_assignment PIN_U21 -to P3[5]
+set_location_assignment PIN_V26 -to P3[6]
+set_location_assignment PIN_V25 -to P3[7]
+set_location_assignment PIN_W25 -to INT0
+set_location_assignment PIN_W23 -to INT1
+set_location_assignment PIN_M21 -to OutPortE[7]
+set_location_assignment PIN_N20 -to OutPortE[6]
+set_location_assignment PIN_M20 -to OutPortE[5]
+set_location_assignment PIN_M19 -to OutPortE[4]
+set_location_assignment PIN_M23 -to OutPortE[3]
+set_location_assignment PIN_M22 -to OutPortE[2]
+set_location_assignment PIN_K26 -to OutPortE[1]
+set_location_assignment PIN_K25 -to OutPortE[0]
+set_location_assignment PIN_T22 -to InPortE[7]
+set_location_assignment PIN_R20 -to InPortE[6]
+set_location_assignment PIN_R24 -to InPortE[5]
+set_location_assignment PIN_R25 -to InPortE[4]
+set_location_assignment PIN_P24 -to InPortE[3]
+set_location_assignment PIN_N24 -to InPortE[2]
+set_location_assignment PIN_M25 -to InPortE[1]
+set_location_assignment PIN_M24 -to InPortE[0]
+set_location_assignment PIN_P23 -to IRQ2_Key2_L
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name VHDL_FILE GraphicsController.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform68k_V13.0.vwf
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL OFF
+set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIXII NORMAL
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name BDF_FILE OnChipROM16KWords.bdf
+set_global_assignment -name VHDL_FILE CharacterGenRom5x7.vhd
+set_global_assignment -name CDF_FILE ../did/output_files/Chain1.cdf
+set_instance_assignment -name CLOCK_SETTINGS CPUClock -to CPUClock
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -from Clk_50Mhz -to *
+set_global_assignment -name VHDL_FILE VGA_Controller_256Pallette.vhd
+set_global_assignment -name BDF_FILE StaticRamController.bdf
+set_global_assignment -name VHDL_FILE ColourPallette.vhd
+set_global_assignment -name QIP_FILE OnChipRom16kWord.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name VHDL_FILE FlashDtackGenerator.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/M68kV6.0 - DE2 - 640by480 - For 465 students/Waveform68k_V13.0.vwf"

@@ -1,0 +1,30 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all; 
+use ieee.std_logic_unsigned.all; 
+
+entity IRQ6VectorFetchDetector is
+	Port (
+		Address : in Std_logic_vector(31 downto 0) ;
+		AS_L	: in std_logic ;  -- address strobe
+		RW_L    : in std_logic ;
+		IRQ6_L : in std_logic ;
+		VectorFetchDetect_H : out Std_logic
+	);
+end ;
+
+
+architecture bhvr of IRQ6VectorFetchDetector is
+Begin
+	process(AS_L, Address, RW_L)
+	begin
+	-- if IRQ6 asserted and the CPU reads from vector for IRQ 26 then detect response to IRQ
+		if(IRQ6_L = '0' and AS_L = '0' and RW_L = '1' and Address( 31 downto 0) = X"00000078") then 
+			VectorFetchDetect_H <= '1' ;
+		else
+			VectorFetchDetect_H <= '0' ;
+		end if ;
+
+		--end if;
+	end process ;
+END ;

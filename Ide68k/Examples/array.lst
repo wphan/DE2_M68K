@@ -1,0 +1,128 @@
+68000 MACRO ASSEMBLER   Version 5.00   (c) 1992-2005 Peter J.Fondse
+
+Date: 06 Apr 2011      Time: 10:25:26          Source: C:\IDE68K\EXAMPLES\ARRAY.SRC
+
+                       1          section   code
+                       2   ; CSTART.ASM  -  C startup-code for SIM68K
+                       3   
+          0000 0400    4   lomem  equ       $400             ; Lowest usable address
+          0001 0000    5   himem  equ       $10000           ; Highest memory addres + 1
+          0000 1000    6   stklen equ       $1000            ; Default stacksize
+                       7   
+00000400               8          org       lomem
+                       9   start:
+00000400  23FC FFFF   10          move.l    #-1,__ungetbuf
+00000404  FFFF 0000 
+00000408  04B0      
+0000040A  42B9 0000   11          clr.l     __allocp
+0000040E  04B4      
+00000410  4FF9 0001   12          lea       himem,A7
+00000414  0000      
+00000416  4EB9 0000   13          jsr       _main
+0000041A  048A      
+0000041C  6010        14          bra.s     __exit
+                      15   _exit:                             ; exit() function
+0000041E  4E56 0000   16          link      A6,#0
+00000422  202E 0008   17          move.l    8(A6),D0
+00000426  4E5E        18          unlk      A6
+00000428  DFFC 0000   19          add.l     #10,A7            ; pop arg & r/a from stack
+0000042C  000A      
+                      20   __exit:                            ; exit program
+0000042E  4E4F        21          trap      #15
+00000430  0000        22          dc.w      0
+00000432  60CC        23          bra       start             ; restart
+                      24   __putch:                           ; Basic character output routine
+00000434  4E56 0000   25          link      A6,#0
+00000438  202E 0008   26          move.l    8(A6),D0
+0000043C  4E4F        27          trap      #15
+0000043E  0001        28          dc.w      1
+00000440  4E5E        29          unlk      A6
+00000442  4E75        30          rts
+                      31   __getch:                           ; Basic character input routine
+00000444  4E4F        32          trap      #15
+00000446  0003        33          dc.w      3
+00000448  4880        34          ext.w     D0
+0000044A  48C0        35          ext.l     D0
+0000044C  4E75        36          rts
+                      37   __kbhit:
+0000044E  4E4F        38          trap      #15
+00000450  0004        39          dc.w      4
+00000452  56C0        40          sne       D0
+00000454  4E75        41          rts
+                      42   stackoverflow:
+00000456  4FF9 0001   43          lea       himem,A7          ; reset stackpointer
+0000045A  0000      
+0000045C  41FA 0008   44          lea       (stackmsg,PC),A0
+00000460  4E4F        45          trap      #15               ; print message
+00000462  0007        46          dc.w      7
+00000464  60C8        47          bra       __exit            ; abort program
+                      48   stackmsg:
+00000466  5374 6163   49          dc.b      'Stack overflow!',$0A,$0D
+0000046A  6B20 6F76 
+0000046E  6572 666C 
+00000472  6F77 210A 
+00000476  0D        
+00000477  5072 6F67   50          dc.b      'Program aborted',$0A,$0D,0
+0000047B  7261 6D20 
+0000047F  6162 6F72 
+00000483  7465 640A 
+00000487  0D00      
+                      51   ; C:\IDE68K\ARRAY\ARRAY.C - Compiled by CC68K  Version 5.00 (c) 1991-2005  Peter J.Fondse
+                      52   ; #include <stdio.h>
+                      53   ; short x[10] ;
+                      54   ; void main()
+                      55   ; {
+                      56   _main:
+0000048A  48E7 2000   57          movem.l   D2,-(A7)
+                      58   ; int i ;
+                      59   ; for(i = 0; i < 10; i ++)
+0000048E  4282        60          clr.l     D2
+                      61   main_1:
+00000490  0C82 0000   62          cmp.l     #10,D2
+00000494  000A      
+00000496  6C12        63          bge.s     main_3
+                      64   ; x[i] = i ;
+00000498  2002        65          move.l    D2,D0
+0000049A  E388        66          lsl.l     #1,D0
+0000049C  41F9 0000   67          lea       _x,A0
+000004A0  04C0      
+000004A2  3182 0800   68          move.w    D2,0(A0,D0.L)
+000004A6  5282        69          addq.l    #1,D2
+000004A8  60E6        70          bra       main_1
+                      71   main_3:
+000004AA  4CDF 0004   72          movem.l   (A7)+,D2
+000004AE  4E75        73          rts
+                      74   ; }
+                      75          section   data
+          0000 04B0   76   data   equ       *
+                      77   __ungetbuf:
+000004B0  FFFF FFFF   78          dc.l      -1                ; ungetbuffer for stdio functions
+                      79   __allocp:
+000004B4  0000 0000   80          dc.l      0                 ; start of free memory block list
+                      81   __heap:
+000004B8  0000 04D4   82          dc.l      heap              ; begin of free memory
+                      83   __stack:
+000004BC  0000 F000   84          dc.l      himem-stklen      ; begin of stack
+                      85          section   bss
+          0000 04C0   86   bss    equ       *
+                      87   _x:
+000004C0              88          ds.b      20
+                      89          section   heap
+          0000 04D4   90   heap   equ       *
+          0000 0400
+
+Assembly errors: 0
+
+
+SYMBOL TABLE
+
+Symbol        Value        Symbol        Value        Symbol        Value
+----------------------     ----------------------     ----------------------
+__allocp      000004B4     __exit        0000042E     __getch       00000444     
+__heap        000004B8     __kbhit       0000044E     __putch       00000434     
+__stack       000004BC     __ungetbuf    000004B0     _exit         0000041E     
+_main         0000048A     _x            000004C0     bss           000004C0     
+data          000004B0     heap          000004D4     himem         00010000     
+lomem         00000400     main_1        00000490     main_3        000004AA     
+stackmsg      00000466     stackoverflow 00000456     start         00000400     
+stklen        00001000     

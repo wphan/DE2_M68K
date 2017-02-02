@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MC68K">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|M68000CPU:inst17|TG68:inst|TG68_fast:TG68_fast_inst|altsyncram:regfile_high_rtl_1" CBX_FILE_NAME="altsyncram_skd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|M68000CPU:inst17|TG68:inst|TG68_fast:TG68_fast_inst|altsyncram:regfile_low_rtl_1" CBX_FILE_NAME="altsyncram_skd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|OnChipROM16KWords:inst16|OnChipRom16KWord:inst1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_teh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|M68000CPU:inst17|TG68:inst|TG68_fast:TG68_fast_inst|altsyncram:regfile_high_rtl_0" CBX_FILE_NAME="altsyncram_skd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|M68000CPU:inst17|TG68:inst|TG68_fast:TG68_fast_inst|altsyncram:regfile_low_rtl_0" CBX_FILE_NAME="altsyncram_skd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|M68000CPU:inst17|TG68:inst|TG68_fast:TG68_fast_inst|lpm_add_sub:Add15" CBX_FILE_NAME="add_sub_ari.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|OnChip16KbyteRam:inst6|Ram8Kbyte:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_jua1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MC68K|OnChip16KbyteRam:inst6|Ram8Kbyte:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_jua1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

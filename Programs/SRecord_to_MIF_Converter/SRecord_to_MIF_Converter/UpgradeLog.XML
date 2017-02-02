@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SRecord_to_MIF_Converter">
+</Property><Property Name="Solution File" Value="C:\M68kV6.0 - 640by480\Programs\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.sln">
+</Property><Property Name="User Options File" Value="C:\M68kV6.0 - 640by480\Programs\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.suo">
+</Property><Property Name="Date" Value="Friday, December 02, 2011">
+</Property><Property Name="Time" Value="8:10 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SRecord_to_MIF_Converter.sln" Description="File successfully backed up as C:\M68kV6.0 - 640by480\Programs\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="SRecord_to_MIF_Converter.suo" Description="File successfully backed up as C:\M68kV6.0 - 640by480\Programs\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.suo.old">
+</Event><Event ErrorLevel="0" Project="SRecord_to_MIF_Converter" Source="SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.vcproj" Description="Converting project file 'C:\M68kV6.0 - 640by480\Programs\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.vcproj'.">
+</Event><Event ErrorLevel="1" Project="SRecord_to_MIF_Converter" Source="SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="SRecord_to_MIF_Converter" Source="SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.vcproj" Description="Done converting to new project file 'C:\M68kV6.0 - 640by480\Programs\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="SRecord_to_MIF_Converter" Source="SRecord_to_MIF_Converter\SRecord_to_MIF_Converter.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SRecord_to_MIF_Converter.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SRecord_to_MIF_Converter.sln" Description="Converted">
+</Event></UpgradeLog>

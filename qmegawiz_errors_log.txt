@@ -1,0 +1,31 @@
+
+
+C:/M68kV6.0 - 640by480/lpm_bustri0.vhd
+
+Jun 29 07PM:46:50>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/M68kV6.0 - 640by480/lpm_bustri0.vhd
+
+Jun 29 07PM:46:52>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/M68kV6.0 - 640by480/lpm_bustri0.vhd
+
+Jun 29 07PM:46:59>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/M68kV6.0 - 640by480/lpm_bustri0.vhd
+
+Jun 29 07PM:56:35>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/M68kV6.0 - 640by480/lpm_bustri0.vhd
+
+Jun 29 07PM:56:37>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/M68kV6.0 - DE2 - 640by480 - For 465 students/lpm_bustri0.vhd
+
+Jan 16 03PM:52:02>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

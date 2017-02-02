@@ -1,0 +1,38 @@
+* DISTANCE.A68 - Assembly function to compute distance between A and B
+*
+* see also Distance.c
+*
+* C language prototype: float distance (CITY *, CITY *);
+*
+* Author: Peter J. Fondse (pfondse@hetnet.nl)
+
+_distance:
+       move.l    (4,A7),A0       A0 points to city A
+       move.l    (8,A7),A1       A1 points to city B
+       fmovem.x  FP2-FP6,-(A7)   save FP2-FP6
+       fmove.s   (4,A0),FP3      copy city A coordinates to FP3 - FP4
+       fmove.s   (8,A0),FP4
+       fmove.s   (4,A1),FP5      copy city B coordinates to FP5 - FP6
+       fmove.s   (8,A1),FP6
+* convert degrees to radians
+       fmove.x   #(3.14159265359/180),FP0
+       fmul.x    FP0,FP4         = x1
+       fmul.x    FP0,FP3         = y1
+       fmul.x    FP0,FP6         = x2
+       fmul.x    FP0,FP5         = y2
+* evaluate: arccos(sin(y1)*sin(y2) + cos(y1)*cos(y2)*cos(x1-x2))
+       fsub.x    FP6,FP4
+       fcos.x    FP4,FP0         FP0 = cos(x1-x2)
+       fcos.x    FP5,FP1         FP1 = cos(y2)
+       fmul.x    FP1,FP0         FP0 = cos(y2)*cos(x1-x2)
+       fcos.x    FP3,FP1         FP1 = cos(y1)
+       fmul.x    FP1,FP0         FP0 = cos(y1)*cos(y2)*cos(x1-x2)
+       fsin.x    FP5,FP1         FP1 = sin(y2)
+       fsin.x    FP3,FP2         FP2 = sin(y1)
+       fmul.x    FP2,FP1         FP1 = sin(y1)*sin(y2)
+       fadd.x    FP1,FP0         FP0 = sin(y1)*sin(y2) + cos(y1)*cos(y2)*cos(x1-x2)
+       facos.x   FP0             FP0 = arccos(..)
+* convert radians to degrees and multiply by 60
+       fmul.x    #(60*180/3.14159265359),FP0
+       fmovem.x  (A7)+,FP2-FP6   restore FP2-FP6
+       rts

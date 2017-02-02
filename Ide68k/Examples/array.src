@@ -1,0 +1,93 @@
+       section   code
+; CSTART.ASM  -  C startup-code for SIM68K
+
+lomem  equ       $400             ; Lowest usable address
+himem  equ       $10000           ; Highest memory addres + 1
+stklen equ       $1000            ; Default stacksize
+
+       org       lomem
+start:
+       move.l    #-1,__ungetbuf
+       clr.l     __allocp
+       lea       himem,A7
+       jsr       _main
+       bra.s     __exit
+_exit:                             ; exit() function
+       link      A6,#0
+       move.l    8(A6),D0
+       unlk      A6
+       add.l     #10,A7            ; pop arg & r/a from stack
+__exit:                            ; exit program
+       trap      #15
+       dc.w      0
+       bra       start             ; restart
+__putch:                           ; Basic character output routine
+       link      A6,#0
+       move.l    8(A6),D0
+       trap      #15
+       dc.w      1
+       unlk      A6
+       rts
+__getch:                           ; Basic character input routine
+       trap      #15
+       dc.w      3
+       ext.w     D0
+       ext.l     D0
+       rts
+__kbhit:
+       trap      #15
+       dc.w      4
+       sne       D0
+       rts
+stackoverflow:
+       lea       himem,A7          ; reset stackpointer
+       lea       (stackmsg,PC),A0
+       trap      #15               ; print message
+       dc.w      7
+       bra       __exit            ; abort program
+stackmsg:
+       dc.b      'Stack overflow!',$0A,$0D
+       dc.b      'Program aborted',$0A,$0D,0
+; C:\IDE68K\ARRAY\ARRAY.C - Compiled by CC68K  Version 5.00 (c) 1991-2005  Peter J.Fondse
+; #include <stdio.h>
+; short x[10] ;
+; void main()
+; {
+_main:
+       movem.l   D2,-(A7)
+; int i ;
+; for(i = 0; i < 10; i ++)
+       clr.l     D2
+main_1:
+       cmp.l     #10,D2
+       bge.s     main_3
+; x[i] = i ;
+       move.l    D2,D0
+       lsl.l     #1,D0
+       lea       _x,A0
+       move.w    D2,0(A0,D0.L)
+       addq.l    #1,D2
+       bra       main_1
+main_3:
+       movem.l   (A7)+,D2
+       rts
+; }
+       section   data
+       align
+data   equ       *
+__ungetbuf:
+       dc.l      -1                ; ungetbuffer for stdio functions
+__allocp:
+       dc.l      0                 ; start of free memory block list
+__heap:
+       dc.l      heap              ; begin of free memory
+__stack:
+       dc.l      himem-stklen      ; begin of stack
+       section   bss
+       align
+bss    equ       *
+_x:
+       ds.b      20
+       section   heap
+       align
+heap   equ       *

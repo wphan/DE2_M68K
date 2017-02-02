@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Feb 01 21:45:36 2017
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : MC68K
+Top-level Entity Name : MC68K
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 4,858 / 33,216 ( 15 % )
+    Total combinational functions : 4,684 / 33,216 ( 14 % )
+    Dedicated logic registers : 1,202 / 33,216 ( 4 % )
+Total registers : 1202
+Total pins : 427 / 475 ( 90 % )
+Total virtual pins : 0
+Total memory bits : 394,304 / 483,840 ( 81 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

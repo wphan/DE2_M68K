@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Paul\Desktop\M68kV6.0 - 640by480\simulation\qsim
+vMC68K
+Z1 I^mncdPo=o:84KzfUEUaJL2
+Z2 VX1ffRZ>hkek24QUSg6H233
+Z3 dC:\M68kV6.0 - DE2 - 640by480 - For 465 students\simulation\qsim
+Z4 w1486010335
+Z5 8MC68K.vo
+Z6 FMC68K.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|MC68K.vo|
+Z9 o-work work -O0
+Z10 n@m@c68@k
+!i10b 1
+Z11 !s100 TYbjH?eig_h9kDXZW0J_<1
+!s85 0
+Z12 !s108 1486010340.297000
+Z13 !s107 MC68K.vo|
+!s101 -O0
+vMC68K_vlg_check_tst
+!i10b 1
+!s100 2RS_H2B6n`S_1a=?`0Kj71
+I>a6;]l4EXZ6m36W>?@8hZ0
+Z14 V2LB:^jPJhFjo3OngAi5:02
+R3
+Z15 w1486010333
+Z16 8MC68K.vt
+Z17 FMC68K.vt
+L0 83
+R7
+r1
+!s85 0
+31
+Z18 !s108 1486010341.466000
+Z19 !s107 MC68K.vt|
+Z20 !s90 -work|work|MC68K.vt|
+!s101 -O0
+R9
+Z21 n@m@c68@k_vlg_check_tst
+vMC68K_vlg_sample_tst
+!i10b 1
+Z22 !s100 @?nR[mEQZ;`OYa@M7<RFR2
+Z23 I3c_z`kTBG49j7A;49?<^Q0
+Z24 V^GHmNmINO6QeB[Ugl;^=E2
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z25 n@m@c68@k_vlg_sample_tst
+vMC68K_vlg_vec_tst
+!i10b 1
+!s100 ODa[gjn`6h>Mh3Q76b^fg3
+I=1N;BBjb;A^kca]IQEUfW0
+Z26 VLmQX73LDYXEfDG>OC[5`k0
+R3
+R15
+R16
+R17
+L0 11889
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z27 n@m@c68@k_vlg_vec_tst

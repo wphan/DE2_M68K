@@ -1,0 +1,22 @@
+68000 MACRO ASSEMBLER   Version 5.00   (c) 1992-2005 Peter J.Fondse
+
+Date: 06 Apr 2011      Time: 12:57:28          Source: NEWFILE1.ASM
+
+00000000               1              org $0
+00000000  1234 5000    2   initialSP  dc.l $12345000
+00000004  0000 0400    3   initialPC  dc.l $400
+                       4   
+00000400               5              org $400
+00000400  203C 0000    6   main       move.l  #$a50f,d0
+00000404  A50F      
+00000406  60F8         7              bra main
+          0000 0000
+
+Assembly errors: 0
+
+
+SYMBOL TABLE
+
+Symbol        Value        Symbol        Value        Symbol        Value
+----------------------     ----------------------     ----------------------
+initialPC     00000004     initialSP     00000000     main          00000400     

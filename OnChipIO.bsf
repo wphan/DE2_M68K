@@ -1,0 +1,302 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 272 496)
+	(text "OnChipIO" (rect 5 0 58 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 464 25 476)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "InPortA[7..0]" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "InPortA[7..0]" (rect 21 27 90 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Address[31..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "Address[31..0]" (rect 21 43 105 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "IOSelect" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "IOSelect" (rect 21 59 68 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "WE_L" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "WE_L" (rect 21 75 54 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "UDS_L" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "UDS_L" (rect 21 91 59 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "InPortB[7..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "InPortB[7..0]" (rect 21 107 89 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "InPortC[7..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "InPortC[7..0]" (rect 21 123 89 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "InPortD[7..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "InPortD[7..0]" (rect 21 139 89 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "Clk" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "Clk" (rect 21 155 37 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "InPortE[7..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "InPortE[7..0]" (rect 21 171 88 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "Reset_L" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "Reset_L" (rect 21 187 68 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "DataIn[7..0]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "DataIn[7..0]" (rect 21 203 84 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "HexDisplay7[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay7[6..0]" (rect 136 27 235 41)(font "Arial" (font_size 8)))
+		(line (pt 256 32)(pt 240 32)(line_width 3))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "HexDisplay6[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay6[6..0]" (rect 136 43 235 57)(font "Arial" (font_size 8)))
+		(line (pt 256 48)(pt 240 48)(line_width 3))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "HexDisplay5[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay5[6..0]" (rect 136 59 235 73)(font "Arial" (font_size 8)))
+		(line (pt 256 64)(pt 240 64)(line_width 3))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "HexDisplay4[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay4[6..0]" (rect 136 75 235 89)(font "Arial" (font_size 8)))
+		(line (pt 256 80)(pt 240 80)(line_width 3))
+	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "HexDisplay3[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay3[6..0]" (rect 136 91 235 105)(font "Arial" (font_size 8)))
+		(line (pt 256 96)(pt 240 96)(line_width 3))
+	)
+	(port
+		(pt 256 112)
+		(output)
+		(text "HexDisplay2[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay2[6..0]" (rect 136 107 235 121)(font "Arial" (font_size 8)))
+		(line (pt 256 112)(pt 240 112)(line_width 3))
+	)
+	(port
+		(pt 256 128)
+		(output)
+		(text "HexDisplay1[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay1[6..0]" (rect 136 123 235 137)(font "Arial" (font_size 8)))
+		(line (pt 256 128)(pt 240 128)(line_width 3))
+	)
+	(port
+		(pt 256 144)
+		(output)
+		(text "HexDisplay0[6..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "HexDisplay0[6..0]" (rect 136 139 235 153)(font "Arial" (font_size 8)))
+		(line (pt 256 144)(pt 240 144)(line_width 3))
+	)
+	(port
+		(pt 256 160)
+		(output)
+		(text "OutPortA[7..0]" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "OutPortA[7..0]" (rect 155 155 235 169)(font "Arial" (font_size 8)))
+		(line (pt 256 160)(pt 240 160)(line_width 3))
+	)
+	(port
+		(pt 256 176)
+		(output)
+		(text "OutPortB[7..0]" (rect 0 0 79 14)(font "Arial" (font_size 8)))
+		(text "OutPortB[7..0]" (rect 156 171 235 185)(font "Arial" (font_size 8)))
+		(line (pt 256 176)(pt 240 176)(line_width 3))
+	)
+	(port
+		(pt 256 192)
+		(output)
+		(text "OutPortC[7..0]" (rect 0 0 79 14)(font "Arial" (font_size 8)))
+		(text "OutPortC[7..0]" (rect 156 187 235 201)(font "Arial" (font_size 8)))
+		(line (pt 256 192)(pt 240 192)(line_width 3))
+	)
+	(port
+		(pt 256 208)
+		(output)
+		(text "OutPortD[7..0]" (rect 0 0 79 14)(font "Arial" (font_size 8)))
+		(text "OutPortD[7..0]" (rect 156 203 235 217)(font "Arial" (font_size 8)))
+		(line (pt 256 208)(pt 240 208)(line_width 3))
+	)
+	(port
+		(pt 256 224)
+		(output)
+		(text "OutPortE[7..0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "OutPortE[7..0]" (rect 158 219 235 233)(font "Arial" (font_size 8)))
+		(line (pt 256 224)(pt 240 224)(line_width 3))
+	)
+	(port
+		(pt 256 240)
+		(output)
+		(text "DataOut[7..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "DataOut[7..0]" (rect 161 235 235 249)(font "Arial" (font_size 8)))
+		(line (pt 256 240)(pt 240 240)(line_width 3))
+	)
+	(port
+		(pt 256 256)
+		(output)
+		(text "TraceExceptionBit_H" (rect 0 0 118 14)(font "Arial" (font_size 8)))
+		(text "TraceExceptionBit_H" (rect 117 251 235 265)(font "Arial" (font_size 8)))
+		(line (pt 256 256)(pt 240 256)(line_width 1))
+	)
+	(port
+		(pt 256 272)
+		(output)
+		(text "LCD_DataOut[7..0]" (rect 0 0 105 14)(font "Arial" (font_size 8)))
+		(text "LCD_DataOut[7..0]" (rect 130 267 235 281)(font "Arial" (font_size 8)))
+		(line (pt 256 272)(pt 240 272)(line_width 3))
+	)
+	(port
+		(pt 256 288)
+		(output)
+		(text "LCD_RS" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "LCD_RS" (rect 188 283 235 297)(font "Arial" (font_size 8)))
+		(line (pt 256 288)(pt 240 288)(line_width 1))
+	)
+	(port
+		(pt 256 304)
+		(output)
+		(text "LCD_E" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "LCD_E" (rect 198 299 235 313)(font "Arial" (font_size 8)))
+		(line (pt 256 304)(pt 240 304)(line_width 1))
+	)
+	(port
+		(pt 256 320)
+		(output)
+		(text "LCD_RW" (rect 0 0 50 14)(font "Arial" (font_size 8)))
+		(text "LCD_RW" (rect 185 315 235 329)(font "Arial" (font_size 8)))
+		(line (pt 256 320)(pt 240 320)(line_width 1))
+	)
+	(port
+		(pt 256 336)
+		(output)
+		(text "Timer1_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer1_IRQ" (rect 171 331 235 345)(font "Arial" (font_size 8)))
+		(line (pt 256 336)(pt 240 336)(line_width 1))
+	)
+	(port
+		(pt 256 352)
+		(output)
+		(text "Timer2_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer2_IRQ" (rect 171 347 235 361)(font "Arial" (font_size 8)))
+		(line (pt 256 352)(pt 240 352)(line_width 1))
+	)
+	(port
+		(pt 256 368)
+		(output)
+		(text "Timer3_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer3_IRQ" (rect 171 363 235 377)(font "Arial" (font_size 8)))
+		(line (pt 256 368)(pt 240 368)(line_width 1))
+	)
+	(port
+		(pt 256 384)
+		(output)
+		(text "Timer4_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer4_IRQ" (rect 171 379 235 393)(font "Arial" (font_size 8)))
+		(line (pt 256 384)(pt 240 384)(line_width 1))
+	)
+	(port
+		(pt 256 400)
+		(output)
+		(text "Timer5_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer5_IRQ" (rect 171 395 235 409)(font "Arial" (font_size 8)))
+		(line (pt 256 400)(pt 240 400)(line_width 1))
+	)
+	(port
+		(pt 256 416)
+		(output)
+		(text "Timer6_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer6_IRQ" (rect 171 411 235 425)(font "Arial" (font_size 8)))
+		(line (pt 256 416)(pt 240 416)(line_width 1))
+	)
+	(port
+		(pt 256 432)
+		(output)
+		(text "Timer7_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer7_IRQ" (rect 171 427 235 441)(font "Arial" (font_size 8)))
+		(line (pt 256 432)(pt 240 432)(line_width 1))
+	)
+	(port
+		(pt 256 448)
+		(output)
+		(text "Timer8_IRQ" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "Timer8_IRQ" (rect 171 443 235 457)(font "Arial" (font_size 8)))
+		(line (pt 256 448)(pt 240 448)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 464)(line_width 1))
+	)
+)

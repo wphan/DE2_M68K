@@ -1,0 +1,809 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- PROGRAM		"Quartus II 64-Bit"
+-- VERSION		"Version 13.0.0 Build 156 04/24/2013 SJ Web Edition"
+-- CREATED		"Sun Jun 23 17:12:03 2013"
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work;
+
+ENTITY MC68K IS 
+	PORT
+	(
+		RS232_RxData :  IN  STD_LOGIC;
+		CLK_50Mhz :  IN  STD_LOGIC;
+		RESET_Key0_L :  IN  STD_LOGIC;
+		Trace_Request_Key3_L :  IN  STD_LOGIC;
+		Bus_Request_SW8_H :  IN  STD_LOGIC;
+		IRQ4_Key1_L :  IN  STD_LOGIC;
+		IRQ2_Key2_L :  IN  STD_LOGIC;
+		FlashData :  INOUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		InPortA :  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		InPortB :  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		InPortC :  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		InPortE :  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		sdram_dq :  INOUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SRam_Data :  INOUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
+		CPUClock :  OUT  STD_LOGIC;
+		sdram_cke :  OUT  STD_LOGIC;
+		sdram_cs_n :  OUT  STD_LOGIC;
+		sdram_ras_n :  OUT  STD_LOGIC;
+		sdram_cas_n :  OUT  STD_LOGIC;
+		sdram_we_n :  OUT  STD_LOGIC;
+		RomSelect_H :  OUT  STD_LOGIC;
+		UDS_L :  OUT  STD_LOGIC;
+		LDS_L :  OUT  STD_LOGIC;
+		Dtack_L :  OUT  STD_LOGIC;
+		sdram_clock :  OUT  STD_LOGIC;
+		LCD_RW :  OUT  STD_LOGIC;
+		CPU_RW :  OUT  STD_LOGIC;
+		LCD_E :  OUT  STD_LOGIC;
+		LCD_RS :  OUT  STD_LOGIC;
+		horiz_sync_out :  OUT  STD_LOGIC;
+		vert_sync_out :  OUT  STD_LOGIC;
+		SRam_OE_L :  OUT  STD_LOGIC;
+		SRam_CE_L :  OUT  STD_LOGIC;
+		SRam_WE_L :  OUT  STD_LOGIC;
+		SRam_LB_L :  OUT  STD_LOGIC;
+		SRam_UB_L :  OUT  STD_LOGIC;
+		ResetOut :  OUT  STD_LOGIC;
+		DramDtack_L :  OUT  STD_LOGIC;
+		FlashOE_L :  OUT  STD_LOGIC;
+		FlashWE_L :  OUT  STD_LOGIC;
+		FlashReset_L :  OUT  STD_LOGIC;
+		FlashCE_L :  OUT  STD_LOGIC;
+		DramSelect_H :  OUT  STD_LOGIC;
+		RS232_TxData :  OUT  STD_LOGIC;
+		AS_L :  OUT  STD_LOGIC;
+		VideoRamSelect_H :  OUT  STD_LOGIC;
+		OnChipRamSelect_H :  OUT  STD_LOGIC;
+		BG_L :  OUT  STD_LOGIC;
+		LCD_Contrast_DE1 :  OUT  STD_LOGIC;
+		LCD_BLON_DE2 :  OUT  STD_LOGIC;
+		LCD_ON_DE2 :  OUT  STD_LOGIC;
+		UDS_OUT_L :  OUT  STD_LOGIC;
+		LDS_OUT_L :  OUT  STD_LOGIC;
+		RW_OUT :  OUT  STD_LOGIC;
+		AS_OUT_L :  OUT  STD_LOGIC;
+		BR_L :  OUT  STD_LOGIC;
+		BGACK_L :  OUT  STD_LOGIC;
+		VideoDac_Sync_L :  OUT  STD_LOGIC;
+		VideoDac_Clock :  OUT  STD_LOGIC;
+		VideoDAC_Blank_L :  OUT  STD_LOGIC;
+		Address_OUT :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		BlueOut :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DMA_DataOut :  OUT  STD_LOGIC_VECTOR(15 DOWNTO 0);
+		FlashAddress :  OUT  STD_LOGIC_VECTOR(21 DOWNTO 0);
+		GreenLEDS :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		GreenOut :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		HexDisplay0 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HexDisplay1 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HexDisplay2 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HexDisplay3 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HexDisplay4 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HexDisplay5 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HexDisplay6 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HexDisplay7 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		LCDDataOut :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		OutPortE :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		RedLEDSA :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		RedLEDSB :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		RedLEDSC :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		RedOut :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		sdram_a :  OUT  STD_LOGIC_VECTOR(11 DOWNTO 0);
+		sdram_ba :  OUT  STD_LOGIC_VECTOR(1 DOWNTO 0);
+		sdram_dqm :  OUT  STD_LOGIC_VECTOR(1 DOWNTO 0);
+		SRamAddress :  OUT  STD_LOGIC_VECTOR(17 DOWNTO 0)
+	);
+END MC68K;
+
+ARCHITECTURE bdf_type OF MC68K IS 
+
+COMPONENT dtack_generator
+	PORT(AS_L : IN STD_LOGIC;
+		 DramSelect_H : IN STD_LOGIC;
+		 FlashSelect_H : IN STD_LOGIC;
+		 DramDtack_L : IN STD_LOGIC;
+		 FlashDtack_L : IN STD_LOGIC;
+		 DtackOut_L : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+COMPONENT video_controller640x480
+	PORT(Clock : IN STD_LOGIC;
+		 Reset_L : IN STD_LOGIC;
+		 RamSelect_H : IN STD_LOGIC;
+		 AS_L : IN STD_LOGIC;
+		 RW : IN STD_LOGIC;
+		 LDS_L : IN STD_LOGIC;
+		 UDS_L : IN STD_LOGIC;
+		 Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DataIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 SRam_Data : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 horiz_sync_out : OUT STD_LOGIC;
+		 vert_sync_out : OUT STD_LOGIC;
+		 SRam_OE_L : OUT STD_LOGIC;
+		 SRam_CE_L : OUT STD_LOGIC;
+		 SRam_WE_L : OUT STD_LOGIC;
+		 SRam_LB_L : OUT STD_LOGIC;
+		 SRam_UB_L : OUT STD_LOGIC;
+		 BlueOut : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 GreenOut : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 RedOut : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 SRamAddress : OUT STD_LOGIC_VECTOR(17 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT onchipm68xxio
+	PORT(Clock_50Mhz : IN STD_LOGIC;
+		 IOSelect : IN STD_LOGIC;
+		 UDS_L : IN STD_LOGIC;
+		 WE_L : IN STD_LOGIC;
+		 Clk : IN STD_LOGIC;
+		 Reset_L : IN STD_LOGIC;
+		 RS232_RxData : IN STD_LOGIC;
+		 PIA1_CB1 : IN STD_LOGIC;
+		 PIA1_CA1 : IN STD_LOGIC;
+		 PIA2_CB1 : IN STD_LOGIC;
+		 PIA2_CA1 : IN STD_LOGIC;
+		 PIA1_CA2 : INOUT STD_LOGIC;
+		 PIA1_CB2 : INOUT STD_LOGIC;
+		 PIA2_CA2 : INOUT STD_LOGIC;
+		 PIA2_CB2 : INOUT STD_LOGIC;
+		 Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DataIn : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 PIA1_PortA : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 PIA1_PortB : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 PIA2_PortA : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 PIA2_PortB : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 ACIA_IRQ : OUT STD_LOGIC;
+		 RS232_TxData : OUT STD_LOGIC;
+		 PIA_IRQ : OUT STD_LOGIC;
+		 DataOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT dmacontroller
+	PORT(Clock : IN STD_LOGIC;
+		 Reset_L : IN STD_LOGIC;
+		 Dtack_IN_L : IN STD_LOGIC;
+		 CS_L : IN STD_LOGIC;
+		 UDS_IN_L : IN STD_LOGIC;
+		 LDS_IN_L : IN STD_LOGIC;
+		 RW_IN : IN STD_LOGIC;
+		 AS_L : IN STD_LOGIC;
+		 BG_L : IN STD_LOGIC;
+		 AddressIn : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DataInFromCPU : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 DataInFromMemory : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 DMA_UDS_L : OUT STD_LOGIC;
+		 DMA_LDS_L : OUT STD_LOGIC;
+		 DMA_RW : OUT STD_LOGIC;
+		 DMA_AS_L : OUT STD_LOGIC;
+		 BR_L : OUT STD_LOGIC;
+		 BGACK_L : OUT STD_LOGIC;
+		 DMA_Address : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DMA_DataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT cpu_dma_mux
+	PORT(CPU_DMA_Select : IN STD_LOGIC;
+		 DMA_AS_L : IN STD_LOGIC;
+		 DMA_RW : IN STD_LOGIC;
+		 DMA_UDS_L : IN STD_LOGIC;
+		 DMA_LDS_L : IN STD_LOGIC;
+		 CPU_AS_L : IN STD_LOGIC;
+		 CPU_UDS_L : IN STD_LOGIC;
+		 CPU_LDS_L : IN STD_LOGIC;
+		 CPU_RW : IN STD_LOGIC;
+		 CPU_Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 CPU_DataBusOut : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 DMA_Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DMA_DataBusOut : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 AS_L : OUT STD_LOGIC;
+		 UDS_L : OUT STD_LOGIC;
+		 LDS_L : OUT STD_LOGIC;
+		 RW : OUT STD_LOGIC;
+		 AddressOut : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT exceptiongenerator
+	PORT(Clock : IN STD_LOGIC;
+		 Reset : IN STD_LOGIC;
+		 AS_L : IN STD_LOGIC;
+		 UDS_L : IN STD_LOGIC;
+		 LDS_L : IN STD_LOGIC;
+		 RW_L : IN STD_LOGIC;
+		 SingleStep_H : IN STD_LOGIC;
+		 TraceRequest_L : IN STD_LOGIC;
+		 Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 AddressIRQ_L : OUT STD_LOGIC;
+		 TraceIRQ_L : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+COMPONENT m68000cpu
+	PORT(Clk : IN STD_LOGIC;
+		 Reset_L : IN STD_LOGIC;
+		 Dtack_L : IN STD_LOGIC;
+		 BR_L : IN STD_LOGIC;
+		 BGACK_L : IN STD_LOGIC;
+		 DataBusIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 IPL : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+		 AS_L : OUT STD_LOGIC;
+		 UDS_L : OUT STD_LOGIC;
+		 LDS_L : OUT STD_LOGIC;
+		 RW : OUT STD_LOGIC;
+		 BG_L : OUT STD_LOGIC;
+		 Address : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DataBusOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT dram
+	PORT(WE_L : IN STD_LOGIC;
+		 Clock : IN STD_LOGIC;
+		 Reset_L : IN STD_LOGIC;
+		 DramSelect_H : IN STD_LOGIC;
+		 LDS_L : IN STD_LOGIC;
+		 UDS_L : IN STD_LOGIC;
+		 AS_L : IN STD_LOGIC;
+		 Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DataIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 sdram_dq : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 sdram_clock : OUT STD_LOGIC;
+		 sdram_cke : OUT STD_LOGIC;
+		 sdram_cs_n : OUT STD_LOGIC;
+		 sdram_ras_n : OUT STD_LOGIC;
+		 sdram_cas_n : OUT STD_LOGIC;
+		 sdram_we_n : OUT STD_LOGIC;
+		 DramDtack_L : OUT STD_LOGIC;
+		 ResetOut_L : OUT STD_LOGIC;
+		 DataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 sdram_a : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+		 sdram_ba : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		 sdram_dqm : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT onchiprom16kbytes
+	PORT(Enable_H : IN STD_LOGIC;
+		 Clock : IN STD_LOGIC;
+		 Address : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+		 DataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT interruptpriorityencoder
+	PORT(IRQ7_L : IN STD_LOGIC;
+		 IRQ6_L : IN STD_LOGIC;
+		 IRQ5_L : IN STD_LOGIC;
+		 IRQ4_L : IN STD_LOGIC;
+		 IRQ3_L : IN STD_LOGIC;
+		 IRQ2_L : IN STD_LOGIC;
+		 IRQ1_L : IN STD_LOGIC;
+		 IPL : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT addressdecoder
+	PORT(Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 OnChipRomSelect_H : OUT STD_LOGIC;
+		 OnChipRamSelect_H : OUT STD_LOGIC;
+		 DramSelect_H : OUT STD_LOGIC;
+		 VideoRamSelect_H : OUT STD_LOGIC;
+		 IOSelect_H : OUT STD_LOGIC;
+		 FlashSelect_H : OUT STD_LOGIC;
+		 DMASelect_L : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+COMPONENT flashinterface
+	PORT(FlashSelect_H : IN STD_LOGIC;
+		 WE_L : IN STD_LOGIC;
+		 Reset_L : IN STD_LOGIC;
+		 UDS_L : IN STD_LOGIC;
+		 Clock : IN STD_LOGIC;
+		 DataIn : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 FlashData : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 FlashOE_L : OUT STD_LOGIC;
+		 FlashCE_L : OUT STD_LOGIC;
+		 FlashWE_L : OUT STD_LOGIC;
+		 FlashReset_L : OUT STD_LOGIC;
+		 FlashDtackOut_L : OUT STD_LOGIC;
+		 DataOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT onchip16kbyteram
+	PORT(RamSelect_H : IN STD_LOGIC;
+		 UDS_L : IN STD_LOGIC;
+		 LDS_L : IN STD_LOGIC;
+		 WE_L : IN STD_LOGIC;
+		 Clock : IN STD_LOGIC;
+		 Address : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+		 DataIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 DataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT onchipio
+	PORT(IOSelect : IN STD_LOGIC;
+		 WE_L : IN STD_LOGIC;
+		 UDS_L : IN STD_LOGIC;
+		 Clk : IN STD_LOGIC;
+		 Reset_L : IN STD_LOGIC;
+		 Address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 DataIn : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 InPortA : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 InPortB : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 InPortC : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 InPortD : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 InPortE : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 TraceExceptionBit_H : OUT STD_LOGIC;
+		 LCD_RS : OUT STD_LOGIC;
+		 LCD_E : OUT STD_LOGIC;
+		 LCD_RW : OUT STD_LOGIC;
+		 Timer1_IRQ : OUT STD_LOGIC;
+		 Timer2_IRQ : OUT STD_LOGIC;
+		 Timer3_IRQ : OUT STD_LOGIC;
+		 Timer4_IRQ : OUT STD_LOGIC;
+		 Timer5_IRQ : OUT STD_LOGIC;
+		 Timer6_IRQ : OUT STD_LOGIC;
+		 Timer7_IRQ : OUT STD_LOGIC;
+		 Timer8_IRQ : OUT STD_LOGIC;
+		 DataOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 HexDisplay0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 HexDisplay1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 HexDisplay2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 HexDisplay3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 HexDisplay4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 HexDisplay5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 HexDisplay6 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 HexDisplay7 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 LCD_DataOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 OutPortA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 OutPortB : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 OutPortC : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 OutPortD : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 OutPortE : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END COMPONENT;
+
+SIGNAL	Address :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL	Clock25Mhz :  STD_LOGIC;
+SIGNAL	Clock_50Mhz :  STD_LOGIC;
+SIGNAL	DataBusIn :  STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL	DataBusOut :  STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL	DMA_Address :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL	DMA_AS_L :  STD_LOGIC;
+SIGNAL	DMA_DataOut_ALTERA_SYNTHESIZED :  STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL	DMA_LDS_L :  STD_LOGIC;
+SIGNAL	DMA_RW :  STD_LOGIC;
+SIGNAL	DMA_UDS_L :  STD_LOGIC;
+SIGNAL	TraceException_H :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_82 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_83 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_84 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_85 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_86 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_87 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_88 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_11 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_12 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_13 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_14 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_15 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_16 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_17 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_18 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_89 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_90 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_91 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_28 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_33 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_34 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_35 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_36 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_92 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_38 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_39 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_40 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_41 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_42 :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_43 :  STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_50 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_52 :  STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_53 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_54 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_56 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_61 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_62 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_63 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_64 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_65 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_66 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_67 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_68 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_72 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_80 :  STD_LOGIC_VECTOR(0 TO 7);
+SIGNAL	SYNTHESIZED_WIRE_81 :  STD_LOGIC;
+
+SIGNAL	GDFX_TEMP_SIGNAL_1 :  STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL	GDFX_TEMP_SIGNAL_0 :  STD_LOGIC_VECTOR(1 DOWNTO 0);
+
+BEGIN 
+LCD_Contrast_DE1 <= '0';
+LCD_BLON_DE2 <= '1';
+LCD_ON_DE2 <= '1';
+VideoDac_Sync_L <= '0';
+VideoDAC_Blank_L <= '1';
+RomSelect_H <= SYNTHESIZED_WIRE_61;
+UDS_L <= SYNTHESIZED_WIRE_88;
+LDS_L <= SYNTHESIZED_WIRE_87;
+Dtack_L <= SYNTHESIZED_WIRE_91;
+CPU_RW <= SYNTHESIZED_WIRE_86;
+ResetOut <= SYNTHESIZED_WIRE_85;
+DramDtack_L <= SYNTHESIZED_WIRE_3;
+DramSelect_H <= SYNTHESIZED_WIRE_83;
+AS_L <= SYNTHESIZED_WIRE_82;
+VideoRamSelect_H <= SYNTHESIZED_WIRE_6;
+OnChipRamSelect_H <= SYNTHESIZED_WIRE_72;
+BG_L <= SYNTHESIZED_WIRE_33;
+BR_L <= SYNTHESIZED_WIRE_62;
+BGACK_L <= SYNTHESIZED_WIRE_92;
+SYNTHESIZED_WIRE_90 <= '0';
+SYNTHESIZED_WIRE_34 <= '1';
+SYNTHESIZED_WIRE_36 <= '1';
+SYNTHESIZED_WIRE_64 <= '1';
+SYNTHESIZED_WIRE_80 <= "00000000";
+
+DataBusIn(15) <= GDFX_TEMP_SIGNAL_1(15);
+DataBusIn(14) <= GDFX_TEMP_SIGNAL_1(14);
+DataBusIn(13) <= GDFX_TEMP_SIGNAL_1(13);
+DataBusIn(12) <= GDFX_TEMP_SIGNAL_1(12);
+DataBusIn(11) <= GDFX_TEMP_SIGNAL_1(11);
+DataBusIn(10) <= GDFX_TEMP_SIGNAL_1(10);
+DataBusIn(9) <= GDFX_TEMP_SIGNAL_1(9);
+DataBusIn(8) <= GDFX_TEMP_SIGNAL_1(8);
+DataBusIn(7) <= GDFX_TEMP_SIGNAL_1(7);
+DataBusIn(6) <= GDFX_TEMP_SIGNAL_1(6);
+DataBusIn(5) <= GDFX_TEMP_SIGNAL_1(5);
+DataBusIn(4) <= GDFX_TEMP_SIGNAL_1(4);
+DataBusIn(3) <= GDFX_TEMP_SIGNAL_1(3);
+DataBusIn(2) <= GDFX_TEMP_SIGNAL_1(2);
+DataBusIn(1) <= GDFX_TEMP_SIGNAL_1(1);
+DataBusIn(0) <= GDFX_TEMP_SIGNAL_1(0);
+
+sdram_dqm(1) <= GDFX_TEMP_SIGNAL_0(1);
+sdram_dqm(0) <= GDFX_TEMP_SIGNAL_0(0);
+
+
+
+b2v_inst : dtack_generator
+PORT MAP(AS_L => SYNTHESIZED_WIRE_82,
+		 DramSelect_H => SYNTHESIZED_WIRE_83,
+		 FlashSelect_H => SYNTHESIZED_WIRE_84,
+		 DramDtack_L => SYNTHESIZED_WIRE_3,
+		 FlashDtack_L => SYNTHESIZED_WIRE_4,
+		 DtackOut_L => SYNTHESIZED_WIRE_91);
+
+
+b2v_inst1 : video_controller640x480
+PORT MAP(Clock => Clock25Mhz,
+		 Reset_L => SYNTHESIZED_WIRE_85,
+		 RamSelect_H => SYNTHESIZED_WIRE_6,
+		 AS_L => SYNTHESIZED_WIRE_82,
+		 RW => SYNTHESIZED_WIRE_86,
+		 LDS_L => SYNTHESIZED_WIRE_87,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 Address => Address,
+		 DataIn => DataBusOut,
+		 SRam_Data => SRam_Data,
+		 horiz_sync_out => horiz_sync_out,
+		 vert_sync_out => vert_sync_out,
+		 SRam_OE_L => SRam_OE_L,
+		 SRam_CE_L => SRam_CE_L,
+		 SRam_WE_L => SRam_WE_L,
+		 SRam_LB_L => SRam_LB_L,
+		 SRam_UB_L => SRam_UB_L,
+		 BlueOut => BlueOut,
+		 DataOut => DataBusIn,
+		 GreenOut => GreenOut,
+		 RedOut => RedOut,
+		 SRamAddress => SRamAddress);
+
+
+SYNTHESIZED_WIRE_67 <= SYNTHESIZED_WIRE_11 AND SYNTHESIZED_WIRE_12 AND SYNTHESIZED_WIRE_13 AND SYNTHESIZED_WIRE_14 AND SYNTHESIZED_WIRE_15 AND SYNTHESIZED_WIRE_16 AND SYNTHESIZED_WIRE_17 AND SYNTHESIZED_WIRE_18;
+
+
+b2v_inst11 : onchipm68xxio
+PORT MAP(Clock_50Mhz => Clock_50Mhz,
+		 IOSelect => SYNTHESIZED_WIRE_89,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 WE_L => SYNTHESIZED_WIRE_86,
+		 Clk => Clock25Mhz,
+		 Reset_L => SYNTHESIZED_WIRE_85,
+		 RS232_RxData => RS232_RxData,
+		 PIA1_CB1 => SYNTHESIZED_WIRE_90,
+		 PIA1_CA1 => SYNTHESIZED_WIRE_90,
+		 PIA2_CB1 => SYNTHESIZED_WIRE_90,
+		 PIA2_CA1 => SYNTHESIZED_WIRE_90,
+		 Address => Address,
+		 DataIn => DataBusOut(15 DOWNTO 8),
+		 ACIA_IRQ => SYNTHESIZED_WIRE_53,
+		 RS232_TxData => RS232_TxData,
+		 PIA_IRQ => SYNTHESIZED_WIRE_54,
+		 DataOut => DataBusIn(15 DOWNTO 8));
+
+
+b2v_inst12 : dmacontroller
+PORT MAP(Clock => Clock_50Mhz,
+		 Reset_L => RESET_Key0_L,
+		 Dtack_IN_L => SYNTHESIZED_WIRE_91,
+		 CS_L => SYNTHESIZED_WIRE_28,
+		 UDS_IN_L => SYNTHESIZED_WIRE_88,
+		 LDS_IN_L => SYNTHESIZED_WIRE_87,
+		 RW_IN => SYNTHESIZED_WIRE_86,
+		 AS_L => SYNTHESIZED_WIRE_82,
+		 BG_L => SYNTHESIZED_WIRE_33,
+		 AddressIn => Address,
+		 DataInFromCPU => DataBusOut,
+		 DataInFromMemory => DataBusIn,
+		 DMA_UDS_L => DMA_UDS_L,
+		 DMA_LDS_L => DMA_LDS_L,
+		 DMA_RW => DMA_RW,
+		 DMA_AS_L => DMA_AS_L,
+		 BR_L => SYNTHESIZED_WIRE_62,
+		 BGACK_L => SYNTHESIZED_WIRE_92,
+		 DMA_Address => DMA_Address,
+		 DMA_DataOut => DMA_DataOut_ALTERA_SYNTHESIZED);
+
+
+PROCESS(Clock_50Mhz,SYNTHESIZED_WIRE_34,SYNTHESIZED_WIRE_36)
+BEGIN
+IF (SYNTHESIZED_WIRE_34 = '0') THEN
+	Clock25Mhz <= '0';
+ELSIF (SYNTHESIZED_WIRE_36 = '0') THEN
+	Clock25Mhz <= '1';
+ELSIF (RISING_EDGE(Clock_50Mhz)) THEN
+	Clock25Mhz <= SYNTHESIZED_WIRE_35;
+END IF;
+END PROCESS;
+
+
+b2v_inst14 : cpu_dma_mux
+PORT MAP(CPU_DMA_Select => SYNTHESIZED_WIRE_92,
+		 DMA_AS_L => DMA_AS_L,
+		 DMA_RW => DMA_RW,
+		 DMA_UDS_L => DMA_UDS_L,
+		 DMA_LDS_L => DMA_LDS_L,
+		 CPU_AS_L => SYNTHESIZED_WIRE_38,
+		 CPU_UDS_L => SYNTHESIZED_WIRE_39,
+		 CPU_LDS_L => SYNTHESIZED_WIRE_40,
+		 CPU_RW => SYNTHESIZED_WIRE_41,
+		 CPU_Address => SYNTHESIZED_WIRE_42,
+		 CPU_DataBusOut => SYNTHESIZED_WIRE_43,
+		 DMA_Address => DMA_Address,
+		 DMA_DataBusOut => DMA_DataOut_ALTERA_SYNTHESIZED,
+		 AS_L => SYNTHESIZED_WIRE_82,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 LDS_L => SYNTHESIZED_WIRE_87,
+		 RW => SYNTHESIZED_WIRE_86,
+		 AddressOut => Address,
+		 DataOut => DataBusOut);
+
+
+
+b2v_inst16 : exceptiongenerator
+PORT MAP(Clock => Clock25Mhz,
+		 Reset => RESET_Key0_L,
+		 AS_L => SYNTHESIZED_WIRE_82,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 LDS_L => SYNTHESIZED_WIRE_87,
+		 RW_L => SYNTHESIZED_WIRE_86,
+		 SingleStep_H => TraceException_H,
+		 TraceRequest_L => Trace_Request_Key3_L,
+		 Address => Address,
+		 AddressIRQ_L => SYNTHESIZED_WIRE_65,
+		 TraceIRQ_L => SYNTHESIZED_WIRE_66);
+
+
+b2v_inst17 : m68000cpu
+PORT MAP(Clk => Clock25Mhz,
+		 Reset_L => SYNTHESIZED_WIRE_85,
+		 Dtack_L => SYNTHESIZED_WIRE_91,
+		 BR_L => SYNTHESIZED_WIRE_50,
+		 BGACK_L => SYNTHESIZED_WIRE_92,
+		 DataBusIn => DataBusIn,
+		 IPL => SYNTHESIZED_WIRE_52,
+		 AS_L => SYNTHESIZED_WIRE_38,
+		 UDS_L => SYNTHESIZED_WIRE_39,
+		 LDS_L => SYNTHESIZED_WIRE_40,
+		 RW => SYNTHESIZED_WIRE_41,
+		 BG_L => SYNTHESIZED_WIRE_33,
+		 Address => SYNTHESIZED_WIRE_42,
+		 DataBusOut => SYNTHESIZED_WIRE_43);
+
+
+SYNTHESIZED_WIRE_56 <= NOT(Clock_50Mhz);
+
+
+
+SYNTHESIZED_WIRE_68 <= SYNTHESIZED_WIRE_53 AND SYNTHESIZED_WIRE_54;
+
+
+b2v_inst2 : dram
+PORT MAP(WE_L => SYNTHESIZED_WIRE_86,
+		 Clock => SYNTHESIZED_WIRE_56,
+		 Reset_L => RESET_Key0_L,
+		 DramSelect_H => SYNTHESIZED_WIRE_83,
+		 LDS_L => SYNTHESIZED_WIRE_87,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 AS_L => SYNTHESIZED_WIRE_82,
+		 Address => Address,
+		 DataIn => DataBusOut,
+		 sdram_dq => sdram_dq,
+		 sdram_clock => sdram_clock,
+		 sdram_cke => sdram_cke,
+		 sdram_cs_n => sdram_cs_n,
+		 sdram_ras_n => sdram_ras_n,
+		 sdram_cas_n => sdram_cas_n,
+		 sdram_we_n => sdram_we_n,
+		 DramDtack_L => SYNTHESIZED_WIRE_3,
+		 ResetOut_L => SYNTHESIZED_WIRE_85,
+		 DataOut => DataBusIn,
+		 sdram_a => sdram_a,
+		 sdram_ba => sdram_ba,
+		 sdram_dqm => GDFX_TEMP_SIGNAL_0);
+
+
+
+b2v_inst21 : onchiprom16kbytes
+PORT MAP(Enable_H => SYNTHESIZED_WIRE_61,
+		 Clock => Clock25Mhz,
+		 Address => Address(14 DOWNTO 1),
+		 DataOut => DataBusIn);
+
+
+
+
+
+
+SYNTHESIZED_WIRE_50 <= SYNTHESIZED_WIRE_62 AND SYNTHESIZED_WIRE_63;
+
+
+
+b2v_inst28 : interruptpriorityencoder
+PORT MAP(IRQ7_L => SYNTHESIZED_WIRE_64,
+		 IRQ6_L => SYNTHESIZED_WIRE_65,
+		 IRQ5_L => SYNTHESIZED_WIRE_66,
+		 IRQ4_L => IRQ4_Key1_L,
+		 IRQ3_L => SYNTHESIZED_WIRE_67,
+		 IRQ2_L => IRQ2_Key2_L,
+		 IRQ1_L => SYNTHESIZED_WIRE_68,
+		 IPL => SYNTHESIZED_WIRE_52);
+
+
+
+b2v_inst3 : addressdecoder
+PORT MAP(Address => Address,
+		 OnChipRomSelect_H => SYNTHESIZED_WIRE_61,
+		 OnChipRamSelect_H => SYNTHESIZED_WIRE_72,
+		 DramSelect_H => SYNTHESIZED_WIRE_83,
+		 VideoRamSelect_H => SYNTHESIZED_WIRE_6,
+		 IOSelect_H => SYNTHESIZED_WIRE_89,
+		 FlashSelect_H => SYNTHESIZED_WIRE_84,
+		 DMASelect_L => SYNTHESIZED_WIRE_28);
+
+
+
+b2v_inst5 : flashinterface
+PORT MAP(FlashSelect_H => SYNTHESIZED_WIRE_84,
+		 WE_L => SYNTHESIZED_WIRE_86,
+		 Reset_L => RESET_Key0_L,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 Clock => Clock25Mhz,
+		 DataIn => DataBusOut(15 DOWNTO 8),
+		 FlashData => FlashData,
+		 FlashOE_L => FlashOE_L,
+		 FlashCE_L => FlashCE_L,
+		 FlashWE_L => FlashWE_L,
+		 FlashReset_L => FlashReset_L,
+		 FlashDtackOut_L => SYNTHESIZED_WIRE_4,
+		 DataOut => DataBusIn(15 DOWNTO 8));
+
+
+b2v_inst6 : onchip16kbyteram
+PORT MAP(RamSelect_H => SYNTHESIZED_WIRE_72,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 LDS_L => SYNTHESIZED_WIRE_87,
+		 WE_L => SYNTHESIZED_WIRE_86,
+		 Clock => Clock25Mhz,
+		 Address => Address(13 DOWNTO 1),
+		 DataIn => DataBusOut,
+		 DataOut => GDFX_TEMP_SIGNAL_1);
+
+
+SYNTHESIZED_WIRE_35 <= NOT(Clock25Mhz);
+
+
+
+b2v_inst8 : onchipio
+PORT MAP(IOSelect => SYNTHESIZED_WIRE_89,
+		 WE_L => SYNTHESIZED_WIRE_86,
+		 UDS_L => SYNTHESIZED_WIRE_88,
+		 Clk => Clock25Mhz,
+		 Reset_L => SYNTHESIZED_WIRE_85,
+		 Address => Address,
+		 DataIn => DataBusOut(15 DOWNTO 8),
+		 InPortA => InPortA,
+		 InPortB => InPortB,
+		 InPortC => InPortC,
+		 InPortD => SYNTHESIZED_WIRE_80,
+		 InPortE => InPortE,
+		 TraceExceptionBit_H => TraceException_H,
+		 LCD_RS => LCD_RS,
+		 LCD_E => LCD_E,
+		 LCD_RW => LCD_RW,
+		 Timer1_IRQ => SYNTHESIZED_WIRE_11,
+		 Timer2_IRQ => SYNTHESIZED_WIRE_13,
+		 Timer3_IRQ => SYNTHESIZED_WIRE_12,
+		 Timer4_IRQ => SYNTHESIZED_WIRE_14,
+		 Timer5_IRQ => SYNTHESIZED_WIRE_18,
+		 Timer6_IRQ => SYNTHESIZED_WIRE_16,
+		 Timer7_IRQ => SYNTHESIZED_WIRE_15,
+		 Timer8_IRQ => SYNTHESIZED_WIRE_17,
+		 DataOut => DataBusIn(15 DOWNTO 8),
+		 HexDisplay0 => HexDisplay0,
+		 HexDisplay1 => HexDisplay1,
+		 HexDisplay2 => HexDisplay2,
+		 HexDisplay3 => HexDisplay3,
+		 HexDisplay4 => HexDisplay4,
+		 HexDisplay5 => HexDisplay5,
+		 HexDisplay6 => HexDisplay6,
+		 HexDisplay7 => HexDisplay7,
+		 LCD_DataOut => LCDDataOut,
+		 OutPortA => RedLEDSA,
+		 OutPortB => RedLEDSB,
+		 OutPortC => RedLEDSC,
+		 OutPortD => GreenLEDS,
+		 OutPortE => OutPortE);
+
+
+SYNTHESIZED_WIRE_63 <= NOT(Bus_Request_SW8_H);
+
+
+CPUClock <= Clock25Mhz;
+Clock_50Mhz <= CLK_50Mhz;
+UDS_OUT_L <= DMA_UDS_L;
+LDS_OUT_L <= DMA_LDS_L;
+RW_OUT <= DMA_RW;
+AS_OUT_L <= DMA_AS_L;
+VideoDac_Clock <= Clock25Mhz;
+Address_OUT <= DMA_Address;
+DMA_DataOut <= DMA_DataOut_ALTERA_SYNTHESIZED;
+FlashAddress(21 DOWNTO 0) <= Address(22 DOWNTO 1);
+
+END bdf_type;

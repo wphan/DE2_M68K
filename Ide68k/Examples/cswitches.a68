@@ -1,0 +1,10 @@
+* CSWITCHES.A68
+*
+* This file contains the startup code for Cswitches.c
+* It uses only one instruction, ORG $400
+* It is assumed that the main() function immediately follows this
+* program and that main() never returns.
+*
+* Author: Peter J. Fondse (pfondse@hetnet.nl)
+
+       org       $400
